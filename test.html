@@ -12,7 +12,405 @@
     <![endif]-->
   </head>
   <body>
-    Hello world
+      <div class="wiki-content" id="main-content">
+        <p>Data requirements for Positions for Shareholding Disclosure.&nbsp;For information on integrating via API, please see <a href= "https://github.com/fundapps/api-examples" rel="nofollow">our GitHub repository</a></p>
+
+        <p>For all other information on Rapptr please see our <a href="https://fundapps.zendesk.com/hc/en-us">Zendesk HelpCentre</a></p>
+
+        <h1 id="Positions-AssetProperties"><span style="color: rgb(0,0,0);">Asset Properties</span></h1>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Description</th>
+                        <th>Data type</th>
+                        <th>Possible values &amp; notes</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>AssetId</td>
+                        <td>Unique identifier for all assets (e.g. ISIN + Market for listed instruments, Alternative Instrument Identifier for OTCs).</td>
+                        <td>string</td>
+                        <td><span style="color: rgb(255,0,0);"><strong><span style="color: rgb(0,0,0);">Must be unique for every asset in the</span> portfolio <span style="color: rgb(0,0,0);">and consistent across NAVdates</span></strong></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>AssetName</td>
+                        <td>Name of the asset</td>
+                        <td>string</td>
+                        <td>No limitations</td>
+                    </tr>
+
+                    <tr>
+                        <td>Quantity</td>
+                        <td>The Quantity of a position</td>
+                        <td>decimal</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h1 id="Positions-Instrumentproperties">Instrument properties</h1>
+
+        <div>
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Property Name</th>
+                            <th>Applies to</th>
+                            <th>Description</th>
+                            <th>Data type</th>
+                            <th>Possible values &amp; notes</th>
+                        </tr>
+
+                        <tr>
+                            <td>InstrumentName</td>
+                            <td>All Instruments</td>
+                            <td>A user friendly name for the instrument</td>
+                            <td>string</td>
+                            <td>&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <td>InstrumentId</td>
+                            <td>All Instruments</td>
+                            <td>An identifier to link Assets to instruments, and instruments to Underlying instruments</td>
+                            <td>string</td>
+                            <td><strong><span style="color: rgb(0,0,0);">Can be any string, but must be unique for every instrument</span></strong><strong><span style="color: rgb(0,0,0);">&nbsp;</span></strong></td>
+                        </tr>
+
+                        <tr>
+                            <td>InstrumentCurrency</td>
+                            <td>All Instruments</td>
+                            <td>Currency the asset is denominated in</td>
+                            <td>string</td>
+                            <td>ISO 4217 code. E.g. USD, GBP, EUR</td>
+                        </tr>
+
+                        <tr>
+                            <td>AssetClass</td>
+                            <td>All Instruments</td>
+                            <td>Asset class</td>
+                            <td>string</td>
+                            <td>ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Swap, Unit, Warrant, StructuredProduct (includes Baskets), Rights</td>
+                        </tr>
+
+                        <tr>
+                            <td>CallOrPut</td>
+                            <td>Warrant,Option</td>
+                            <td>If an option / warrant is call or put</td>
+                            <td>string</td>
+                            <td>Call, Put</td>
+                        </tr>
+
+                        <tr>
+                            <td>ClassDebtOutstanding</td>
+                            <td>Convertible,Bond</td>
+                            <td>The amount of outstanding debt for that class</td>
+                            <td>decimal</td>
+                            <td>Only required for UK takeover calculations for convertibles</td>
+                        </tr>
+
+                        <tr>
+                            <td>ClassSharesOutstanding</td>
+                            <td>Equity,ADR,Unit</td>
+                            <td>Shares in circulation for this Share Class</td>
+                            <td>decimal</td>
+                            <td>Used in ca. 30 countries</td>
+                        </tr>
+
+                        <tr>
+                            <td>ContractSize</td>
+                            <td>Warrant,Option,Future,CFD</td>
+                            <td>Contract size e.g. 1000 would mean every option represents 1000 of the underlying. (If relevant, this should be in Instrument currency)</td>
+                            <td>decimal</td>
+                            <td>Important for calculating equivalent shares for derivatives</td>
+                        </tr>
+
+                        <tr>
+                            <td>ConversionRatio</td>
+                            <td>Convertible,ADR,Rights</td>
+                            <td><span style="color: rgb(54,43,54);">For a Convertible: the number of equity that one convertible converts into</span>
+                                <span style="color: rgb(54,43,54);">For an ADR: the number of underlying shares represented by one DR</span>
+                                <span style="color: rgb(54,43,54);">For a Right: the number of underlying securities that one right gives entitlement to.</span>
+                            </td>
+                            <td>decimal</td>
+                            <td>For calculating equivalent shares for depository receipts, convertibles and rights.</td>
+                        </tr>
+
+                        <tr>
+                            <td>CountryOfIncorporation</td>
+                            <td>Equity</td>
+                            <td>Country the issuer is incorporated in</td>
+                            <td>string</td>
+                            <td>ISO 3166-1 alpha-2 code. E.g. IE, US, DE, FR</td>
+                        </tr>
+
+                        <tr>
+                            <td>CountryOfIssue</td>
+                            <td>Equity</td>
+                            <td>Country the issue is Issued in</td>
+                            <td>string</td>
+                            <td>ISO 3166-1 alpha-2 code. E.g. IE, US, DE, FR</td>
+                        </tr>
+
+                        <tr>
+                            <td>Delta</td>
+                            <td>Warrant,Option,Convertible</td>
+                            <td>Delta of the asset (price sensitivity with relation to the underlying)</td>
+                            <td>decimal</td>
+                            <td>&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <td>ExerciseStyle</td>
+                            <td>Warrant,Option</td>
+                            <td>The exercise style of an option</td>
+                            <td>string</td>
+                            <td>Possible values: American, European</td>
+                        </tr>
+
+                        <tr>
+                            <td>HomeMemberState</td>
+                            <td>Equity,Convertible,Bond</td>
+                            <td>The chosen Home Member State of the issuer as defined by the EU transparency directive.</td>
+                            <td>string</td>
+                            <td>ISO 3166-1 alpha-2 code. E.g. IE, US, DE, FR
+                                <p>Rapptr will populate this value, if not provided, based on the ESMA list of MiFID "Shares Traded on Regulated Markets" <a href="http://mifiddatabase.esma.europa.eu/Index.aspx?sectionlinks_id=14&amp;pageName=MiFIDLiquidSearch%27">here</a>.</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>InControlOfConversion</td>
+                            <td>Warrant,Option,Convertible</td>
+                            <td>If the conversion is in control of both parties</td>
+                            <td>boolean</td>
+                            <td>Some countries require convertibles &amp; warrants to be counted if the conditions for conversion are within the control of the parties (e.g. UK)</td>
+                        </tr>
+
+                        <tr>
+                            <td>IsCashSettled</td>
+                            <td>Swap,Warrant,Option,Future,CFD</td>
+                            <td>If the derivative is cash settled (as opposed to requiring physical delivery)</td>
+                            <td>boolean</td>
+                            <td>Most countries capture physically settled derivatives, many (but less) are interested in cash settled derivatives.</td>
+                        </tr>
+
+                        <tr>
+                            <td>IsCoveredWarrant</td>
+                            <td>Warrant</td>
+                            <td>If the warrant is covered</td>
+                            <td>boolean</td>
+                            <td>Some countries require disclosure of covered warrants but not standard warrants, e.g. Germany.</td>
+                        </tr>
+
+                        <tr>
+                            <td>ISIN</td>
+                            <td>Swap,Equity,Warrant,Option,Convertible,ADR,Future,Bond,CFD,CDS,Unit</td>
+                            <td>ISIN of the instrument</td>
+                            <td>string</td>
+                            <td>Used to look-up security in many lists such as EU Short Selling Exempt, short selling black &amp; white lists, Takeover lists etc.</td>
+                        </tr>
+
+                        <tr>
+                            <td>IssuerId</td>
+                            <td>Equity,Convertible,ADR,Bond</td>
+                            <td>An Id for the Issuer of the asset</td>
+                            <td>string</td>
+                            <td>This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. (You could use the Issuers LEI here)</td>
+                        </tr>
+
+                        <tr>
+                            <td>IssuerName</td>
+                            <td>Equity,Convertible,ADR,Bond</td>
+                            <td>The name of the Issuer of the asset</td>
+                            <td>string</td>
+                            <td>(Not needed if you're using the Name as the Id)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Market</td>
+                            <td>Swap,Equity,Warrant,Option,Convertible, ADR,Rights,Future,Bond,CFD,CDS,Unit</td>
+                            <td>Market identification code for the market this asset is traded on</td>
+                            <td>string</td>
+                            <td>ISO 10383 code (MIC). Used as a lookup to calculate listing country and also for certain rules to see if market is in a list of specific markets. For securities with no market, use value: XXXX</td>
+                        </tr>
+
+                        <tr>
+                            <td>MarketsListedIn</td>
+                            <td>Swap,Equity,Warrant,Option,Convertible,ADR,Rights,Future,Bond,CFD,CDS,Unit</td>
+                            <td>A list of all the markets that the security is traded on</td>
+                            <td>list</td>
+                            <td>ISO 10383 code (MIC). For securities with no market, use value: XXXX</td>
+                        </tr>
+
+                        <tr>
+                            <td>MaturityDate</td>
+                            <td>Warrant,Option,Convertible,Future,Swap</td>
+                            <td>Expiry date for warrants, convertibles, rights. Necessary for determining if they expire within next 60 days. For physically settled derivatives in USA &amp; Canada, when the securities are to be delivered</td>
+                            <td>date</td>
+                            <td>ISO 8601 (YYYY-MM-DD)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Price</td>
+                            <td>All Instruments</td>
+                            <td>Price of the asset in Instrument Currency</td>
+                            <td>decimal</td>
+                            <td>Ensure if you don't have a value, leave the cell blank, not 0</td>
+                        </tr>
+
+                        <tr>
+                            <td>TotalSharesOutstanding</td>
+                            <td>Equity,Unit</td>
+                            <td>Total amount of shares in circulation (i.e. from all share classes) of the Issuer</td>
+                            <td>decimal</td>
+                            <td>Used in many rules</td>
+                        </tr>
+
+                        <tr>
+                            <td>TotalVotingRights</td>
+                            <td>Equity</td>
+                            <td>Total amount of voting rights in circulation</td>
+                            <td>decimal</td>
+                            <td>Used in many rules</td>
+                        </tr>
+
+                        <tr>
+                            <td>VotesPerShare</td>
+                            <td>Equity</td>
+                            <td>Number of voting rights per share</td>
+                            <td>decimal</td>
+                            <td>Used to calculate equivalent votes</td>
+                        </tr>
+
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <td class="highlight-yellow confluenceTd" colspan="5" data-highlight-colour="yellow">
+                                <h1 id="Positions-Propertiesonlyrequiredforahandfulofspecificcountries"style="text-align: center;">Properties only required for a handful of specific countries</h1>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>CUSIP</td>
+                            <td>Swap,Equity,Warrant,Option,Convertible,ADR,Future,Bond,CFD,CDS,Unit</td>
+                            <td>CUSIP of the Instrument</td>
+                            <td>string</td>
+                            <td>Only used for US 13F regulation (to match the SEC list). For assets with no CUSIP (e.g. those not traded in the US), default to: NONE</td>
+                        </tr>
+
+                        <tr>
+                            <td>ParValue</td>
+                            <td>Convertible,Bond</td>
+                            <td>Price of a security when originally issued and bearing no relation to the market price, also known as par or face value (or the underlying if a derivative/convertible/warrant) in Instrument Currency</td>
+                            <td>decimal</td>
+                            <td>Required for: Nominal issued capital regulation in: Netherlands, Denmark, Egypt</td>
+                        </tr>
+
+                        <tr>
+                            <td>TotalIssuedNominalCapital</td>
+                            <td>Equity</td>
+                            <td>The total issued nominal share capital across all share classes in Instrument Currency&nbsp;</td>
+                            <td>decimal</td>
+                            <td>Required for: Nominal issued capital regulation in: Netherlands, Denmark, Egypt</td>
+                        </tr>
+
+                        <tr>
+                            <td>TotalVotingShares</td>
+                            <td>Equity</td>
+                            <td>Total amount of outstanding shares with voting rights attached in circulation</td>
+                            <td>decimal</td>
+                            <td>Required for: Kenya, Kuwait, Malaysia, Thailand</td>
+                        </tr>
+
+                        <tr>
+                            <td>Nominal</td>
+                            <td>Convertible,Bond</td>
+                            <td>Total nominal value of a bond or convertible bond position, or the number of bonds held multiplied by the bond's face value</td>
+                            <td>decimal</td>
+                            <td>Required for: EU Sovereign debt, UK Takeover Panel</td>
+                        </tr>
+
+                        <tr>
+                            <td>MarketCap</td>
+                            <td>Equity</td>
+                            <td>Monetary value of the registered share capital in Instrument Currency</td>
+                            <td>decimal</td>
+                            <td>Required for: Phillipines &amp; Czech Republic</td>
+                        </tr>
+
+                        <tr>
+                            <td>LotSize</td>
+                            <td>Equity</td>
+                            <td>Number of Shares in each lot or trading unit</td>
+                            <td>decimal</td>
+                            <td>Required for: Short selling in Japan</td>
+                        </tr>
+
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <td class="highlight-yellow confluenceTd" colspan="5" data-highlight-colour="yellow">
+                                <h1 id="Positions-RequiredforEUSovereignDebtrules" style="text-align: center;">Required for EUSovereign Debt rules</h1>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>IsGovernmentBacked</td>
+                            <td>Bond</td>
+                            <td>Is the bond a Sovereign Bond</td>
+                            <td>boolean</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>DurationAdjustment</td>
+                            <td>Bond</td>
+                            <td>Modified duration of a bond. This is used for calculating the appropriate exposure for EU short selling regulation.</td>
+                            <td>decimal</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>TotalDebtOustanding</td>
+                            <td>Bond</td>
+                            <td>Debt outstanding of an Issuer in <em><strong>Instrument Currency</strong></em></td>
+                            <td>decimal</td>
+                            <td>Only required if you can't match the Sovereign issuer name used in <strong>Issuer</strong> to <a href="http://www.esma.europa.eu/page/Net-short-position-notification-thresholds-sovereign-issuers" >ESMA's list</a> of Sovereign Issuers.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>IsSubNational</td>
+                            <td>Bond</td>
+                            <td>Is the bond issued by a state as opposed to a Country</td>
+                            <td>boolean</td>
+                            <td>Only required if you can't match the Sovereign issuer name used in<strong>&nbsp;Issuer&nbsp;</strong>to <a href="http://www.esma.europa.eu/page/Net-short-position-notification-thresholds-sovereign-issuers" >ESMA's list</a> of Sovereign Issuers.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <script src="javascripts/scale.fix.js"></script>    
   </body>
 </html>
