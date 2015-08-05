@@ -35,21 +35,21 @@
                 <tr>
                     <td>AssetId</td>
                     <td>Unique identifier for all assets (e.g. ISIN + Market for listed instruments, Alternative Instrument Identifier for OTCs).</td>
-                    <td><a href="#" title="This is some information for our tooltip." class="tooltip">string</a></td>
+                    <td><a href="#" title="Any string value, no length restrictions" class="tooltip">string</a></td>
                     <td><strong>Must be unique for every asset in the portfolio and consistent across NAVdates</strong></td>
                 </tr>
 
                 <tr>
                     <td>AssetName</td>
                     <td>Name of the asset</td>
-                    <td>string</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types" title="see more">string</a></td>
                     <td>No limitations</td>
                 </tr>
 
                 <tr>
                     <td>Quantity</td>
                     <td>The Quantity of a position</td>
-                    <td>decimal</td>
+                    <td><a href="#" title="Any decimal value. Must use '.'' as decimal separator. Group (thousand) separators are not allowed, exponential formatting not allowed" class="tooltip">decimal</a></td>
                     <td></td>
                 </tr>
             </tbody>
@@ -77,7 +77,7 @@
                         <td>All Instruments</td>
                         <td>A user friendly name for the instrument</td>
                         <td>string</td>
-                        <td>&nbsp;</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -193,7 +193,7 @@
                         <td>InControlOfConversion</td>
                         <td>Warrant, Option, Convertible</td>
                         <td>If the conversion is in control of both parties</td>
-                        <td>boolean</td>
+                        <td><a href="#" title="Any boolean value. Must be the word 'true' or 'false'" class="tooltip">boolean</a></td>
                         <td>Some countries require convertibles &amp; warrants to be counted if the conditions for conversion are within the control of the parties (e.g. UK)</td>
                     </tr>
 
@@ -249,7 +249,7 @@
                         <td>MarketsListedIn</td>
                         <td>Swap, Equity, Warrant, Option, Convertible, ADR, Rights, Future, Bond, CFD, CDS, Unit</td>
                         <td>A list of all the markets that the security is traded on</td>
-                        <td>list</td>
+                        <td><a href="#" title="Any List value. Comma separated string" class="tooltip">list</a></td>
                         <td>ISO 10383 code (MIC). For securities with no market, use value: XXXX</td>
                     </tr>
 
@@ -257,7 +257,7 @@
                         <td>MaturityDate</td>
                         <td>Warrant, Option, Convertible, Future, Swap</td>
                         <td>Expiry date for warrants, convertibles, rights. Necessary for determining if they expire within next 60 days. For physically settled derivatives in USA &amp; Canada, when the securities are to be delivered</td>
-                        <td>date</td>
+                        <td><a href="#" title="Any Date value. Must be in "YYYY-MM-DD" format (ISO 8601)" class="tooltip">date</a></td>
                         <td>ISO 8601 (YYYY-MM-DD)</td>
                     </tr>
 
