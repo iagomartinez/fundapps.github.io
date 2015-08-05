@@ -30,7 +30,7 @@
                     <td>AssetId</td>
                     <td>Unique identifier for all assets (e.g. ISIN + Market for listed instruments, Alternative Instrument Identifier for OTCs).</td>
                     <td>string</td>
-                    <td><span style="color: rgb(255,0,0);"><strong><span style="color: rgb(0,0,0);">Must be unique for every asset in the</span> portfolio <span style="color: rgb(0,0,0);">and consistent across NAVdates</span></strong></span></td>
+                    <td><strong>Must be unique for every asset in the portfolio and consistent across NAVdates</strong></td>
                 </tr>
 
                 <tr>
@@ -50,7 +50,7 @@
         </table>
     </div>
 
-    <h1 id="Positions-Instrumentproperties">Instrument properties</h1>
+    <h1 id="Positions-Instrumentproperties">Instrument Properties</h1>
 
     <div>
         <div>
@@ -77,7 +77,7 @@
                         <td>All Instruments</td>
                         <td>An identifier to link Assets to instruments, and instruments to Underlying instruments</td>
                         <td>string</td>
-                        <td><strong><span style="color: rgb(0,0,0);">Can be any string, but must be unique for every instrument</span></strong><strong><span style="color: rgb(0,0,0);">&nbsp;</span></strong></td>
+                        <td><strong>Can be any string, but must be unique for every instrument</strong></td>
                     </tr>
 
                     <tr>
@@ -131,9 +131,9 @@
                     <tr>
                         <td>ConversionRatio</td>
                         <td>Convertible,ADR,Rights</td>
-                        <td><span style="color: rgb(54,43,54);">For a Convertible: the number of equity that one convertible converts into</span>
-                            <span style="color: rgb(54,43,54);">For an ADR: the number of underlying shares represented by one DR</span>
-                            <span style="color: rgb(54,43,54);">For a Right: the number of underlying securities that one right gives entitlement to.</span>
+                        <td><strong>For a Convertible:</strong> the number of equity that one convertible converts into</br>
+                            <strong>For an ADR:</strong> the number of underlying shares represented by one DR</br>
+                            <strong>For a Right:</strong> the number of underlying securities that one right gives entitlement to.
                         </td>
                         <td>decimal</td>
                         <td>For calculating equivalent shares for depository receipts, convertibles and rights.</td>
@@ -293,11 +293,7 @@
                         <td>&nbsp;</td>
                     </tr>
 
-                    <tr>
-                        <td class="highlight-yellow confluenceTd" colspan="5" data-highlight-colour="yellow">
-                            <h1 id="Positions-Propertiesonlyrequiredforahandfulofspecificcountries"style="text-align: center;">Properties only required for a handful of specific countries</h1>
-                        </td>
-                    </tr>
+                    <tr><td colspan="5"><h1 id="SpecificCountries"style="text-align: center;">Properties only required for a handful of specific countries</h1></td></tr>
 
                     <tr>
                         <td>CUSIP</td>
@@ -363,11 +359,7 @@
                         <td>&nbsp;</td>
                     </tr>
 
-                    <tr>
-                        <td class="highlight-yellow confluenceTd" colspan="5" data-highlight-colour="yellow">
-                            <h1 id="Positions-RequiredforEUSovereignDebtrules" style="text-align: center;">Required for EUSovereign Debt rules</h1>
-                        </td>
-                    </tr>
+                    <tr><td colspan="5"><h1 id="SovDebt" style="text-align: center;">Required for EUSovereign Debt rules</h1></td></tr>
 
                     <tr>
                         <td>IsGovernmentBacked</td>
@@ -399,7 +391,7 @@
                         <td>Bond</td>
                         <td>Is the bond issued by a state as opposed to a Country</td>
                         <td>boolean</td>
-                        <td>Only required if you can't match the Sovereign issuer name used in<strong>&nbsp;Issuer&nbsp;</strong>to <a href="http://www.esma.europa.eu/page/Net-short-position-notification-thresholds-sovereign-issuers" >ESMA's list</a> of Sovereign Issuers.</td>
+                        <td>Only required if you can't match the Sovereign issuer name used in<strong>Issuer</strong>to <a href="http://www.esma.europa.eu/page/Net-short-position-notification-thresholds-sovereign-issuers" >ESMA's list</a> of Sovereign Issuers.</td>
                     </tr>
                 </tbody>
             </table>
