@@ -35,10 +35,10 @@
                             <td>AssetId 
                                     <img src="./img/required.gif" title='Required for file validation to pass' alt="required" />
                             </td>
-                            <td style="width: 200px">
-                                    All asset classes
+                            <td>
+                                    All
                             </td>
-                            <td style="width: 600px">Unique ID of the asset</td>
+                            <td>Unique ID of the asset</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
@@ -51,10 +51,10 @@ e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/
                             <td>AssetName 
                                     <img src="./img/required.gif" title='Required for file validation to pass' alt="required" />
                             </td>
-                            <td style="width: 200px">
-                                    All asset classes
+                            <td>
+                                    All
                             </td>
-                            <td style="width: 600px">Name of the asset</td>
+                            <td>Name of the asset</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
@@ -65,10 +65,10 @@ e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/
                         <tr>
                             <td>IsCollateral 
                             </td>
-                            <td style="width: 200px">
-                                    All asset classes
+                            <td>
+                                    All
                             </td>
-                            <td style="width: 600px">If the position is being used as collateral</td>
+                            <td>If the position is being used as collateral</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Boolean</a>
                             </td>
@@ -79,10 +79,10 @@ e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/
                         <tr>
                             <td>IsShareClassHedge 
                             </td>
-                            <td style="width: 200px">
-                                    All asset classes
+                            <td>
+                                    All
                             </td>
-                            <td style="width: 600px">Set to true for positions that are used for Share Class Hedging</td>
+                            <td>Set to true for positions that are used for Share Class Hedging</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Boolean</a>
                             </td>
@@ -94,10 +94,10 @@ Defaults to false if not provided.
                         <tr>
                             <td>MarketValue 
                             </td>
-                            <td style="width: 200px">
-                                    All asset classes
+                            <td>
+                                    All
                             </td>
-                            <td style="width: 600px">Market value of a position in portfolio currency. If the market value can not be provided in portfolio currency, it should be provided in instrument currency in the property MarketValueInInstrumentCurrency. For derivatives the market value should represent the equivalent value of the underlying asset as opposed to the PnL of the contract.</td>
+                            <td>Market value of a position in portfolio currency. If the market value can not be provided in portfolio currency, it should be provided in instrument currency in the property MarketValueInInstrumentCurrency. For derivatives the market value should represent the equivalent value of the underlying asset as opposed to the PnL of the contract.</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -108,10 +108,10 @@ Defaults to false if not provided.
                         <tr>
                             <td>MarketValueInInstrumentCurrency 
                             </td>
-                            <td style="width: 200px">
-                                    All asset classes
+                            <td>
+                                    All
                             </td>
-                            <td style="width: 600px">Market value of a position in instrument currency. MarketValueInInstrumentCurrency should only be provided if it is not possible to provide the market value in portfolio currency in the property MarketValue. For derivatives the market value should represent the equivalent value of the underlying asset as opposed to the PnL of the contract.</td>
+                            <td>Market value of a position in instrument currency. MarketValueInInstrumentCurrency should only be provided if it is not possible to provide the market value in portfolio currency in the property MarketValue. For derivatives the market value should represent the equivalent value of the underlying asset as opposed to the PnL of the contract.</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -123,10 +123,10 @@ Defaults to false if not provided.
                             <td>Quantity 
                                     <img src="./img/required.gif" title='Required for file validation to pass' alt="required" />
                             </td>
-                            <td style="width: 200px">
-                                    All asset classes
+                            <td>
+                                    All
                             </td>
-                            <td style="width: 600px">Quantity of the position</td>
+                            <td>Quantity of the position</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -152,10 +152,10 @@ Defaults to false if not provided.
                             <td>AssetClass 
                                     <img src="./img/required.gif" title='Required for file validation to pass' alt="required" />
                             </td>
-                            <td style="width: 200px">
-                                    All asset classes
+                            <td>
+                                    All
                             </td>
-                            <td style="width: 600px">Asset class (e.g. Equity, Bond, CFD etc.)</td>
+                            <td>Asset class (e.g. Equity, Bond, CFD etc.)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
@@ -167,10 +167,10 @@ Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Forward, Future, Index, 
                         <tr>
                             <td>CallOrPut 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 Warrant, Option                                    <img src="./img/required.gif" title='Required for file validation to pass' alt="required" />
                             </td>
-                            <td style="width: 600px">If an option / warrant is Call or Put</td>
+                            <td>If an option / warrant is Call or Put</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
@@ -182,9 +182,9 @@ Valid values: Call, Put.
                         <tr>
                             <td>ContractSize 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 CFD, Future, Option, Warrant                            </td>
-                            <td style="width: 600px">Contract size of a derivative e.g. 1000 would mean every option represents 1000 of the underlying. (If relevant, this should be in Instrument currency)</td>
+                            <td>Contract size of a derivative e.g. 1000 would mean every option represents 1000 of the underlying. (If relevant, this should be in Instrument currency)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -195,9 +195,9 @@ CFD, Future, Option, Warrant                            </td>
                         <tr>
                             <td>ConversionPrice 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 ADR, Convertible, Rights                            </td>
-                            <td style="width: 600px">Conversion price for convertible bonds. (Price at conversion for shares)</td>
+                            <td>Conversion price for convertible bonds. (Price at conversion for shares)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -208,9 +208,9 @@ ADR, Convertible, Rights                            </td>
                         <tr>
                             <td>ConversionRatio 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 ADR, Convertible, Rights                            </td>
-                            <td style="width: 600px"><strong>Convertible</strong>: the number of equities one convertible converts into;<br /><strong>DR</strong>: the number of underlying shares represented in one DR;<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.</td>
+                            <td><strong>Convertible</strong>: the number of equities one convertible converts into;<br /><strong>DR</strong>: the number of underlying shares represented in one DR;<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -221,10 +221,10 @@ ADR, Convertible, Rights                            </td>
                         <tr>
                             <td>Counterparty 
                             </td>
-                            <td style="width: 200px">
-                                    All asset classes
+                            <td>
+                                    All
                             </td>
-                            <td style="width: 600px">Counterparty to an OTC deal or a deposit</td>
+                            <td>Counterparty to an OTC deal or a deposit</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
@@ -235,9 +235,9 @@ ADR, Convertible, Rights                            </td>
                         <tr>
                             <td>CountryOfIncorporation 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 Equity, Unit                            </td>
-                            <td style="width: 600px">Country the issuer is incorporated in</td>
+                            <td>Country the issuer is incorporated in</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
@@ -249,9 +249,9 @@ Valid values: <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="
                         <tr>
                             <td>Delta 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 Convertible, Option, Warrant                            </td>
-                            <td style="width: 600px">Delta of the asset (price sensitivity with relation to the underlying)</td>
+                            <td>Delta of the asset (price sensitivity with relation to the underlying)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -262,10 +262,10 @@ Convertible, Option, Warrant                            </td>
                         <tr>
                             <td>InControlOfConversion 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 Warrant, Convertible                                    <img src="./img/required.gif" title='Required for file validation to pass' alt="required" />
                             </td>
-                            <td style="width: 600px">True if the holder has control over the conditions of conversion (for convertibles) or exercise (for warrants)</td>
+                            <td>True if the holder has control over the conditions of conversion (for convertibles) or exercise (for warrants)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Boolean</a>
                             </td>
@@ -277,13 +277,13 @@ Some countries require convertibles &amp; warrants to be counted if the conditio
                         <tr>
                             <td>InstrumentCurrency 
                             </td>
-                            <td style="width: 200px">
-                                    All asset classes
+                            <td>
+                                    All
                                         <br />
                                         StructuredProduct, Index
                                         <img src="./img/required.gif" title='Required for file validation to pass' alt="required" />
                             </td>
-                            <td style="width: 600px">Currency the Instrument is denominated in</td>
+                            <td>Currency the Instrument is denominated in</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
@@ -296,10 +296,10 @@ Valid values: <a href="http://en.wikipedia.org/wiki/ISO_4217" target="_blank">IS
                             <td>InstrumentName 
                                     <img src="./img/required.gif" title='Required for file validation to pass' alt="required" />
                             </td>
-                            <td style="width: 200px">
-                                    All asset classes
+                            <td>
+                                    All
                             </td>
-                            <td style="width: 600px">Instrument name</td>
+                            <td>Instrument name</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
@@ -310,9 +310,9 @@ Valid values: <a href="http://en.wikipedia.org/wiki/ISO_4217" target="_blank">IS
                         <tr>
                             <td>InterestDuration 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 Forward, Future, Option, Swap, Warrant                            </td>
-                            <td style="width: 600px">Interest duration in years</td>
+                            <td>Interest duration in years</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -323,10 +323,10 @@ Forward, Future, Option, Swap, Warrant                            </td>
                         <tr>
                             <td>IsCashSettled 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 CFD, Future, Option, Swap, Warrant                                    <img src="./img/required.gif" title='Required for file validation to pass' alt="required" />
                             </td>
-                            <td style="width: 600px">If the derivative is cash settled (as opposed to requiring physical delivery)</td>
+                            <td>If the derivative is cash settled (as opposed to requiring physical delivery)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Boolean</a>
                             </td>
@@ -338,10 +338,10 @@ Most countries capture physically settled derivatives, many (but less) are inter
                         <tr>
                             <td>IsCoveredWarrant 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 Warrant                                    <img src="./img/required.gif" title='Required for file validation to pass' alt="required" />
                             </td>
-                            <td style="width: 600px">If the warrant is covered</td>
+                            <td>If the warrant is covered</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Boolean</a>
                             </td>
@@ -353,9 +353,9 @@ Some countries require disclosure of covered warrants but not standard warrants,
                         <tr>
                             <td>ISIN 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Swap, Unit, Warrant                            </td>
-                            <td style="width: 600px">ISIN of the instrument</td>
+                            <td>ISIN of the instrument</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
@@ -367,9 +367,9 @@ Used to look-up Instrument in many lists such as EU Short Selling Exempt, short 
                         <tr>
                             <td>Issuer 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 ADR, Bond, Convertible, Equity, Unit, Warrant                            </td>
-                            <td style="width: 600px">Issuer of the asset</td>
+                            <td>Issuer of the asset</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
@@ -380,9 +380,9 @@ ADR, Bond, Convertible, Equity, Unit, Warrant                            </td>
                         <tr>
                             <td>IssuerId 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 ADR, Bond, Convertible, Equity, Warrant                            </td>
-                            <td style="width: 600px">Unique identifier for the issuer of the Instrument</td>
+                            <td>Unique identifier for the issuer of the Instrument</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
@@ -395,9 +395,9 @@ This allows you to link assets of the same issuer together. If you don't have an
                         <tr>
                             <td>IssuerName 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 ADR, Bond, Convertible, Equity, Warrant                            </td>
-                            <td style="width: 600px">The name of the Issuer of the Instrument</td>
+                            <td>The name of the Issuer of the Instrument</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
@@ -409,9 +409,9 @@ Not needed if you're using the Name as the IssuerId
                         <tr>
                             <td>MarketsListedIn 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Rights, Swap, Unit, Warrant                            </td>
-                            <td style="width: 600px">List of markets (MICs) where the issuer is listed</td>
+                            <td>List of markets (MICs) where the issuer is listed</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">List</a>
                             </td>
@@ -423,9 +423,9 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Rights, Swap, Unit, Wa
                         <tr>
                             <td>MaturityDate 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 Convertible, Future, Option, Swap, Warrant                            </td>
-                            <td style="width: 600px"><strong>Convertible, Right, Warrant</strong>: Expiry date (To determine if expiry within next 60 days)<br /><strong>Physically settled derivative</strong> When the securities are to be delivered<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
+                            <td><strong>Convertible, Right, Warrant</strong>: Expiry date (To determine if expiry within next 60 days)<br /><strong>Physically settled derivative</strong> When the securities are to be delivered<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Date</a>
                             </td>
@@ -437,9 +437,9 @@ Necessary for USA &amp; Canada
                         <tr>
                             <td>Nominal 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 Bond, Convertible                            </td>
-                            <td style="width: 600px">Total nominal value of a bond or convertible bond position, or the number of bonds held multiplied by the bond's face value</td>
+                            <td>Total nominal value of a bond or convertible bond position, or the number of bonds held multiplied by the bond's face value</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -450,10 +450,10 @@ Bond, Convertible                            </td>
                         <tr>
                             <td>Price 
                             </td>
-                            <td style="width: 200px">
-                                    All asset classes
+                            <td>
+                                    All
                             </td>
-                            <td style="width: 600px">Price of the instrument in Instrument Currency</td>
+                            <td>Price of the instrument in Instrument Currency</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -464,9 +464,9 @@ Bond, Convertible                            </td>
                         <tr>
                             <td>TotalVotingRights 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 Equity                            </td>
-                            <td style="width: 600px">Total amount of voting rights in circulation</td>
+                            <td>Total amount of voting rights in circulation</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -478,9 +478,9 @@ Defaults to TotalVotingShares if not provided.
                         <tr>
                             <td>TotalVotingShares 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 Equity                            </td>
-                            <td style="width: 600px">Total amount of outstanding shares with voting rights attached in circulation</td>
+                            <td>Total amount of outstanding shares with voting rights attached in circulation</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -492,9 +492,9 @@ Required for: Kenya, Kuwait, Malaysia, Thailand
                         <tr>
                             <td>VotesPerShare 
                             </td>
-                            <td style="width: 200px">
+                            <td>
 Equity                            </td>
-                            <td style="width: 600px">Number of Votes attached to a single share</td>
+                            <td>Number of Votes attached to a single share</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
