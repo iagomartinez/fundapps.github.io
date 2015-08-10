@@ -43,7 +43,7 @@
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
                             <td>
-e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs. <strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong>
+e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong>
 
                             </td>
                         </tr>
@@ -270,11 +270,7 @@ Valid values: Call, Put.
                             <td>CanInvestGreater10InOtherOpenCIS
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Unit                            </td>
                             <td>If a unit can invest more than 10% in other open ended CIS</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Boolean</a>
@@ -287,11 +283,7 @@ Valid values: Call, Put.
                             <td>ContractSize
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+CFD, Future, Option, Warrant                            </td>
                             <td>Contract size of a derivative e.g. 1000 would mean every option represents 1000 of the underlying. (If relevant, this should be in Instrument currency)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -304,11 +296,7 @@ Valid values: Call, Put.
                             <td>ConversionRatio
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Convertible, Rights                            </td>
                             <td><strong>Convertible</strong>: the number of equities one convertible converts into;<br /><strong>DR</strong>: the number of underlying shares represented in one DR;<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -393,11 +381,7 @@ Valid values: A-1, A-1+, A-2, A-3, B, C, D, NR, Unknown.
                             <td>Delta
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Convertible, Option, Warrant                            </td>
                             <td>Delta of the asset (price sensitivity with relation to the underlying)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -410,11 +394,7 @@ Valid values: A-1, A-1+, A-2, A-3, B, C, D, NR, Unknown.
                             <td>HasUnitsInOtherSubFunds
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Unit                            </td>
                             <td>If the unit has units in other sub funds of the umbrella</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Boolean</a>
@@ -486,11 +466,7 @@ Bond                                    <img src="/img/required.gif" title='Requ
                             <td>IsGovernmentBacked
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Bond                            </td>
                             <td>If the bond is government backed or guaranteed</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Boolean</a>
@@ -503,11 +479,7 @@ Bond                                    <img src="/img/required.gif" title='Requ
                             <td>ISIN
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Swap, Unit, Warrant                            </td>
                             <td>ISIN of the instrument</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
@@ -549,11 +521,7 @@ Used to look-up Instrument in many lists such as EU Short Selling Exempt, short 
                             <td>IssueDate
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, Convertible, Equity, Unit, Warrant                            </td>
                             <td>Date the security was first issued</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Date</a>
@@ -581,11 +549,7 @@ Valid values: <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="
                             <td>IssuerGroup
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, Convertible, Equity, Unit, Warrant                            </td>
                             <td>Group of the issuer (ultimate parent issuer)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
@@ -598,11 +562,7 @@ Valid values: <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="
                             <td>IssuerId
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, Convertible, Equity, Warrant                            </td>
                             <td>Unique identifier for the issuer of the Instrument</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
@@ -617,11 +577,7 @@ This allows you to link assets of the same issuer together. If you don't have an
                             <td>IssuerName
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, Convertible, Equity, Warrant                            </td>
                             <td>The name of the Issuer of the Instrument</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
@@ -635,11 +591,7 @@ Not needed if you're using the Name as the IssuerId
                             <td>IssuerRating
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, Convertible, Equity, Unit, Warrant                            </td>
                             <td>Rating of the issuer (needed for collateral for OTCs)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
@@ -653,11 +605,7 @@ Valid values: A, A-, A+, AA, AA-, AA+, AAA, B, B-, B+, BB, BB-, BB+, BBB, BBB-, 
                             <td>IsUcits
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Unit                            </td>
                             <td>If the unit is of a UCITS fund</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Boolean</a>
@@ -670,11 +618,7 @@ Valid values: A, A-, A+, AA, AA-, AA+, AAA, B, B-, B+, BB, BB-, BB+, BBB, BBB-, 
                             <td>ListingDate
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, Convertible, Equity, Unit, Warrant                            </td>
                             <td>The date a security was, or will be, listed</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Date</a>
@@ -687,11 +631,7 @@ Valid values: A, A-, A+, AA, AA-, AA+, AAA, B, B-, B+, BB, BB-, BB+, BBB, BBB-, 
                             <td>Market
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Rights, Swap, Unit, Warrant                            </td>
                             <td>Market identification code for the market this Instrument is traded on</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
@@ -705,11 +645,7 @@ Valid values: A, A-, A+, AA, AA-, AA+, AAA, B, B-, B+, BB, BB-, BB+, BBB, BBB-, 
                             <td>MaturityDate
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Convertible, Future, Option, Swap, Warrant                            </td>
                             <td><strong>Convertible, Right, Warrant</strong>: Expiry date (To determine if expiry within next 60 days)<br /><strong>Physically settled derivative</strong> When the securities are to be delivered<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Date</a>
@@ -723,11 +659,7 @@ Necessary for USA &amp; Canada
                             <td>Nominal
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Bond, Convertible                            </td>
                             <td>Total nominal value of a bond or convertible bond position, or the number of bonds held multiplied by the bond's face value</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -740,11 +672,7 @@ Necessary for USA &amp; Canada
                             <td>ParentUmbrellaId
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Unit                            </td>
                             <td>An identifier of the umbrella parent of a fund. If not defined or the fund does not have an umbrella fund, the property will use the ISIN of the sub fund/fund</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
@@ -772,11 +700,7 @@ Defaults to ISIN if not provided.
                             <td>RepayableOrWithdrawable
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Deposit                            </td>
                             <td>If a deposit is repayable on demand or withdrawable</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Boolean</a>
@@ -789,11 +713,7 @@ Defaults to ISIN if not provided.
                             <td>SecurityIs144A
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, Convertible, Equity, Unit, Warrant                            </td>
                             <td>If the security is a 144A security</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Boolean</a>
@@ -806,11 +726,7 @@ Defaults to ISIN if not provided.
                             <td>TotalDebtSecurities
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Bond                            </td>
                             <td>Total value of debt securities of this issuer in circulation (if unavailable the rule does not have to be checked)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -823,11 +739,7 @@ Defaults to ISIN if not provided.
                             <td>TotalNonVotingShares
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Equity                            </td>
                             <td>Total amount of non-voting shares in circulation</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -840,11 +752,7 @@ Defaults to ISIN if not provided.
                             <td>TotalUmbrellaUnits
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Unit                            </td>
                             <td>Total amount of units of a funds umbrella fund in circulation. If the fund does not have an umbrella fund or if the data is unavailable the rule will run on individual level instead. If the total amount of units in circulation of the fund/sub fund is not available the rule does not have to be checked</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -858,11 +766,7 @@ Defaults to TotalUnits if not provided.
                             <td>TotalUnits
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Unit                            </td>
                             <td>Total amount of units of a fund in circulation (if unavailable the rule does not have to be checked)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -875,11 +779,7 @@ Defaults to TotalUnits if not provided.
                             <td>TotalVotingShares
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Equity                            </td>
                             <td>Total amount of outstanding shares with voting rights attached in circulation</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -893,11 +793,7 @@ Required for: Kenya, Kuwait, Malaysia, Thailand
                             <td>VotesPerShare
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Equity                            </td>
                             <td>Number of Votes attached to a single share</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>

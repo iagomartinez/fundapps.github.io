@@ -43,7 +43,7 @@
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
                             <td>
-e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs. <strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong>
+e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong>
 
                             </td>
                         </tr>
@@ -186,11 +186,7 @@ Valid values: Call, Put.
                             <td>ContractSize
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+CFD, Future, Option, Warrant                            </td>
                             <td>Contract size of a derivative e.g. 1000 would mean every option represents 1000 of the underlying. (If relevant, this should be in Instrument currency)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -203,11 +199,7 @@ Valid values: Call, Put.
                             <td>ConversionRatio
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Convertible, Rights                            </td>
                             <td><strong>Convertible</strong>: the number of equities one convertible converts into;<br /><strong>DR</strong>: the number of underlying shares represented in one DR;<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -234,11 +226,7 @@ Valid values: Call, Put.
                             <td>CountryOfIncorporation
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Equity, Unit                            </td>
                             <td>Country the issuer is incorporated in</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
@@ -252,11 +240,7 @@ Valid values: <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="
                             <td>Delta
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Convertible, Option, Warrant                            </td>
                             <td>Delta of the asset (price sensitivity with relation to the underlying)</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -314,11 +298,7 @@ Valid values: <a href="http://en.wikipedia.org/wiki/ISO_4217" target="_blank">IS
                             <td>InterestDuration
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Forward, Future, Option, Swap, Warrant                            </td>
                             <td>Interest duration in years</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -360,11 +340,7 @@ Warrant                                    <img src="/img/required.gif" title='R
                             <td>ISIN
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Swap, Unit, Warrant                            </td>
                             <td>ISIN of the instrument</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
@@ -378,11 +354,7 @@ Used to look-up Instrument in many lists such as EU Short Selling Exempt, short 
                             <td>IssuerId
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, Convertible, Equity, Warrant                            </td>
                             <td>Unique identifier for the issuer of the Instrument</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
@@ -397,11 +369,7 @@ This allows you to link assets of the same issuer together. If you don't have an
                             <td>IssuerName
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, Convertible, Equity, Warrant                            </td>
                             <td>The name of the Issuer of the Instrument</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
@@ -415,11 +383,7 @@ Not needed if you're using the Name as the IssuerId
                             <td>MarketsListedIn
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Rights, Swap, Unit, Warrant                            </td>
                             <td>List of markets (MICs) where the issuer is listed</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">List</a>
@@ -433,11 +397,7 @@ Not needed if you're using the Name as the IssuerId
                             <td>MaturityDate
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Convertible, Future, Option, Swap, Warrant                            </td>
                             <td><strong>Convertible, Right, Warrant</strong>: Expiry date (To determine if expiry within next 60 days)<br /><strong>Physically settled derivative</strong> When the securities are to be delivered<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Date</a>
@@ -451,11 +411,7 @@ Necessary for USA &amp; Canada
                             <td>Nominal
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Bond, Convertible                            </td>
                             <td>Total nominal value of a bond or convertible bond position, or the number of bonds held multiplied by the bond's face value</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -482,11 +438,7 @@ Necessary for USA &amp; Canada
                             <td>TotalVotingRights
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Equity                            </td>
                             <td>Total amount of voting rights in circulation</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -500,11 +452,7 @@ Defaults to TotalVotingShares if not provided.
                             <td>TotalVotingShares
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Equity                            </td>
                             <td>Total amount of outstanding shares with voting rights attached in circulation</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
@@ -518,11 +466,7 @@ Required for: Kenya, Kuwait, Malaysia, Thailand
                             <td>VotesPerShare
                             </td>
                             <td>
-                                    All
-                                        <br />
-                                        
-                                        <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
-                            </td>
+Equity                            </td>
                             <td>Number of Votes attached to a single share</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
