@@ -175,7 +175,8 @@ Only used in disclosure forms.
                                 <a href="https://github.com/fundapps/api-examples#data-types">String</a>
                             </td>
                             <td>
-Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Future, Index, Option, Rights, StructuredProduct, Swap, Unit, Warrant.
+Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Future, Ignore, Index, Option, Rights, StructuredProduct, Swap, Unit, Warrant.
+To ignore this asset during checking, set to 'Ignore'
 
                             </td>
                         </tr>
@@ -267,7 +268,9 @@ ADR, Convertible, Rights                            </td>
                             </td>
                             <td>
 ADR, Convertible, Rights                            </td>
-                            <td><strong>Convertible</strong>: the number of equities one convertible converts into;<br /><strong>DR</strong>: the number of underlying shares represented in one DR;<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.</td>
+                            <td><strong>Convertible</strong>: the number of equities one convertible converts into;
+<br /><strong>DR</strong>: the number of underlying shares represented in one DR;
+<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Decimal</a>
                             </td>
@@ -651,7 +654,9 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Rights, Swap, Unit, Wa
                             </td>
                             <td>
 Convertible, Future, Option, Swap, Warrant                            </td>
-                            <td><strong>Convertible, Right, Warrant</strong>: Expiry date (To determine if expiry within next 60 days)<br /><strong>Physically settled derivative</strong> When the securities are to be delivered<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
+                            <td><strong>Convertible, Right, Warrant</strong>: Expiry date (To determine if expiry within next 60 days)
+<br /><strong>Physically settled derivative</strong> When the securities are to be delivered
+<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
                             <td>
                                 <a href="https://github.com/fundapps/api-examples#data-types">Date</a>
                             </td>
