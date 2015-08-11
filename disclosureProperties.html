@@ -481,63 +481,78 @@ Equity                        </td>
             <thead>
                 <tr>
                     <th>Asset Class</th>
+                    <th>Valid Underlyings</th>
                     <th>Properties</th>
                 </tr>
             </thead>
                 <tr>
                     <td>ADR</td>
+                    <td>Equity</td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, ClassSharesOutstanding, ConversionRatio, CUSIP, DRType, HoldingType, InstrumentCurrency, InstrumentName, ISIN, IssuerId, IssuerName, LocalTicker, LotSize, ManagedBy, Market, MarketsListedIn, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity</td>
                 </tr>
                 <tr>
                     <td>Bond</td>
+                    <td></td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, CUSIP, DurationAdjustment, HoldingType, HomeMemberState, InstrumentCurrency, InstrumentName, IsGovernmentBacked, ISIN, IsSubNational, IssuerId, IssuerName, LocalTicker, ManagedBy, Market, MarketsListedIn, MarketValue, MarketValueInInstrumentCurrency, Nominal, ParValue, Price, Quantity, TotalDebtOutstanding</td>
                 </tr>
                 <tr>
                     <td>CDS</td>
+                    <td>Bond, Index, StructuredProduct</td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, CUSIP, HoldingType, InstrumentCurrency, InstrumentName, ISIN, LocalTicker, ManagedBy, Market, MarketsListedIn, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity</td>
                 </tr>
                 <tr>
                     <td>CFD</td>
+                    <td>Bond, Convertible, Equity, Index, StructuredProduct</td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, ContractSize, CUSIP, ExercisePrice, HoldingType, InstrumentCurrency, InstrumentName, IsCashSettled, ISIN, LocalTicker, ManagedBy, Market, MarketsListedIn, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity</td>
                 </tr>
                 <tr>
                     <td>Convertible</td>
+                    <td>Equity</td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, ClassDebtOutstanding, ConversionRatio, CUSIP, Delta, HoldingType, HomeMemberState, InControlOfConversion, InstrumentCurrency, InstrumentName, IsCoveredConvertible, ISIN, IssuerId, IssuerName, LocalTicker, LotSize, ManagedBy, Market, MarketsListedIn, MarketValue, MarketValueInInstrumentCurrency, MaturityDate, Nominal, ParValue, Price, Quantity, TotalDebtOutstanding</td>
                 </tr>
                 <tr>
                     <td>Equity</td>
+                    <td></td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, ClassSharesOutstanding, CountryOfIncorporation, CountryOfIssue, CUSIP, HoldingType, HomeMemberState, InstrumentCurrency, InstrumentName, IsDeltaHedge, ISIN, IssuerId, IssuerName, LocalTicker, LotSize, ManagedBy, Market, MarketCap, MarketsListedIn, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity, TotalIssuedNominalCapital, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare</td>
                 </tr>
                 <tr>
                     <td>Future</td>
+                    <td>Bond, Convertible, Equity, Index, StructuredProduct</td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, ContractSize, CUSIP, ExercisePrice, HoldingType, InstrumentCurrency, InstrumentName, IsCashSettled, ISIN, LocalTicker, ManagedBy, Market, MarketsListedIn, MarketValue, MarketValueInInstrumentCurrency, MaturityDate, Price, Quantity</td>
                 </tr>
                 <tr>
                     <td>Index</td>
+                    <td>Equity</td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, HoldingType, InstrumentCurrency, InstrumentName, LocalTicker, ManagedBy, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity</td>
                 </tr>
                 <tr>
                     <td>Option</td>
+                    <td>Bond, Convertible, Equity, Future, Index, StructuredProduct, Unit</td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, CallOrPut, ContractSize, CUSIP, Delta, ExercisePrice, ExerciseStyle, HoldingType, InstrumentCurrency, InstrumentName, IsCashSettled, ISIN, LocalTicker, ManagedBy, Market, MarketsListedIn, MarketValue, MarketValueInInstrumentCurrency, MaturityDate, NextExerciseDate, Price, Quantity</td>
                 </tr>
                 <tr>
                     <td>Rights</td>
+                    <td>Equity</td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, ConversionRatio, HoldingType, InstrumentCurrency, InstrumentName, LocalTicker, ManagedBy, Market, MarketsListedIn, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity</td>
                 </tr>
                 <tr>
                     <td>StructuredProduct</td>
+                    <td>ADR, Bond, CDS, Convertible, Equity, Future, Index, Option, StructuredProduct</td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, HoldingType, InstrumentCurrency, InstrumentName, LocalTicker, ManagedBy, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity</td>
                 </tr>
                 <tr>
                     <td>Swap</td>
+                    <td>ADR, Bond, Convertible, Equity, Index, StructuredProduct</td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, CUSIP, HoldingType, InstrumentCurrency, InstrumentName, IsCashSettled, ISIN, LocalTicker, ManagedBy, Market, MarketsListedIn, MarketValue, MarketValueInInstrumentCurrency, MaturityDate, Price, Quantity</td>
                 </tr>
                 <tr>
                     <td>Unit</td>
+                    <td>ADR, Bond, CDS, Convertible, Equity, Future, Option, StructuredProduct</td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, ClassSharesOutstanding, CountryOfIncorporation, CUSIP, HoldingType, InstrumentCurrency, InstrumentName, ISIN, LocalTicker, ManagedBy, Market, MarketsListedIn, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity, TotalSharesOutstanding</td>
                 </tr>
                 <tr>
                     <td>Warrant</td>
+                    <td>Equity</td>
                     <td>AssetClass, AssetClassCustomer, AssetId, AssetName, CallOrPut, ContractSize, CUSIP, Delta, ExerciseStyle, HoldingType, InControlOfConversion, InstrumentCurrency, InstrumentName, IsCashSettled, IsCoveredWarrant, ISIN, IssuerId, IssuerName, LocalTicker, ManagedBy, Market, MarketsListedIn, MarketValue, MarketValueInInstrumentCurrency, MaturityDate, Price, Quantity</td>
                 </tr>
             </table>
