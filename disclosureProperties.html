@@ -132,7 +132,7 @@ Equity                        </td>
                         </td>
                         <td>Customer defined asset class</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Only used for display purposes / in forms</td>
+                        <td>Only used for display purposes / in forms<br />e.g. if you have a more granular definition</td>
                     </tr>
                     <tr>
                         <td>CallOrPut </td>
@@ -147,7 +147,7 @@ Warrant, Option <img src="/img/required.gif" title='Required for file validation
                         <td>ClassDebtOutstanding </td>
                         <td>
 Convertible                        </td>
-                        <td>The amount of outstanding debt for that class of convertible</td>
+                        <td>Amount of outstanding debt for that class of convertible</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>Only required for UK takeover calculations for convertibles</td>
                     </tr>
@@ -235,7 +235,7 @@ CFD, Future, Option                        </td>
                         <td>ExerciseStyle </td>
                         <td>
 Option, Warrant                        </td>
-                        <td>The exercise style of options and warrants</td>
+                        <td>Exercise style of options and warrants</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>Valid values: American, Bermudan, European.<br />Defaults to American if not provided</td>
                     </tr>
@@ -243,16 +243,16 @@ Option, Warrant                        </td>
                         <td>HomeMemberState </td>
                         <td>
 Bond, Convertible, Equity                        </td>
-                        <td>The chosen home member state of the issuer</td>
+                        <td>Chosen home member state of the issuer</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>If not provided, Rapptr tries to look it up in the <a href="http://mifiddatabase.esma.europa.eu/Index.aspx?sectionlinks_id=14" target="_blank">ESMA list</a></td>
                     </tr>
                     <tr>
                         <td>InControlOfConversion </td>
                         <td>
-Warrant, Convertible <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
+Convertible, Warrant <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
                         </td>
-                        <td>True if the holder has control over the conditions of conversion (for convertibles) or exercise (for warrants)</td>
+                        <td>If the holder has control over the conditions of conversion (for convertibles) or exercise (for warrants)</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td>Some countries require convertibles &amp; warrants to be counted if the conditions for conversion are within the control of the parties (e.g. UK)</td>
                     </tr>
@@ -273,7 +273,7 @@ Warrant, Convertible <img src="/img/required.gif" title='Required for file valid
                         <td>
                                 All
                         </td>
-                        <td>An identifier to link assets to instruments, and instruments to Underlying instruments</td>
+                        <td>Identifier to link assets to instruments and instruments to Underlying instruments</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td><strong>Must be unique for every instrument in one upload</strong></td>
                     </tr>
@@ -333,7 +333,7 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Swap, Unit, Warrant   
                         <td>IsSubNational </td>
                         <td>
 Bond                        </td>
-                        <td>Whether a bond is issued by a country or a state (True = By a state, False = by a country), for sovereign debt rules</td>
+                        <td>If the bond is issued by a country or a state (True = By a state, False = by a country), for sovereign debt rules</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td>Only required if you can't match the sovereign issuer name used in Issuer to <a href="http://www.esma.europa.eu/page/Net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers</td>
                     </tr>
@@ -349,7 +349,7 @@ ADR, Bond, Convertible, Equity, Warrant                        </td>
                         <td>IssuerName </td>
                         <td>
 ADR, Bond, Convertible, Equity, Warrant                        </td>
-                        <td>The name of the issuer of the instrument</td>
+                        <td>Name of the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>Not needed if you're using the name as the IssuerId</td>
                     </tr>
@@ -366,7 +366,7 @@ ADR, Bond, Convertible, Equity, Warrant                        </td>
                         <td>LotSize </td>
                         <td>
 ADR, Convertible, Equity                        </td>
-                        <td>Number of Shares in each lot or trading unit</td>
+                        <td>Number of shares in each lot or trading unit</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>Required for: Short selling in Japan</td>
                     </tr>
@@ -406,7 +406,7 @@ Convertible, Future, Option, Swap, Warrant                        </td>
                         <td>NextExerciseDate </td>
                         <td>
 Option                        </td>
-                        <td>The next date where an option is exercisable. For American options: Maturity date </td>
+                        <td>Next date where an option is exercisable. For American options: Maturity date </td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Date</a></td>
                         <td>Defaults to MaturityDate if not provided.</td>
                     </tr>
@@ -439,15 +439,15 @@ Bond, Convertible                        </td>
                         <td>TotalDebtOutstanding </td>
                         <td>
 Bond, Convertible                        </td>
-                        <td>Total debt outstanding of an Issuer in instrument currency, for Sovereign debt rules</td>
+                        <td>Total amount of debt outstanding of an issuer in instrument currency, for sovereign debt rules</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
-                        <td>Only required if you can't match the Sovereign issuer name used in Issuer to <a href="http://www.esma.europa.eu/page/Net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of Sovereign Issuers</td>
+                        <td>Only required if you can't match the sovereign issuer name used in Issuer to <a href="http://www.esma.europa.eu/page/Net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers</td>
                     </tr>
                     <tr>
                         <td>TotalIssuedNominalCapital </td>
                         <td>
 Equity                        </td>
-                        <td>The total issued nominal share capital across all share classes in instrument currency</td>
+                        <td>Total amount of issued nominal share capital across all share classes in instrument currency</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>Required for: Netherlands, Denmark, Egypt (Nominal issued capital regulation)</td>
                     </tr>
