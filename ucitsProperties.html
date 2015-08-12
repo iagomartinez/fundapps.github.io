@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>FundApps: Properties required for UCITS</title>
+        <title>FundApps: Properties required for UCITS IE</title>
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="stylesheets/styles.css">
@@ -14,7 +14,7 @@
     </head>
     <body>
         <p><a href="/"><img src="/img/fundapps_logo.png" alt="Logo" /></a></p>
-        <h1>Properties required for UCITS</h1>
+        <h1>Properties required for UCITS IE</h1>
         <p>
             For information on integrating via API, please see <a href="https://github.com/fundapps/api-examples" rel="nofollow">our GitHub repository</a>. For all other information on Rapptr please see our <a href="https://fundapps.zendesk.com/hc/en-us" rel="nofollow">Zendesk HelpCentre</a>
         </p>
@@ -172,11 +172,20 @@
                         <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Deposit, Equity, Forward, Future, FxForward, Index, Option, Rights, StructuredProduct, Swap, Unit, Warrant.<br />To ignore this asset during checking, set to 'Ignore'</td>
                     </tr>
                     <tr>
+                        <td>AssetClassCustomer </td>
+                        <td>
+                                All
+                        </td>
+                        <td>Customer defined asset class</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Only used for display purposes / in forms<br />e.g. if you have a more granular definition</td>
+                    </tr>
+                    <tr>
                         <td>CallOrPut </td>
                         <td>
 Warrant, Option <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
                         </td>
-                        <td>If an option / warrant is Call or Put</td>
+                        <td>If an option / warrant is call or put</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>Valid values: Call, Put.</td>
                     </tr>
@@ -192,9 +201,9 @@ Unit                        </td>
                         <td>ContractSize </td>
                         <td>
 CFD, Future, Option, Warrant                        </td>
-                        <td>Contract size of a derivative e.g. 1000 would mean every option represents 1000 of the underlying. (If relevant, this should be in Instrument currency)</td>
+                        <td>Contract size of a derivative. If relevant, this should be in instrument currency</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
-                        <td></td>
+                        <td>e.g. 1000 would mean every option represents 1000 of the underlying.</td>
                     </tr>
                     <tr>
                         <td>ConversionRatio </td>
@@ -270,12 +279,21 @@ Unit                        </td>
                         <td>
                                 All
                                     <br />
-                                    StructuredProduct, Index
+                                    Index, StructuredProduct
                                     <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
                         </td>
-                        <td>Currency the Instrument is denominated in</td>
+                        <td>Currency the instrument is denominated in</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>Valid values: <a href="http://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a> currency codes.</td>
+                    </tr>
+                    <tr>
+                        <td>InstrumentId <img src="/img/required.gif" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Identifier to link assets to instruments and instruments to Underlying instruments</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td><strong>Must be unique for every instrument in one upload</strong></td>
                     </tr>
                     <tr>
                         <td>InstrumentName <img src="/img/required.gif" title='Required for file validation to pass' alt="required" /></td>
@@ -370,17 +388,17 @@ ADR, Bond, Convertible, Equity, Unit, Warrant                        </td>
                         <td>IssuerId </td>
                         <td>
 ADR, Bond, Convertible, Equity, Warrant                        </td>
-                        <td>Unique identifier for the issuer of the Instrument</td>
+                        <td>Unique identifier for the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Defaults to Issuer if not provided.<br />This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. (You could use the Issuers LEI here)</td>
+                        <td>Defaults to Issuer if not provided.<br />This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. You could use the issuer's LEI here</td>
                     </tr>
                     <tr>
                         <td>IssuerName </td>
                         <td>
 ADR, Bond, Convertible, Equity, Warrant                        </td>
-                        <td>The name of the Issuer of the Instrument</td>
+                        <td>Name of the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Not needed if you're using the Name as the IssuerId</td>
+                        <td>Not needed if you're using the name as the IssuerId</td>
                     </tr>
                     <tr>
                         <td>IssuerRating </td>
@@ -410,7 +428,7 @@ ADR, Bond, Convertible, Equity, Unit, Warrant                        </td>
                         <td>Market </td>
                         <td>
 ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Rights, Swap, Unit, Warrant                        </td>
-                        <td>Market identification code for the market this Instrument is traded on</td>
+                        <td>Market identification code for the market this instrument is traded on</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td><a href="http://www.iso15022.org/mic/homepagemic.htm" target="_blank">ISO 10383 code</a> (MIC). Used as a lookup to calculate listing country and also for certain rules to see if market is in a list of specific markets. For securities with no market, use value: XXXX</td>
                     </tr>
@@ -418,9 +436,9 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Rights, Swap, Unit, Wa
                         <td>MaturityDate </td>
                         <td>
 Convertible, Future, Option, Swap, Warrant                        </td>
-                        <td><strong>Convertible, Right, Warrant</strong>: Expiry date (To determine if expiry within next 60 days)<br /><strong>Physically settled derivative</strong> When the securities are to be delivered<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
+                        <td><strong>Convertible, Right, Warrant</strong>: Expiry date<br /><strong>Physically settled derivative</strong> When the securities are to be delivered<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Date</a></td>
-                        <td>Necessary for USA &amp; Canada</td>
+                        <td>Necessary for USA &amp; Canada to determine if expiry within next 60 days</td>
                     </tr>
                     <tr>
                         <td>Nominal </td>
@@ -443,7 +461,7 @@ Unit                        </td>
                         <td>
                                 All
                         </td>
-                        <td>Price of the instrument in Instrument Currency</td>
+                        <td>Price of the instrument in instrument currency</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td></td>
                     </tr>
@@ -507,87 +525,124 @@ Equity                        </td>
                         <td>VotesPerShare </td>
                         <td>
 Equity                        </td>
-                        <td>Number of Votes attached to a single share</td>
+                        <td>Number of votes attached to a single share</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td></td>
                     </tr>
                 </tbody>
             </table>
-        <h2>Properties valid for each AssetClass</h2>
+        <h2 id="globalProperties">Properties valid for ALL AssetClasses</h2>
+        <p>AssetClass, AssetClassCustomer, AssetId, AssetName, CollateralCounterparty, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentId, InstrumentName, IsCollateral, IsExcludedFromLeverage, IsListed, IsOTC, IsShareClassHedge, IssuerDomicile, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, PnL, Price, Quantity</p>
+        <h2 id="byClass">Properties valid for each AssetClass</h2>
         <table>
             <thead>
                 <tr>
                     <th>Asset Class</th>
+                    <th>Valid Underlyings</th>
                     <th>Properties</th>
                 </tr>
             </thead>
                 <tr>
                     <td>ADR</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, ConversionRatio, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCollateral, IsExcludedFromLeverage, ISIN, IsListed, IsOTC, IsShareClassHedge, IssueDate, IssuerDomicile, IssuerGroup, IssuerId, IssuerName, IssuerRating, ListingDate, Market, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, PnL, Price, Quantity, SecurityIs144A</td>
+                    <td>Equity 
+<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>ConversionRatio, ISIN, IssueDate, IssuerGroup, IssuerId, IssuerName, IssuerRating, ListingDate, Market, SecurityIs144A</td>
                 </tr>
                 <tr>
                     <td>Bond</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCollateral, IsCovered, IsExcludedFromLeverage, IsGovernmentBacked, ISIN, IsListed, IsOTC, IsShareClassHedge, IssueDate, IssuerDomicile, IssuerGroup, IssuerId, IssuerName, IssuerRating, ListingDate, Market, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, Nominal, PnL, Price, Quantity, SecurityIs144A, TotalDebtSecurities</td>
+                    <td> 
+                                        </td>
+                    <td>IsCovered, IsGovernmentBacked, ISIN, IssueDate, IssuerGroup, IssuerId, IssuerName, IssuerRating, ListingDate, Market, Nominal, SecurityIs144A, TotalDebtSecurities</td>
                 </tr>
                 <tr>
                     <td>CDS</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCollateral, IsExcludedFromLeverage, ISIN, IsListed, IsOTC, IsShareClassHedge, IssuerDomicile, Market, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, PnL, Price, Quantity</td>
+                    <td>Bond, Index, StructuredProduct 
+<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>ISIN, Market</td>
                 </tr>
                 <tr>
                     <td>CFD</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, ContractSize, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCashSettled, IsCollateral, IsExcludedFromLeverage, ISIN, IsListed, IsOTC, IsShareClassHedge, IssuerDomicile, Market, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, PnL, Price, Quantity</td>
+                    <td>Bond, Convertible, Equity, Index, StructuredProduct 
+<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>ContractSize, IsCashSettled, ISIN, Market</td>
                 </tr>
                 <tr>
                     <td>Convertible</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, ConversionRatio, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, Delta, InstrumentCurrency, InstrumentName, IsCollateral, IsExcludedFromLeverage, ISIN, IsListed, IsOTC, IsShareClassHedge, IssueDate, IssuerDomicile, IssuerGroup, IssuerId, IssuerName, IssuerRating, ListingDate, Market, MarketValue, MarketValueInInstrumentCurrency, MaturityDate, MTM, NettingAgreement, Nominal, PnL, Price, Quantity, SecurityIs144A</td>
+                    <td>Equity 
+<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>ConversionRatio, Delta, ISIN, IssueDate, IssuerGroup, IssuerId, IssuerName, IssuerRating, ListingDate, Market, MaturityDate, Nominal, SecurityIs144A</td>
                 </tr>
                 <tr>
                     <td>Deposit</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCollateral, IsExcludedFromLeverage, IsListed, IsOTC, IsShareClassHedge, IssuerDomicile, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, PnL, Price, Quantity, RepayableOrWithdrawable</td>
+                    <td> 
+                                        </td>
+                    <td>RepayableOrWithdrawable</td>
                 </tr>
                 <tr>
                     <td>Equity</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCollateral, IsExcludedFromLeverage, ISIN, IsListed, IsOTC, IsShareClassHedge, IssueDate, IssuerDomicile, IssuerGroup, IssuerId, IssuerName, IssuerRating, ListingDate, Market, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, PnL, Price, Quantity, SecurityIs144A, TotalNonVotingShares, TotalVotingShares, VotesPerShare</td>
+                    <td> 
+                                        </td>
+                    <td>ISIN, IssueDate, IssuerGroup, IssuerId, IssuerName, IssuerRating, ListingDate, Market, SecurityIs144A, TotalNonVotingShares, TotalVotingShares, VotesPerShare</td>
                 </tr>
                 <tr>
                     <td>Forward</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCollateral, IsExcludedFromLeverage, IsListed, IsOTC, IsShareClassHedge, IssuerDomicile, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, PnL, Price, Quantity</td>
+                    <td>Bond, Convertible, Equity, Index, StructuredProduct 
+<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>Future</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, ContractSize, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCashSettled, IsCollateral, IsExcludedFromLeverage, ISIN, IsListed, IsOTC, IsShareClassHedge, IssuerDomicile, Market, MarketValue, MarketValueInInstrumentCurrency, MaturityDate, MTM, NettingAgreement, PnL, Price, Quantity</td>
+                    <td>Bond, Convertible, Equity, Index, StructuredProduct 
+<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>ContractSize, IsCashSettled, ISIN, Market, MaturityDate</td>
                 </tr>
                 <tr>
                     <td>FxForward</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCollateral, IsExcludedFromLeverage, IsListed, IsOTC, IsShareClassHedge, IssuerDomicile, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, PnL, Price, Quantity</td>
+                    <td> 
+                                        </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>Index</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCollateral, IsExcludedFromLeverage, IsListed, IsOTC, IsShareClassHedge, IssuerDomicile, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, PnL, Price, Quantity</td>
+                    <td>Equity 
+                    <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>Option</td>
-                    <td>AssetClass, AssetId, AssetName, CallOrPut, CollateralCounterparty, ContractSize, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, Delta, InstrumentCurrency, InstrumentName, IsCashSettled, IsCollateral, IsExcludedFromLeverage, ISIN, IsListed, IsOTC, IsShareClassHedge, IssuerDomicile, Market, MarketValue, MarketValueInInstrumentCurrency, MaturityDate, MTM, NettingAgreement, PnL, Price, Quantity</td>
+                    <td>Bond, Convertible, Equity, Future, Index, StructuredProduct, Unit 
+<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                    <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <td>CallOrPut, ContractSize, Delta, IsCashSettled, ISIN, Market, MaturityDate</td>
                 </tr>
                 <tr>
                     <td>Rights</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, ConversionRatio, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCollateral, IsExcludedFromLeverage, IsListed, IsOTC, IsShareClassHedge, IssuerDomicile, Market, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, PnL, Price, Quantity</td>
+                    <td>Equity 
+<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>ConversionRatio, Market</td>
                 </tr>
                 <tr>
                     <td>StructuredProduct</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCollateral, IsExcludedFromLeverage, IsListed, IsOTC, IsShareClassHedge, IssuerDomicile, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, PnL, Price, Quantity</td>
+                    <td>ADR, Bond, CDS, Convertible, Equity, Forward, Future, Index, Option, StructuredProduct 
+                    <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>Swap</td>
-                    <td>AssetClass, AssetId, AssetName, CollateralCounterparty, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, InstrumentCurrency, InstrumentName, IsCashSettled, IsCollateral, IsExcludedFromLeverage, ISIN, IsListed, IsOTC, IsShareClassHedge, IssuerDomicile, Market, MarketValue, MarketValueInInstrumentCurrency, MaturityDate, MTM, NettingAgreement, PnL, Price, Quantity</td>
+                    <td>ADR, Bond, Convertible, Equity, Index, StructuredProduct 
+<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                    <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <td>IsCashSettled, ISIN, Market, MaturityDate</td>
                 </tr>
                 <tr>
                     <td>Unit</td>
-                    <td>AssetClass, AssetId, AssetName, CanInvestGreater10InOtherOpenCIS, CollateralCounterparty, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, HasUnitsInOtherSubFunds, InstrumentCurrency, InstrumentName, IsCollateral, IsExcludedFromLeverage, ISIN, IsListed, IsOTC, IsShareClassHedge, IssueDate, IssuerDomicile, IssuerGroup, IssuerRating, IsUcits, ListingDate, Market, MarketValue, MarketValueInInstrumentCurrency, MTM, NettingAgreement, ParentUmbrellaId, PnL, Price, Quantity, SecurityIs144A, TotalUmbrellaUnits, TotalUnits</td>
+                    <td>ADR, Bond, CDS, Convertible, Equity, Forward, Future, Option, StructuredProduct 
+                    <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <td>CanInvestGreater10InOtherOpenCIS, HasUnitsInOtherSubFunds, ISIN, IssueDate, IssuerGroup, IssuerRating, IsUcits, ListingDate, Market, ParentUmbrellaId, SecurityIs144A, TotalUmbrellaUnits, TotalUnits</td>
                 </tr>
                 <tr>
                     <td>Warrant</td>
-                    <td>AssetClass, AssetId, AssetName, CallOrPut, CollateralCounterparty, ContractSize, Counterparty, CounterpartyDomicile, CounterpartyGroup, CounterpartyIsCreditInstitution, CounterpartyRating, DaysToListing, Delta, InstrumentCurrency, InstrumentName, IsCashSettled, IsCollateral, IsExcludedFromLeverage, ISIN, IsListed, IsOTC, IsShareClassHedge, IssueDate, IssuerDomicile, IssuerGroup, IssuerId, IssuerName, IssuerRating, ListingDate, Market, MarketValue, MarketValueInInstrumentCurrency, MaturityDate, MTM, NettingAgreement, PnL, Price, Quantity, SecurityIs144A</td>
+                    <td>Equity 
+<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>CallOrPut, ContractSize, Delta, IsCashSettled, ISIN, IssueDate, IssuerGroup, IssuerId, IssuerName, IssuerRating, ListingDate, Market, MaturityDate, SecurityIs144A</td>
                 </tr>
             </table>
         <script src="javascripts/scale.fix.js"></script>
