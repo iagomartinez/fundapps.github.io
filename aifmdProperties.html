@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>FundApps: Properties required for AIFMD</title>
+        <title>FundApps: Properties required for Aifmd</title>
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="stylesheets/styles.css">
@@ -14,7 +14,7 @@
     </head>
     <body>
         <p><a href="/"><img src="/img/fundapps_logo.png" alt="Logo" /></a></p>
-        <h1>Properties required for AIFMD</h1>
+        <h1>Properties required for Aifmd</h1>
         <p>
             For information on integrating via API, please see <a href="https://github.com/fundapps/api-examples" rel="nofollow">our GitHub repository</a>. For all other information on Rapptr please see our <a href="https://fundapps.zendesk.com/hc/en-us" rel="nofollow">Zendesk HelpCentre</a>
         </p>
@@ -38,8 +38,7 @@
                         </td>
                         <td>Unique ID of the asset</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.
-<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
+                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
                     </tr>
                     <tr>
                         <td>AssetName <img src="/img/required.gif" title='Required for file validation to pass' alt="required" /></td>
@@ -116,8 +115,7 @@
                         </td>
                         <td>Asset class (e.g. Equity, Bond, CFD etc.)</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Forward, Future, Index, Option, Rights, StructuredProduct, Swap, Unit, Warrant.
-<br />To ignore this asset during checking, set to 'Ignore'</td>
+                        <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Forward, Future, Index, Option, Rights, StructuredProduct, Swap, Unit, Warrant.<br />To ignore this asset during checking, set to 'Ignore'</td>
                     </tr>
                     <tr>
                         <td>AssetClassCustomer </td>
@@ -126,8 +124,7 @@
                         </td>
                         <td>Customer defined asset class</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Only used for display purposes / in forms
-<br />e.g. if you have a more granular definition</td>
+                        <td>Only used for display purposes / in forms<br />e.g. if you have a more granular definition</td>
                     </tr>
                     <tr>
                         <td>CallOrPut </td>
@@ -150,9 +147,7 @@ CFD, Future, Option, Warrant                        </td>
                         <td>ConversionRatio </td>
                         <td>
 ADR, Convertible, Rights                        </td>
-                        <td><strong>Convertible</strong>: the number of equities one convertible converts into;
-<br /><strong>DR</strong>: the number of underlying shares represented in one DR;
-<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.</td>
+                        <td><strong>Convertible</strong>: the number of equities one convertible converts into;<br /><strong>DR</strong>: the number of underlying shares represented in one DR;<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td></td>
                     </tr>
@@ -260,8 +255,7 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Swap, Unit, Warrant   
 ADR, Bond, Convertible, Equity, Warrant                        </td>
                         <td>Unique identifier for the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Defaults to Issuer if not provided.
-<br />This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. You could use the issuer's LEI here</td>
+                        <td>Defaults to Issuer if not provided.<br />This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. You could use the issuer's LEI here</td>
                     </tr>
                     <tr>
                         <td>IssuerName </td>
@@ -283,9 +277,7 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Rights, Swap, Unit, Wa
                         <td>MaturityDate </td>
                         <td>
 Convertible, Future, Option, Swap, Warrant                        </td>
-                        <td><strong>Convertible, Right, Warrant</strong>: Expiry date
-<br /><strong>Physically settled derivative</strong> When the securities are to be delivered
-<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
+                        <td><strong>Convertible, Right, Warrant</strong>: Expiry date<br /><strong>Physically settled derivative</strong> When the securities are to be delivered<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Date</a></td>
                         <td>Necessary for USA &amp; Canada to determine if expiry within next 60 days</td>
                     </tr>
