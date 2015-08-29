@@ -374,7 +374,7 @@ ADR, Convertible, Equity                        </td>
                         <td>Market </td>
                         <td>
 ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Rights, Swap, Unit, Warrant                        </td>
-                        <td>Market identification code for the market this instrument is traded on</td>
+                        <td>Market identification code (MIC) for the market this instrument is traded on</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td><a href="http://www.iso15022.org/mic/homepagemic.htm" target="_blank">ISO 10383 code</a> (MIC). Used as a lookup to calculate listing country and also for certain rules to see if market is in a list of specific markets. For securities with no market, use value: XXXX</td>
                     </tr>
@@ -390,7 +390,7 @@ Equity                        </td>
                         <td>MarketsListedIn </td>
                         <td>
 ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Rights, Swap, Unit, Warrant                        </td>
-                        <td>List of markets (MICs) where the issuer is listed</td>
+                        <td>List of market identification codes (MICs) where the instrument is listed</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">List</a></td>
                         <td><a href="http://www.iso15022.org/mic/homepagemic.htm" target="_blank">ISO 10383 code</a> (MIC). For securities with no market, use value: XXXX</td>
                     </tr>
