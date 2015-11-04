@@ -445,8 +445,8 @@ CDS, Future, Option, Swap                        </td>
                     <tr>
                         <td>ParValue </td>
                         <td>
-Bond, Convertible                        </td>
-                        <td>Price of a security when originally issued and bearing no relation to the market price, also known as par or face value (or the underlying if a derivative/convertible/warrant) in instrument currency</td>
+Equity                        </td>
+                        <td>Price of an equity security when originally issued and bearing no relation to the market price.</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>Required for: Netherlands, Denmark, Egypt (Nominal issued capital regulation)</td>
                     </tr>
@@ -530,7 +530,7 @@ Equity, Unit                        </td>
                     <td>Bond</td>
                     <td> 
                                         </td>
-                    <td>CountryOfIssue, CUSIP, DurationAdjustment, FaceValue, HomeMemberState, IsGovernmentBacked, ISIN, IsSubNational, IssuerId, IssuerName, Market, MarketsListedIn, ParValue, TotalDebtOutstanding</td>
+                    <td>CountryOfIssue, CUSIP, DurationAdjustment, FaceValue, HomeMemberState, IsGovernmentBacked, ISIN, IsSubNational, IssuerId, IssuerName, Market, MarketsListedIn, TotalDebtOutstanding</td>
                 </tr>
                 <tr>
                     <td>CDS</td>
@@ -548,13 +548,13 @@ Equity, Unit                        </td>
                     <td>Convertible</td>
                     <td>Equity 
 <img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
-                    <td>ClassDebtOutstanding, ConversionRatio, CUSIP, Delta, FaceValue, HomeMemberState, InControlOfConversion, IsCoveredConvertible, ISIN, IssuerId, IssuerName, LotSize, Market, MarketsListedIn, MaturityDate, ParValue, TotalDebtOutstanding</td>
+                    <td>ClassDebtOutstanding, ConversionRatio, CUSIP, Delta, FaceValue, HomeMemberState, InControlOfConversion, IsCoveredConvertible, ISIN, IssuerId, IssuerName, LotSize, Market, MarketsListedIn, MaturityDate, TotalDebtOutstanding</td>
                 </tr>
                 <tr>
                     <td>Equity</td>
                     <td> 
                                         </td>
-                    <td>ClassSharesOutstanding, CountryOfIncorporation, CountryOfIssue, CUSIP, HomeMemberState, IsDeltaHedge, ISIN, IssuerId, IssuerName, LotSize, Market, MarketCap, MarketsListedIn, TotalIssuedNominalCapital, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare</td>
+                    <td>ClassSharesOutstanding, CountryOfIncorporation, CountryOfIssue, CUSIP, HomeMemberState, IsDeltaHedge, ISIN, IssuerId, IssuerName, LotSize, Market, MarketCap, MarketsListedIn, ParValue, TotalIssuedNominalCapital, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare</td>
                 </tr>
                 <tr>
                     <td>Future</td>
