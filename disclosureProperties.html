@@ -224,14 +224,6 @@ Bond                        </td>
                         <td>This is used for calculating the appropriate exposure for EU Sovereign Debt Short Selling Regulation.</td>
                     </tr>
                     <tr>
-                        <td>ETFStructure </td>
-                        <td>
-Unit                        </td>
-                        <td>How the ETF is structured.</td>
-                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Valid values: ETN, Grantor, Open, Partnership, UIT.</td>
-                    </tr>
-                    <tr>
                         <td>ExercisePrice </td>
                         <td>
 CFD, Future, Option                        </td>
@@ -518,6 +510,37 @@ Equity, Unit                        </td>
                     </tr>
                 </tbody>
             </table>
+            <h2 id="InstrumentComponentProperties">InstrumentComponent Properties</h2>
+ <p>An InstrumentComponent is a component of an index / basket / structured product</p>             <table>
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Applies To</th>
+                        <th>Description</th>
+                        <th>Data type</th>
+                        <th>Valid values &amp; notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>InstrumentId <img src="/img/required.gif" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td></td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Weighting </td>
+                        <td>
+ADR, Bond, Convertible, Equity, Index <img src='./img/required.gif' title='Required for file validation to pass' alt='required' />, StructuredProduct, Unit <img src='./img/required.gif' title='Required for file validation to pass' alt='required' />                        </td>
+                        <td>Weighting of the component in the structured product. If not specified, we will default this to a value of 1.</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         <h2 id="globalProperties">Properties valid for ALL AssetClasses</h2>
         <p>AssetClass, AssetClassCustomer, AssetId, AssetName, HoldingType, InstrumentCurrency, InstrumentId, InstrumentName, LocalTicker, ManagedBy, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity, TitleOfClass</p>
         <h2 id="byClass">Properties valid for each AssetClass</h2>
@@ -533,13 +556,13 @@ Equity, Unit                        </td>
                     <td>ADR</td>
                     <td>Equity 
 <img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
-                    <td>ClassSharesOutstanding, ConversionRatio, CUSIP, DRType, ISIN, IssuerId, IssuerName, LotSize, Market, MarketsListedIn</td>
+                    <td>ClassSharesOutstanding, ConversionRatio, CUSIP, DRType, ISIN, IssuerId, IssuerName, LotSize, Market, MarketsListedIn, Weighting</td>
                 </tr>
                 <tr>
                     <td>Bond</td>
                     <td> 
                                         </td>
-                    <td>CountryOfIssue, CUSIP, DurationAdjustment, FaceValue, HomeMemberState, IsGovernmentBacked, ISIN, IsSubNational, IssuerId, IssuerName, Market, MarketsListedIn, TotalDebtOutstanding</td>
+                    <td>CountryOfIssue, CUSIP, DurationAdjustment, FaceValue, HomeMemberState, IsGovernmentBacked, ISIN, IsSubNational, IssuerId, IssuerName, Market, MarketsListedIn, TotalDebtOutstanding, Weighting</td>
                 </tr>
                 <tr>
                     <td>CDS</td>
@@ -557,13 +580,13 @@ Equity, Unit                        </td>
                     <td>Convertible</td>
                     <td>Equity 
 <img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
-                    <td>ClassDebtOutstanding, ConversionRatio, CUSIP, Delta, FaceValue, HomeMemberState, InControlOfConversion, IsCoveredConvertible, ISIN, IssuerId, IssuerName, LotSize, Market, MarketsListedIn, MaturityDate, TotalDebtOutstanding</td>
+                    <td>ClassDebtOutstanding, ConversionRatio, CUSIP, Delta, FaceValue, HomeMemberState, InControlOfConversion, IsCoveredConvertible, ISIN, IssuerId, IssuerName, LotSize, Market, MarketsListedIn, MaturityDate, TotalDebtOutstanding, Weighting</td>
                 </tr>
                 <tr>
                     <td>Equity</td>
                     <td> 
                                         </td>
-                    <td>ClassSharesOutstanding, CountryOfIncorporation, CountryOfIssue, CUSIP, HomeMemberState, IsDeltaHedge, ISIN, IssuerId, IssuerName, LotSize, Market, MarketCap, MarketsListedIn, ParValue, TotalIssuedNominalCapital, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare</td>
+                    <td>ClassSharesOutstanding, CountryOfIncorporation, CountryOfIssue, CUSIP, HomeMemberState, IsDeltaHedge, ISIN, IssuerId, IssuerName, LotSize, Market, MarketCap, MarketsListedIn, ParValue, TotalIssuedNominalCapital, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
                 </tr>
                 <tr>
                     <td>Future</td>
@@ -575,7 +598,7 @@ Equity, Unit                        </td>
                     <td>Index</td>
                     <td>Bond, Equity 
                     <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
-                    <td></td>
+                    <td>Weighting</td>
                 </tr>
                 <tr>
                     <td>Option</td>
@@ -593,7 +616,7 @@ Equity, Unit                        </td>
                     <td>StructuredProduct</td>
                     <td>ADR, Bond, CDS, Convertible, Equity, Future, Index, Option, StructuredProduct 
                     <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
-                    <td></td>
+                    <td>Weighting</td>
                 </tr>
                 <tr>
                     <td>Swap</td>
@@ -605,7 +628,7 @@ Equity, Unit                        </td>
                     <td>Unit</td>
                     <td>ADR, Bond, CDS, Convertible, Equity, Future, Option, StructuredProduct 
                     <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
-                    <td>ClassSharesOutstanding, CountryOfIncorporation, CUSIP, ETFStructure, HomeMemberState, IsETF, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare</td>
+                    <td>ClassSharesOutstanding, CountryOfIncorporation, CUSIP, HomeMemberState, IsETF, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
                 </tr>
                 <tr>
                     <td>Warrant</td>
