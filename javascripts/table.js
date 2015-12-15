@@ -23,6 +23,6 @@ $(function() {
 			}
 		}
 	}
-	groupTable($('#myTable tr:has(td)'),0,3);
-	$('#myTable .deleted').remove();
+	groupTable($('.groupTable tr:has(td)'),0,3);
+	$('.groupTable .deleted').remove();
 });
