@@ -351,7 +351,7 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Swap, Unit, Warrant   
 Bond                        </td>
                         <td>If the bond is issued by a country or a state (True = By a state, False = by a country), for sovereign debt rules</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
-                        <td>Only required if you can't match the sovereign issuer name used in Issuer to <a href="http://www.esma.europa.eu/page/Net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers</td>
+                        <td>Only required if you can't match the sovereign issuer name used in Issuer to <a href="https://www.esma.europa.eu/net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers</td>
                     </tr>
                     <tr>
                         <td>IssuerId </td>
@@ -359,7 +359,7 @@ Bond                        </td>
 ADR, Bond, Convertible, Equity, Unit, Warrant                        </td>
                         <td>Unique identifier for the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Defaults to Issuer if not provided.<br />This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. You could use the issuer's LEI here.<br />For government bonds, insert the exact sovereign issuer name from <a href="http://www.esma.europa.eu/page/Net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers, if you want Rapptr to lookup the TotalDebtOutstanding automatically.<br />For Unit funds structured as an ETF, this should be the ETF itself.</td>
+                        <td>Defaults to Issuer if not provided.<br />This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. You could use the issuer's LEI here.<br />For government bonds, insert the exact sovereign issuer name from <a href="https://www.esma.europa.eu/net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers, if you want Rapptr to lookup the TotalDebtOutstanding automatically.<br />For Unit funds structured as an ETF, this should be the ETF itself.</td>
                     </tr>
                     <tr>
                         <td>IssuerName </td>
@@ -381,7 +381,7 @@ ADR, Bond, Convertible, Equity, Unit, Warrant                        </td>
                     <tr>
                         <td>LotSize </td>
                         <td>
-Equity                        </td>
+Equity, Unit                        </td>
                         <td>Number of shares in each lot or trading unit</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>Required for: Short selling in Japan</td>
@@ -466,7 +466,7 @@ Equity                        </td>
 Bond, Convertible                        </td>
                         <td>Total amount of debt outstanding of an issuer in instrument currency, for sovereign debt rules</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
-                        <td>Only required if you can't match the sovereign issuer name used in Issuer to <a href="http://www.esma.europa.eu/page/Net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers</td>
+                        <td>Only required if you can't match the sovereign issuer name used in Issuer to <a href="https://www.esma.europa.eu/net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers</td>
                     </tr>
                     <tr>
                         <td>TotalIssuedNominalCapital </td>
@@ -628,7 +628,7 @@ ADR, Bond, Convertible, Equity, Index <img src='./img/required.gif' title='Requi
                     <td>Unit</td>
                     <td>ADR, Bond, CDS, Convertible, Equity, Future, Option, StructuredProduct 
                     <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
-                    <td>ClassSharesOutstanding, CountryOfIncorporation, CUSIP, HomeMemberState, IsETF, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
+                    <td>ClassSharesOutstanding, CountryOfIncorporation, CUSIP, HomeMemberState, IsETF, ISIN, IssuerId, IssuerName, LotSize, Market, MarketsListedIn, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
                 </tr>
                 <tr>
                     <td>Warrant</td>
