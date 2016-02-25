@@ -17,7 +17,7 @@
 	<body>
   		<p><a href='/'><img src='/img/fundapps_logo.png' alt='Logo' /></a></p>
   		<h1>Disclosure Test Coverage</h1>
-  		<b>Total: 526 tests</b><br /><br />Industry Limits Argentina: Industry Limit Argentina<br />
+  		<b>Total: 541 tests</b><br /><br />Industry Limits Argentina: Industry Limit Argentina<br />
  Industry Limits Australia: Industry Limit Australia<br />
  Industry Limits Austria: Industry Limit Austria<br />
  Industry Limits Bahrain: Industry Limit Bahrain<br />
@@ -77,6 +77,7 @@
  Industry Limits Greece: Sector Limit Banking & Finance - Brokerage and Investment day 3<br />
  Industry Limits India: Industry Limit India<br />
  Industry Limits Kazakhstan: Industry Limit Kazakhstan<br />
+ Industry Limits Malta: Industry Limit Malta<br />
  Industry Limits Slovakia: Industry Limit Slovakia<br />
  Industry Limits Spain: Industry Limit Spain<br />
  Industry Limits Turkey: Industry Limit Turkey<br />
@@ -128,9 +129,14 @@
  Major Shareholding Canada-AMRS: Cross major shareholding threshold day 2<br />
  Major Shareholding Canada-EW: Cross major shareholding threshold<br />
  Major Shareholding Canada-EW: Cross major shareholding threshold day 2<br />
- Major Shareholding Canada-IR: Cross major shareholding threshold - Precondition rule<br />
+ Major Shareholding Canada-EW: Cross major shareholding threshold with CA-EW company type<br />
+ Major Shareholding Canada-EW: Unknown Entity property when SpecifiedDisclosureRegime is not stated<br />
+ Major Shareholding Canada-IR: Cross major shareholding threshold - Precondition rule - day 1 <br />
+ Major Shareholding Canada-IR: Cross major shareholding threshold - Precondition rule - day 2 <br />
+ Major Shareholding Canada-IR: Cross major shareholding threshold - Precondition rule - day 3 <br />
  Major Shareholding Canada-IR: Cross major shareholding threshold - day 1 <br />
  Major Shareholding Canada-IR: Cross major shareholding threshold - day 2<br />
+ Major Shareholding Canada-IR: Cross major shareholding threshold - day 3<br />
  Major Shareholding CaymanIslands: No thresholds<br />
  Major Shareholding Chile: Issuers below 10% should be OK<br />
  Major Shareholding Chile: Issuer goes above 10%<br />
@@ -183,7 +189,6 @@
  Major Shareholding Germany: Cross major shareholding Equity threshold WpHG 25 day 3<br />
  Major Shareholding Germany: Cross major shareholding Equity threshold WpHG 25a day 3<br />
  Major Shareholding Ghana: Cross major shareholding threshold<br />
- Major Shareholding Gibraltar: Cross major shareholding threshold<br />
  Major Shareholding Greece: Cross major shareholding threshold <br />
  Major Shareholding Greece: Cross major shareholding threshold day 2<br />
  Major Shareholding Greece: Cross major shareholding threshold per share class<br />
@@ -194,8 +199,8 @@
  Major Shareholding Hungary: Cross major shareholding threshold <br />
  Major Shareholding Hungary: Cross major shareholding threshold Day 2<br />
  Major Shareholding Hungary: Test for securities in ETFs<br />
- Major Shareholding Iceland: Aggregated Cross major shareholding threshold <br />
- Major Shareholding Iceland: Expect the unexpected <br />
+ Major Shareholding Iceland: Aggregated Cross major shareholding threshold - Day 1<br />
+ Major Shareholding Iceland: Aggregated Cross major shareholding threshold - Day 2<br />
  Major Shareholding India: Cross annual shares threshold <br />
  Major Shareholding India: Cross annual voting threshold <br />
  Major Shareholding India: Cross shares threshold day 1<br />
@@ -246,11 +251,13 @@
  Major Shareholding Lithuania: Cross major shareholding home threshold<br />
  Major Shareholding Lithuania: Cross major shareholding home threshold day 2<br />
  Major Shareholding Luxembourg: Cross major shareholding threshold<br />
+ Major Shareholding Luxembourg: Cross major shareholding threshold - Day 2<br />
  Major Shareholding Macau: Monitoring rule day 1<br />
  Major Shareholding Malaysia: Cross major shareholding threshold<br />
  Major Shareholding Malaysia: Cross major shareholding threshold day 2<br />
  Major Shareholding Malta: Cross major shareholding threshold<br />
  Major Shareholding Malta: Cross major shareholding threshold day 2<br />
+ Major Shareholding Malta: Cross major shareholding threshold ETF<br />
  Major Shareholding MarshallIslands: Monitoring rule day 1<br />
  Major Shareholding Mauritius: Cross shares threshold<br />
  Major Shareholding Mauritius: Cross shares threshold day 2<br />
@@ -336,10 +343,6 @@
  Major Shareholding Slovenia: Cross major shareholding Takeovers Act threshold day 2<br />
  Major Shareholding South Africa: Cross major shareholding s.021 threshold<br />
  Major Shareholding South Africa: Cross major shareholding s.021 threshold day 2<br />
- Major Shareholding South Africa: Cross major shareholding s.56 threshold   <br />
- Major Shareholding South Africa: Cross major shareholding s.56 threshold day 2<br />
- Major Shareholding South Africa: Cross major shareholding s.56 threshold day 3<br />
- Major Shareholding South Africa: Cross major shareholding s.56 threshold day 4<br />
  Major Shareholding South Africa: Cross major shareholding s.122 threshold<br />
  Major Shareholding South Africa: Cross major shareholding s.122 threshold day 2<br />
  Major Shareholding South Korea: Cross major shareholding threshold<br />
@@ -393,6 +396,8 @@
  Major Shareholding US-13D: Cross major shareholding threshold (Portfolio not including deemed shares in denominator)<br />
  Major Shareholding US-13D: Check that Issuers that are totally sold off still appear<br />
  Major Shareholding US-13D: Check that Issuers that are totally sold off still appear (Portfolio not including deemed shares in denominator)<br />
+ Major Shareholding US-13D: Cross major shareholding threshold with 13D company type<br />
+ Major Shareholding US-13D: Unknown Entity property when SpecifiedDisclosureRegime not stated<br />
  Major Shareholding US-13F: 1. First upload end of quarter, above $100m, should alert Disclosure<br />
  Major Shareholding US-13F: 2. First upload end of month (not quarter), above $100m, should alert Info<br />
  Major Shareholding US-13F: 3. First upload middle of month, above $100m, should alert Ok<br />
@@ -444,6 +449,7 @@
  Short Selling EU Bonds: Correct Aggregation - National<br />
  Short Selling EU Bonds: Correct Aggregation - SubNational<br />
  Short Selling EU Bonds: Mixed Mapped Issuer + Given Country Code<br />
+ Short Selling EU Bonds: Government Bond: IssuerName and IssuerID test<br />
  Short Selling EU Equity NM: Correct Aggregation<br />
  Short Selling EU Equity NM: Europe Agg<br />
  Short Selling EU Equity NM: International  Agg <br />
@@ -474,7 +480,8 @@
  Short Selling Kuwait: Short Selling Ban<br />
  Short Selling Malaysia: Short Selling Ban<br />
  Short Selling Morocco: Short Selling Ban<br />
- Short Selling Netherlands: Cross short selling threshold<br />
+ Short Selling Netherlands: Cross short selling threshold - Nominal Share Capital (day 1)<br />
+ Short Selling Netherlands: Cross short selling threshold - Nominal Share Capital (day 2)<br />
  Short Selling New Zealand: Short Selling Ban<br />
  Short Selling Pakistan: Short Selling - Permitted <br />
  Short Selling Philippines: Short Selling Ban<br />
@@ -517,7 +524,8 @@
  Takeover Ireland: Dropped off List vs Sold out<br />
  Takeover Malaysia: Cross takeover threshold<br />
  Takeover Malaysia: Cross takeover threshold day 2<br />
- Takeover Malaysia: Takeover reducing ownwership (disposal ban)<br />
+ Takeover Malaysia: Takeover reducing ownwership Day 1 (disposal ban)<br />
+ Takeover Malaysia: Takeover reducing ownwership Day 2 (disposal ban)<br />
  Takeover Qatar: Cross takeover threshold<br />
  Takeover Qatar: Cross takeover threshold day 2<br />
  Takeover SaudiArabia: Cross takeover threshold<br />
@@ -536,13 +544,20 @@
  Takeover Tunisia: Cross takeover voting threshold day 2<br />
  Takeover Tunisia: Cross takeover share capital threshold<br />
  Takeover Tunisia: Cross takeover share capital threshold day 2<br />
- Takeover UK: Have position on TakeOver list<br />
- Takeover UK: Have position on TakeOver list -Dealings<br />
- Takeover UK: Disclose when change in position in different class<br />
- Takeover UK: Disclose when change in position in different class -Dealings<br />
- Takeover UK: Nothing on list<br />
- Takeover UK: Nothing on list -Dealings<br />
- Takeover UK: Dropped off List vs Sold out<br />
+ Takeover UK: Day 1 - Percent Rule<br />
+ Takeover UK: Day 1 - Dealings Rule<br />
+ Takeover UK: Day 2 - Percent Rule<br />
+ Takeover UK: Day 2 - Dealings Rule<br />
+ Takeover UK: Day 3 - Percent Rule<br />
+ Takeover UK: Day 3 - Dealings Rule<br />
+ Takeover UK: Day 4 - Percent Rule<br />
+ Takeover UK: Day 4 - Dealings Rule<br />
+ Takeover UK: Day 5 - Percent Rule<br />
+ Takeover UK: Day 5 - Dealings Rule<br />
+ Takeover UK: Day 6 - Percent Rule<br />
+ Takeover UK: Day 6 - Dealings Rule<br />
+ Takeover UK: Day 7 - Percent Rule<br />
+ Takeover UK: Day 7 - Dealings Rule<br />
 
  	</body>	
 </html>
