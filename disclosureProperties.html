@@ -50,6 +50,24 @@
                         <td></td>
                     </tr>
                     <tr>
+                        <td>GbTakeoverIds </td>
+                        <td>
+                                All
+                        </td>
+                        <td>GB Takeovers that the asset has a role in</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>GbTakeoverIsPartOfDisclosableGroup </td>
+                        <td>
+                                All
+                        </td>
+                        <td>Asset is part of a disclosable GB takeover</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
                         <td>HoldingType </td>
                         <td>
                                 All
@@ -154,7 +172,7 @@ Convertible                        </td>
                     <tr>
                         <td>ClassSharesOutstanding </td>
                         <td>
-ADR, Equity, Unit                        </td>
+Equity, Unit                        </td>
                         <td>Total amount of shares in circulation for this share class</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>For Unit funds structured as ETFs this should reflect the number of units issued.</td>
@@ -367,7 +385,7 @@ ADR, Bond, Convertible, Equity, Unit, Warrant                        </td>
 ADR, Bond, Convertible, Equity, Unit, Warrant                        </td>
                         <td>Name of the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Not needed if you're using the name as the IssuerId. For Unit fund structured as ETFs, the IssuerName should be that of the ETFs it self.</td>
+                        <td>Defaults to IssuerId if not provided.<br />Not needed if you're using the name as the IssuerId. For Unit fund structured as ETFs, the IssuerName should be that of the ETFs it self.</td>
                     </tr>
                     <tr>
                         <td>LocalTicker </td>
@@ -542,7 +560,7 @@ ADR, Bond, Convertible, Equity, Index <img src='./img/required.gif' title='Requi
                 </tbody>
             </table>
         <h2 id="globalProperties">Properties valid for ALL AssetClasses</h2>
-        <p>AssetClass, AssetClassCustomer, AssetId, AssetName, HoldingType, InstrumentCurrency, InstrumentId, InstrumentName, LocalTicker, ManagedBy, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity, TitleOfClass</p>
+        <p>AssetClass, AssetClassCustomer, AssetId, AssetName, GbTakeoverIds, GbTakeoverIsPartOfDisclosableGroup, HoldingType, InstrumentCurrency, InstrumentId, InstrumentName, LocalTicker, ManagedBy, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity, TitleOfClass</p>
         <h2 id="byClass">Properties valid for each AssetClass</h2>
         <table>
             <thead>
@@ -556,7 +574,7 @@ ADR, Bond, Convertible, Equity, Index <img src='./img/required.gif' title='Requi
                     <td>ADR</td>
                     <td>Equity 
 <img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
-                    <td>ClassSharesOutstanding, ConversionRatio, CUSIP, DRType, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, Weighting</td>
+                    <td>ConversionRatio, CUSIP, DRType, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, Weighting</td>
                 </tr>
                 <tr>
                     <td>Bond</td>
