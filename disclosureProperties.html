@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -44,7 +44,8 @@
                         </td>
                         <td>Unique ID of the asset</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
+                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.
+<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
                     </tr>
                     <tr>
                         <td>AssetName <img src="/img/required.gif" title='Required for file validation to pass' alt="required" /></td>
@@ -62,7 +63,9 @@
                         </td>
                         <td>Direct or Indirect holding</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Only used for display purposes / in forms<br />Valid values: Direct, Indirect.<br />Used in TR1 forms</td>
+                        <td>Only used for display purposes / in forms
+<br />Valid values: Direct, Indirect.
+<br />Used in TR1 forms</td>
                     </tr>
                     <tr>
                         <td>IsDeltaHedge </td>
@@ -79,7 +82,8 @@ Equity                        </td>
                         </td>
                         <td>The manager managing the position</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Only used for display purposes / in forms<br />Used in document generation where the manager of individual assets must be disclosed, e.g. 13F</td>
+                        <td>Only used for display purposes / in forms
+<br />Used in document generation where the manager of individual assets must be disclosed, e.g. 13F</td>
                     </tr>
                     <tr>
                         <td>MarketValue </td>
@@ -129,7 +133,8 @@ Equity                        </td>
                         </td>
                         <td>Asset class (e.g. Equity, Bond, CFD etc.)</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Future, Index, Option, Rights, StructuredProduct, Swap, Unit, Warrant.<br />To ignore this asset during checking, set to 'Ignore'</td>
+                        <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Future, Index, Option, Rights, StructuredProduct, Swap, Unit, Warrant.
+<br />To ignore this asset during checking, set to 'Ignore'</td>
                     </tr>
                     <tr>
                         <td>AssetClassCustomer </td>
@@ -138,7 +143,8 @@ Equity                        </td>
                         </td>
                         <td>Customer defined asset class</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Only used for display purposes / in forms<br />Optional field to be populated with a customer's own internal asset class specification as reference</td>
+                        <td>Only used for display purposes / in forms
+<br />Optional field to be populated with a customer's own internal asset class specification as reference</td>
                     </tr>
                     <tr>
                         <td>CallOrPut </td>
@@ -177,7 +183,9 @@ CFD, Future, Option, Warrant                        </td>
                         <td>ConversionRatio </td>
                         <td>
 ADR, Convertible, Rights                        </td>
-                        <td><strong>Convertible</strong>: the number of equities one convertible converts into;<br /><strong>DR</strong>: the number of underlying shares represented in one DR;<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.</td>
+                        <td><strong>Convertible</strong>: the number of equities one convertible converts into;
+<br /><strong>DR</strong>: the number of underlying shares represented in one DR;
+<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td></td>
                     </tr>
@@ -219,7 +227,8 @@ Convertible, Option, Warrant                        </td>
 ADR                        </td>
                         <td>Type of depositary receipt</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Valid values: NVDR, P-Note, Sponsored, Unsponsored.<br />Required for: Major Thailand</td>
+                        <td>Valid values: NVDR, P-Note, Sponsored, Unsponsored.
+<br />Required for: Major Thailand</td>
                     </tr>
                     <tr>
                         <td>DurationAdjustment </td>
@@ -235,7 +244,8 @@ Bond                        </td>
 CFD, Future, Option                        </td>
                         <td>Exercise / strike price</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
-                        <td>Only used for display purposes / in forms<br />Used in TR1 forms</td>
+                        <td>Only used for display purposes / in forms
+<br />Used in TR1 forms</td>
                     </tr>
                     <tr>
                         <td>ExerciseStyle </td>
@@ -243,7 +253,8 @@ CFD, Future, Option                        </td>
 Option, Warrant                        </td>
                         <td>Exercise style of options and warrants</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Valid values: American, Bermudan, European.<br />Defaults to American if not provided</td>
+                        <td>Valid values: American, Bermudan, European.
+<br />Defaults to American if not provided</td>
                     </tr>
                     <tr>
                         <td>FaceValue </td>
@@ -365,7 +376,10 @@ Bond                        </td>
 ADR, Bond, Convertible, Equity, Unit, Warrant                        </td>
                         <td>Unique identifier for the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Defaults to Issuer if not provided.<br />This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. You could use the issuer's LEI here.<br />For government bonds, insert the exact sovereign issuer name from <a href="https://www.esma.europa.eu/net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers, if you want Rapptr to lookup the TotalDebtOutstanding automatically.<br />For Unit funds structured as an ETF, this should be the ETF itself.</td>
+                        <td>Defaults to Issuer if not provided.
+<br />This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. You could use the issuer's LEI here.
+<br />For government bonds, insert the exact sovereign issuer name from <a href="https://www.esma.europa.eu/net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers, if you want Rapptr to lookup the TotalDebtOutstanding automatically.
+<br />For Unit funds structured as an ETF, this should be the ETF itself.</td>
                     </tr>
                     <tr>
                         <td>IssuerName </td>
@@ -373,7 +387,8 @@ ADR, Bond, Convertible, Equity, Unit, Warrant                        </td>
 ADR, Bond, Convertible, Equity, Unit, Warrant                        </td>
                         <td>Name of the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Defaults to IssuerId if not provided.<br />Not needed if you're using the name as the IssuerId. For Unit fund structured as ETFs, the IssuerName should be that of the ETFs it self.</td>
+                        <td>Defaults to IssuerId if not provided.
+<br />Not needed if you're using the name as the IssuerId. For Unit fund structured as ETFs, the IssuerName should be that of the ETFs it self.</td>
                     </tr>
                     <tr>
                         <td>LocalTicker </td>
@@ -420,7 +435,9 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Rights, Swap, Unit, Wa
                         <td>MaturityDate </td>
                         <td>
 Convertible, Future, Option, Swap, Warrant                        </td>
-                        <td><strong>Convertible, Right, Warrant, Option</strong>: Expiry date<br /><strong>Physically settled derivative</strong> When the securities are to be delivered<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
+                        <td><strong>Convertible, Right, Warrant, Option</strong>: Expiry date
+<br /><strong>Physically settled derivative</strong> When the securities are to be delivered
+<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Date</a></td>
                         <td>Necessary for USA &amp; Canada to determine if expiry within next 60 days</td>
                     </tr>
@@ -543,7 +560,7 @@ Equity, Unit                        </td>
 ADR, Bond, Convertible, Equity, Index <img src='/img/required.gif' title='Required for file validation to pass' alt='required' />, StructuredProduct, Unit <img src='/img/required.gif' title='Required for file validation to pass' alt='required' />                        </td>
                         <td>Weighting of the component in the structured product. If not specified, we will default this to a value of 1.</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
-                        <td></td>
+                        <td>Allowed value range: 0 .. 1</td>
                     </tr>
                 </tbody>
             </table>
