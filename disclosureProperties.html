@@ -70,7 +70,7 @@
 Equity                        </td>
                         <td>If a short equity position is used for delta hedging purposes of long convertible bonds</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
-                        <td>Defaults to false if not provided.</td>
+                        <td>Defaults to false if not provided.<br />Used in: Short selling in Japan</td>
                     </tr>
                     <tr>
                         <td>ManagedBy </td>
@@ -460,8 +460,7 @@ Equity                        </td>
                     <tr>
                         <td>TitleOfClass </td>
                         <td>
-                                All
-                        </td>
+ADR, Bond, Convertible, Equity, Rights, Unit, Warrant                        </td>
                         <td>Title of the class of the security (e.g. 1p ORD). Used in disclosure forms</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>Only used for display purposes / in forms</td>
@@ -481,6 +480,14 @@ Equity                        </td>
                         <td>Total amount of issued nominal share capital across all share classes in instrument currency</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>Property required for jurisdictions such as the Netherlands, Denmark and Egypt, where the calculation of holdings is based on nominal share capital in an issuer. If TotalIssuedNominalCapital is not provided, the rules which use it will not run</td>
+                    </tr>
+                    <tr>
+                        <td>TotalSharesInTreasury </td>
+                        <td>
+Equity                        </td>
+                        <td>Total amount of shares held in treasury by the issuer.</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>TotalSharesOutstanding </td>
@@ -548,7 +555,7 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.gif' title='Requir
                 </tbody>
             </table>
         <h2 id="globalProperties">Properties valid for ALL AssetClasses</h2>
-        <p>AssetClass, AssetClassCustomer, AssetId, AssetName, HoldingType, InstrumentCurrency, InstrumentId, InstrumentName, LocalTicker, ManagedBy, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity, TitleOfClass</p>
+        <p>AssetClass, AssetClassCustomer, AssetId, AssetName, HoldingType, InstrumentCurrency, InstrumentId, InstrumentName, LocalTicker, ManagedBy, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity</p>
         <h2 id="byClass">Properties valid for each AssetClass</h2>
         <table>
             <thead>
@@ -562,13 +569,13 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.gif' title='Requir
                     <td>ADR</td>
                     <td>Equity 
 <img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
-                    <td>ConversionRatio, CUSIP, DRType, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, Weighting</td>
+                    <td>ConversionRatio, CUSIP, DRType, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, TitleOfClass, Weighting</td>
                 </tr>
                 <tr>
                     <td>Bond</td>
                     <td> 
                                         </td>
-                    <td>CountryOfIssue, CUSIP, DurationAdjustment, FaceValue, HomeMemberState, IsGovernmentBacked, ISIN, IsSubNational, IssuerId, IssuerName, Market, MarketsListedIn, TotalDebtOutstanding, Weighting</td>
+                    <td>CountryOfIssue, CUSIP, DurationAdjustment, FaceValue, HomeMemberState, IsGovernmentBacked, ISIN, IsSubNational, IssuerId, IssuerName, Market, MarketsListedIn, TitleOfClass, TotalDebtOutstanding, Weighting</td>
                 </tr>
                 <tr>
                     <td>CDS</td>
@@ -586,13 +593,13 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.gif' title='Requir
                     <td>Convertible</td>
                     <td>Equity 
 <img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
-                    <td>ClassDebtOutstanding, ConversionRatio, CUSIP, Delta, FaceValue, HomeMemberState, InControlOfConversion, IsCoveredConvertible, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, MaturityDate, TotalDebtOutstanding, Weighting</td>
+                    <td>ClassDebtOutstanding, ConversionRatio, CUSIP, Delta, FaceValue, HomeMemberState, InControlOfConversion, IsCoveredConvertible, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, MaturityDate, TitleOfClass, TotalDebtOutstanding, Weighting</td>
                 </tr>
                 <tr>
                     <td>Equity</td>
                     <td> 
                                         </td>
-                    <td>ClassSharesOutstanding, CountryOfIncorporation, CountryOfIssue, CUSIP, HomeMemberState, IsDeltaHedge, ISIN, IssuerId, IssuerName, LotSize, Market, MarketCap, MarketsListedIn, ParValue, TotalIssuedNominalCapital, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
+                    <td>ClassSharesOutstanding, CountryOfIncorporation, CountryOfIssue, CUSIP, HomeMemberState, IsDeltaHedge, ISIN, IssuerId, IssuerName, LotSize, Market, MarketCap, MarketsListedIn, ParValue, TitleOfClass, TotalIssuedNominalCapital, TotalSharesInTreasury, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
                 </tr>
                 <tr>
                     <td>Future</td>
@@ -616,7 +623,7 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.gif' title='Requir
                     <td>Rights</td>
                     <td>Equity 
 <img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
-                    <td>ConversionRatio, Market, MarketsListedIn</td>
+                    <td>ConversionRatio, Market, MarketsListedIn, TitleOfClass</td>
                 </tr>
                 <tr>
                     <td>StructuredProduct</td>
@@ -634,13 +641,13 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.gif' title='Requir
                     <td>Unit</td>
                     <td>ADR, Bond, CDS, Convertible, Equity, Future, Option, StructuredProduct 
                     <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
-                    <td>ClassSharesOutstanding, CountryOfIncorporation, CUSIP, HomeMemberState, IsETF, ISIN, IssuerId, IssuerName, LotSize, Market, MarketsListedIn, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
+                    <td>ClassSharesOutstanding, CountryOfIncorporation, CUSIP, HomeMemberState, IsETF, ISIN, IssuerId, IssuerName, LotSize, Market, MarketsListedIn, TitleOfClass, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
                 </tr>
                 <tr>
                     <td>Warrant</td>
                     <td>Equity 
 <img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
-                    <td>CallOrPut, ContractSize, CUSIP, Delta, ExerciseStyle, InControlOfConversion, IsCashSettled, IsCoveredWarrant, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, MaturityDate</td>
+                    <td>CallOrPut, ContractSize, CUSIP, Delta, ExerciseStyle, InControlOfConversion, IsCashSettled, IsCoveredWarrant, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, MaturityDate, TitleOfClass</td>
                 </tr>
             </table>
         <script src="javascripts/scale.fix.js"></script>
