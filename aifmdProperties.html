@@ -32,16 +32,17 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>AssetId <img src="/img/required.gif" title='Required for file validation to pass' alt="required" /></td>
+                        <td>AssetId <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
                         <td>Unique ID of the asset</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
+                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.
+<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
                     </tr>
                     <tr>
-                        <td>AssetName <img src="/img/required.gif" title='Required for file validation to pass' alt="required" /></td>
+                        <td>AssetName <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -86,7 +87,7 @@
                         <td>Should only be provided if the market value can't be provided in portfolio currency (property MarketValue). For derivatives the market value should represent the equivalent value of the underlying asset as opposed to the PnL of the contract.</td>
                     </tr>
                     <tr>
-                        <td>Quantity <img src="/img/required.gif" title='Required for file validation to pass' alt="required" /></td>
+                        <td>Quantity <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -109,13 +110,14 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>AssetClass <img src="/img/required.gif" title='Required for file validation to pass' alt="required" /></td>
+                        <td>AssetClass <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
                         <td>Asset class (e.g. Equity, Bond, CFD etc.)</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Forward, Future, Index, Option, Rights, StructuredProduct, Swap, Unit, Warrant.<br />To ignore this asset during checking, set to 'Ignore'</td>
+                        <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Forward, Future, Index, Option, Rights, StructuredProduct, Swap, Unit, Warrant.
+<br />To ignore this asset during checking, set to 'Ignore'</td>
                     </tr>
                     <tr>
                         <td>AssetClassCustomer </td>
@@ -124,12 +126,13 @@
                         </td>
                         <td>Customer defined asset class</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Only used for display purposes / in forms<br />e.g. if you have a more granular definition</td>
+                        <td>Only used for display purposes / in forms
+<br />e.g. if you have a more granular definition</td>
                     </tr>
                     <tr>
                         <td>CallOrPut </td>
                         <td>
-Warrant, Option <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
+Warrant, Option <img src="/img/required.png" title='Required for file validation to pass' alt="required" />
                         </td>
                         <td>If an option / warrant is call or put</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
@@ -147,7 +150,9 @@ CFD, Future, Option, Warrant                        </td>
                         <td>ConversionRatio </td>
                         <td>
 ADR, Convertible, Rights                        </td>
-                        <td><strong>Convertible</strong>: the number of equities one convertible converts into;<br /><strong>DR</strong>: the number of underlying shares represented in one DR;<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.</td>
+                        <td><strong>Convertible</strong>: the number of equities one convertible converts into;
+<br /><strong>DR</strong>: the number of underlying shares represented in one DR;
+<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td></td>
                     </tr>
@@ -179,7 +184,7 @@ Convertible, Option, Warrant                        </td>
                     <tr>
                         <td>InControlOfConversion </td>
                         <td>
-Convertible, Warrant <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
+Convertible, Warrant <img src="/img/required.png" title='Required for file validation to pass' alt="required" />
                         </td>
                         <td>If the holder has control over the conditions of conversion (for convertibles) or exercise (for warrants)</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
@@ -191,14 +196,14 @@ Convertible, Warrant <img src="/img/required.gif" title='Required for file valid
                                 All
                                     <br />
                                     Index, StructuredProduct
-                                    <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
+                                    <img src="/img/required.png" title='Required for file validation to pass' alt="required" />
                         </td>
                         <td>Currency the instrument is denominated in</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>Valid values: <a href="http://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a> currency codes.</td>
                     </tr>
                     <tr>
-                        <td>InstrumentId <img src="/img/required.gif" title='Required for file validation to pass' alt="required" /></td>
+                        <td>InstrumentId <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -207,7 +212,7 @@ Convertible, Warrant <img src="/img/required.gif" title='Required for file valid
                         <td><strong>Must be unique for every instrument in one upload</strong></td>
                     </tr>
                     <tr>
-                        <td>InstrumentName <img src="/img/required.gif" title='Required for file validation to pass' alt="required" /></td>
+                        <td>InstrumentName <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -226,7 +231,7 @@ Forward, Future, Option, Swap, Warrant                        </td>
                     <tr>
                         <td>IsCashSettled </td>
                         <td>
-CFD, Future, Option, Swap, Warrant <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
+CFD, Future, Option, Swap, Warrant <img src="/img/required.png" title='Required for file validation to pass' alt="required" />
                         </td>
                         <td>If the derivative is cash settled (as opposed to requiring physical delivery)</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
@@ -235,7 +240,7 @@ CFD, Future, Option, Swap, Warrant <img src="/img/required.gif" title='Required 
                     <tr>
                         <td>IsCoveredWarrant </td>
                         <td>
-Warrant <img src="/img/required.gif" title='Required for file validation to pass' alt="required" />
+Warrant <img src="/img/required.png" title='Required for file validation to pass' alt="required" />
                         </td>
                         <td>If the warrant is covered</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
@@ -255,7 +260,8 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Swap, Unit, Warrant   
 ADR, Bond, Convertible, Equity, Warrant                        </td>
                         <td>Unique identifier for the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Defaults to Issuer if not provided.<br />This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. You could use the issuer's LEI here</td>
+                        <td>Defaults to Issuer if not provided.
+<br />This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. You could use the issuer's LEI here</td>
                     </tr>
                     <tr>
                         <td>IssuerName </td>
@@ -277,7 +283,9 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, Rights, Swap, Unit, Wa
                         <td>MaturityDate </td>
                         <td>
 Convertible, Future, Option, Swap, Warrant                        </td>
-                        <td><strong>Convertible, Right, Warrant</strong>: Expiry date<br /><strong>Physically settled derivative</strong> When the securities are to be delivered<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
+                        <td><strong>Convertible, Right, Warrant</strong>: Expiry date
+<br /><strong>Physically settled derivative</strong> When the securities are to be delivered
+<br /><strong>Bond, Deposit</strong>: Maturity Date</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Date</a></td>
                         <td>Necessary for USA &amp; Canada to determine if expiry within next 60 days</td>
                     </tr>
@@ -338,7 +346,7 @@ Equity                        </td>
                 <tr>
                     <td>ADR</td>
                     <td>Equity 
-<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+<img src="/img/required.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
                     <td>ConversionRatio, ISIN, IssuerId, IssuerName, MarketsListedIn</td>
                 </tr>
                 <tr>
@@ -350,19 +358,19 @@ Equity                        </td>
                 <tr>
                     <td>CDS</td>
                     <td>Bond, Index, StructuredProduct 
-<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+<img src="/img/required.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
                     <td>ISIN, MarketsListedIn</td>
                 </tr>
                 <tr>
                     <td>CFD</td>
                     <td>Bond, Convertible, Equity, Index, StructuredProduct 
-<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+<img src="/img/required.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
                     <td>ContractSize, IsCashSettled, ISIN, MarketsListedIn</td>
                 </tr>
                 <tr>
                     <td>Convertible</td>
                     <td>Equity 
-<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+<img src="/img/required.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
                     <td>ConversionRatio, Delta, InControlOfConversion, ISIN, IssuerId, IssuerName, MarketsListedIn, MaturityDate, Nominal</td>
                 </tr>
                 <tr>
@@ -374,55 +382,55 @@ Equity                        </td>
                 <tr>
                     <td>Forward</td>
                     <td>Bond, Convertible, Equity, Index, StructuredProduct 
-<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+<img src="/img/required.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
                     <td>InterestDuration</td>
                 </tr>
                 <tr>
                     <td>Future</td>
                     <td>Bond, Convertible, Equity, Index, StructuredProduct 
-<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+<img src="/img/required.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
                     <td>ContractSize, InterestDuration, IsCashSettled, ISIN, MarketsListedIn, MaturityDate</td>
                 </tr>
                 <tr>
                     <td>Index</td>
                     <td>Equity 
-                    <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />                    </td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Option</td>
                     <td>Bond, Convertible, Equity, Future, Index, StructuredProduct, Unit 
-<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                    <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+<img src="/img/required.png" title='At least one underlying required for file validation to pass' alt="required" />                    <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />                    </td>
                     <td>CallOrPut, ContractSize, Delta, InterestDuration, IsCashSettled, ISIN, MarketsListedIn, MaturityDate</td>
                 </tr>
                 <tr>
                     <td>Rights</td>
                     <td>Equity 
-<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+<img src="/img/required.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
                     <td>ConversionRatio, MarketsListedIn</td>
                 </tr>
                 <tr>
                     <td>StructuredProduct</td>
                     <td>ADR, Bond, CDS, Convertible, Equity, Forward, Future, Index, Option, StructuredProduct 
-                    <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />                    </td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Swap</td>
                     <td>ADR, Bond, Convertible, Equity, Index, StructuredProduct 
-<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                    <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+<img src="/img/required.png" title='At least one underlying required for file validation to pass' alt="required" />                    <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />                    </td>
                     <td>InterestDuration, IsCashSettled, ISIN, MarketsListedIn, MaturityDate</td>
                 </tr>
                 <tr>
                     <td>Unit</td>
                     <td>ADR, Bond, CDS, Convertible, Equity, Forward, Future, Option, StructuredProduct 
-                    <img src="/img/multiple.gif" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />                    </td>
                     <td>CountryOfIncorporation, ISIN, MarketsListedIn</td>
                 </tr>
                 <tr>
                     <td>Warrant</td>
                     <td>Equity 
-<img src="/img/required.gif" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+<img src="/img/required.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
                     <td>CallOrPut, ContractSize, Delta, InControlOfConversion, InterestDuration, IsCashSettled, IsCoveredWarrant, ISIN, IssuerId, IssuerName, MarketsListedIn, MaturityDate</td>
                 </tr>
             </table>
