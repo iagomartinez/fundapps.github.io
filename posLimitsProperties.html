@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FundApps: Properties required for Position Limits</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <p><a href="/"><img src="/img/fundapps_logo.png" alt="Logo" /></a></p>
+        <h1>Properties required for Position Limits</h1>
+        <p>
+            The only way to be sure you are providing enough data is to go into Rapptr results and ensure you have no Missing Data - <a href="https://fundapps.zendesk.com/hc/en-us/articles/204820619-Missing-Data-The-gory-details">see here</a>.<br />
+            Rapptr will <a href="https://fundapps.zendesk.com/hc/en-us/articles/204840639">fail validation</a> if any of the properties marked with <img src="/img/required.png" /> are missing.
+        </p>
+        <p>
+            For information on integrating via API, please see <a href="https://github.com/fundapps/api-examples" rel="nofollow">our GitHub repository</a>. For all other information on Rapptr please see our <a href="https://fundapps.zendesk.com/hc/en-us" rel="nofollow">Zendesk HelpCentre</a>
+        </p>
+        <br />
+            <h2 id="AssetProperties">Asset Properties</h2>
+ <p>An asset is the specific position a portfolio has in an instrument. Instrument properties are independent of portfolio, whereas asset properties are specifc to the portfolio</p>             <table>
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Applies To</th>
+                        <th>Description</th>
+                        <th>Data type</th>
+                        <th>Valid values &amp; notes</th>
+                        <th>Rules</th>
+                        <th>Jurisdictions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AssetId <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Unique ID of the asset</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.
+<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>AssetName <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Name of the asset</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td></td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>Quantity <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Quantity of the position</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td>For credit default swaps (CDS), use a negative quantity for protection buys (which is an effective short position) and positive quantity for protection sells (which is an effective long position)</td>
+                        <td>489</td>
+                        <td><span title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, WW, ZA, ZW">88</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 id="InstrumentProperties">Instrument Properties</h2>
+ <p>An instrument is the portfolio independent information</p>             <table>
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Applies To</th>
+                        <th>Description</th>
+                        <th>Data type</th>
+                        <th>Valid values &amp; notes</th>
+                        <th>Rules</th>
+                        <th>Jurisdictions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AssetClass <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Asset class (e.g. Equity, Bond, CFD etc.)</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Future, Index, Option, PreferredEquity, Rights, StructuredProduct, Swap, Unit, Warrant.
+<br />To ignore this asset during checking, set to 'Ignore'</td>
+                        <td>489</td>
+                        <td><span title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, WW, ZA, ZW">88</span></td>
+                    </tr>
+                    <tr>
+                        <td>CallOrPut </td>
+                        <td>
+Warrant, Option <img src="/img/required.png" title='Required for file validation to pass' alt="required" />
+                        </td>
+                        <td>If an option / warrant is call or put</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Valid values: Call, Put.</td>
+                        <td>489</td>
+                        <td><span title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, WW, ZA, ZW">88</span></td>
+                    </tr>
+                    <tr>
+                        <td>ContractSize </td>
+                        <td>
+CFD, Future, Option, Warrant                        </td>
+                        <td>Contract size of a derivative. If relevant, this should be in instrument currency</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td>e.g. 1000 would mean every option represents 1000 of the underlying.</td>
+                        <td>426</td>
+                        <td><span title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, WW, ZA, ZW">88</span></td>
+                    </tr>
+                    <tr>
+                        <td>InstrumentId <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Identifier to link assets to instruments and instruments to Underlying instruments</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td><strong>Must be unique for every instrument in one upload</strong></td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>InstrumentName <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Instrument name</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td></td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>IsCashSettled </td>
+                        <td>
+CFD, Future, Option, Swap, Warrant <img src="/img/required.png" title='Required for file validation to pass' alt="required" />
+                        </td>
+                        <td>If the derivative is cash settled (as opposed to requiring physical delivery)</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
+                        <td>Most countries capture physically settled derivatives, many (but less) are interested in cash settled derivatives.</td>
+                        <td>218</td>
+                        <td><span title="AE, AR, AT, AU, BD, BE, BG, BH, BR, CA, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR, HR, HU, IE, IL, IN, IS, IT, JO, JP, KR, KW, LT, LU, LV, MA, MT, MX, MY, NL, NO, PH, PK, PL, PT, RO, SA, SE, SG, SI, SK, TH, TN, TR, UA, US, ZA">56</span></td>
+                    </tr>
+                    <tr>
+                        <td>Market </td>
+                        <td>
+ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Rights, Swap, Unit, Warrant                        </td>
+                        <td>Market identification code (MIC) for the market this instrument is traded on</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td><a href="http://www.iso15022.org/mic/homepagemic.htm" target="_blank">ISO 10383 code</a> (MIC). Used as a lookup to calculate listing country and also for certain rules to see if market is in a list of specific markets. Insert the MIC (the specific market segment) and not only the Operating MIC since the latter is the parent market venue only. For securities with no market, use value: XXXX</td>
+                        <td>47</td>
+                        <td><span title="AT, BE, BG, CN, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR, HK, HR, HU, IE, IT, KR, LT, LU, LV, MA, MT, NL, PL, PT, RO, SE, SI, SK, TW, ZA">34</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        <script src="javascripts/scale.fix.js"></script>
+    </body>
+</html>
