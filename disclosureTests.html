@@ -17,7 +17,7 @@
 	<body>
   		<p><a href='/'><img src='/img/fundapps_logo.png' alt='Logo' /></a></p>
   		<h1>Disclosure Test Coverage</h1>
-  		<b>Total: 960 tests</b><br /><br />Industry Limits Argentina: Industry Limit Argentina<br />
+  		<b>Total: 972 tests</b><br /><br />Industry Limits Argentina: Industry Limit Argentina<br />
  Industry Limits Australia: Industry Limit Australia<br />
  Industry Limits Austria: Industry Limit Austria<br />
  Industry Limits Bahrain: Industry Limit Bahrain<br />
@@ -62,9 +62,7 @@
  Industry Limits Germany: Min Limits Germany Day 2<br />
  Industry Limits Ghana: Industry Limit Ghana<br />
  Industry Limits Greece: Industry Limit Greece<br />
- Industry Limits Greece: Greek Football Prognostics Organization<br />
  Industry Limits Greece: Sector Limit Greece 1% in Media Company, or any other type of company engaged in a public sector contract procedure<br />
- Industry Limits Greece: Sector Limit Aviation<br />
  Industry Limits Greece: Sector Limit Media<br />
  Industry Limits Greece: Sector Limit Mining<br />
  Industry Limits Greece: Sector Limit Real Estate<br />
@@ -134,6 +132,7 @@
  Industry Limits Ukraine: Industry Limit Ukraine<br />
  Industry Limits UnitedArabEmirates: Industry Limit United Arab Emirates<br />
  Industry Limits UnitedKingdom: Industry Limit UK Finance<br />
+ Industry Limits UnitedKingdom: Min Limit UK<br />
  Industry Limits UnitedStates: Min Limit United States<br />
  Industry Limits Uruguay: Min Limit Uruguay<br />
  Industry Limits Venezuela: Min Limit Venezuela<br />
@@ -190,11 +189,18 @@
  Major Shareholding Botswana: Cross major shareholding threshold day 2 - Beneficial Interests<br />
  Major Shareholding Botswana: Cross major shareholding threshold day 1 - Registered Holder<br />
  Major Shareholding Botswana: Cross major shareholding threshold day 2 - Registered Holder<br />
- Major Shareholding Brazil: Cross major shareholding threshold<br />
- Major Shareholding Brazil: Cross major shareholding threshold day 2<br />
- Major Shareholding Brazil: Lookthrough ETF cross major shareholding threshold<br />
- Major Shareholding Brazil: Cross major shareholding threshold day 1 (cash-settled derivatives)<br />
- Major Shareholding Brazil: Cross major shareholding threshold day 2 (cash-settled derivatives)<br />
+ Major Shareholding Brazil: Cross major shareholding threshold - Group 1 Assets - Day 1<br />
+ Major Shareholding Brazil: Cross major shareholding threshold - Shares - Day 1<br />
+ Major Shareholding Brazil: Cross major shareholding threshold - Physically-Settled - Day 1<br />
+ Major Shareholding Brazil: Cross major shareholding threshold - Group 1 Assets - Day 2<br />
+ Major Shareholding Brazil: Cross major shareholding threshold - Shares - Day 2<br />
+ Major Shareholding Brazil: Cross major shareholding threshold - Physically-Settled - Day 2<br />
+ Major Shareholding Brazil: Lookthrough ETF cross major shareholding threshold - Group 1 Assets<br />
+ Major Shareholding Brazil: Cross major shareholding threshold - Shares - ETFs<br />
+ Major Shareholding Brazil: Cross major shareholding threshold - Physically-Settled - ETFs<br />
+ Major Shareholding Brazil: Cross major shareholding threshold - Group 2 Assets - Day 1<br />
+ Major Shareholding Brazil: Cross major shareholding threshold - Group 2 Assets - Day 2<br />
+ Major Shareholding Brazil: Lookthrough ETF cross major shareholding threshold - Group 2 Assets<br />
  Major Shareholding Bulgaria: Cross major shareholding threshold - Aggregated - Day 1<br />
  Major Shareholding Bulgaria: Cross major shareholding threshold - Aggregated - Day 2<br />
  Major Shareholding Bulgaria: Cross major shareholding - Shares - Day 1<br />
@@ -643,10 +649,13 @@
  Major Shareholding Singapore: Cross major shareholding class threshold day 2<br />
  Major Shareholding Slovakia: Cross major shareholding home threshold - Aggregated - Day 1<br />
  Major Shareholding Slovakia: Cross major shareholding home threshold - Aggregated - Day 2<br />
+ Major Shareholding Slovakia: Cross major shareholding home threshold - Aggregated - ETF<br />
  Major Shareholding Slovakia: Cross major shareholding home threshold -Financial Instruments - Day 1<br />
  Major Shareholding Slovakia: Cross major shareholding home threshold -Financial Instruments - Day 2<br />
+ Major Shareholding Slovakia: Cross major shareholding home threshold - Financial Instruments - ETF<br />
  Major Shareholding Slovakia: Cross major shareholding home threshold -Shares - Day 1<br />
  Major Shareholding Slovakia: Cross major shareholding home threshold -Shares - Day 2<br />
+ Major Shareholding Slovakia: Cross major shareholding home threshold - Shares - ETF<br />
  Major Shareholding Slovenia: Cross major shareholding threshold - Aggregated - Day 1<br />
  Major Shareholding Slovenia: Cross major shareholding threshold - Aggregated - Day 2<br />
  Major Shareholding Slovenia: Cross major shareholding - Shares - Day 1<br />
@@ -769,7 +778,7 @@
  Major Shareholding US-13F: 4. First upload end of quarter, below $100m, should alert Disclosure<br />
  Major Shareholding US-13F: 5. If PriceInUSD is missing then rule should use MarketValueInUSD<br />
  Major Shareholding US-13F: 6. Is the rule working if MarketValue is missing and Price is provided<br />
- Major Shareholding US-13F: 7. If MarketValue or Price is not provided the rule should return Unknown on 1. default value: Price<br />
+ Major Shareholding US-13F: 7. If MarketValue or Price is not provided the rule should return Unknown on 1. default value: MarketValueInInstrumentCurrency <br />
  Major Shareholding US-13F: 8. Test for asset classes, Options reference ULCUSIP and Warrants reference CUSIP<br />
  Major Shareholding US-13F: 9. Test for 13F document generation<br />
  Major Shareholding US-13G: 1. Cross major shareholding threshold 13G-10 - Day 1<br />
@@ -879,6 +888,7 @@
  Short Selling Japan: Short Sell Japan Disclosure Day 1<br />
  Short Selling Japan: Short Sell Japan Disclosure Day 2<br />
  Short Selling Japan: Short Sell Japan Ban Day 3 test for default FALSE in IsDeltaHedge<br />
+ Short Selling Japan: Short Sell Japan Disclosure Day 1 Delta Hedge<br />
  Short Selling Korea: Short Sell Disclosure<br />
  Short Selling Korea: Short Sell Disclosure Day 2<br />
  Short Selling Korea: Short Selling Ban<br />
@@ -939,6 +949,8 @@
  Takeover Ireland: Have position on TakeOver list<br />
  Takeover Ireland: Have position on TakeOver list Pref Shares<br />
  Takeover Ireland: Have position on TakeOver list Pref Shares - Day 2<br />
+ Takeover Ireland: TakeoverIE Assets Day1<br />
+ Takeover Ireland: TakeoverIE Assets Day2<br />
  Takeover Ireland: Dropped off List vs Sold out<br />
  Takeover Malaysia: Cross takeover threshold<br />
  Takeover Malaysia: Cross takeover threshold day 2<br />

@@ -1,0 +1,365 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FundApps: Properties required for Positionlimits</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <p><a href="/"><img src="/img/fundapps_logo.png" alt="Logo" /></a></p>
+        <h1>Properties required for Positionlimits</h1>
+        <p>
+            
+            Rapptr will <a href="https://fundapps.zendesk.com/hc/en-us/articles/204840639">fail validation</a> if any of the properties marked with <img src="/img/required.png" /> are missing.
+        </p>
+        <p>
+            For information on integrating via API, please see <a href="https://github.com/fundapps/api-examples" rel="nofollow">our GitHub repository</a>. For all other information on Rapptr please see our <a href="https://fundapps.zendesk.com/hc/en-us" rel="nofollow">Zendesk HelpCentre</a>
+        </p>
+        <br />
+            <h2 id="AssetProperties">Asset Properties</h2>
+ <p>An asset is the specific position a portfolio has in an instrument. Instrument properties are independent of portfolio, whereas asset properties are specifc to the portfolio</p>             <table>
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Applies To</th>
+                        <th>Description</th>
+                        <th>Data type</th>
+                        <th>Valid values &amp; notes</th>
+                        <th>Rules</th>
+                        <th>Jurisdictions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AssetId <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Unique ID of the asset</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>AssetName <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Name of the asset</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td></td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>Quantity <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Quantity of the position</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td>For credit default swaps (CDS), use a negative quantity for protection buys (which is an effective short position) and positive quantity for protection sells (which is an effective long position)</td>
+                        <td>2</td>
+                        <td><span title="US">1</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 id="InstrumentProperties">Instrument Properties</h2>
+ <p>An instrument is the portfolio independent information</p>             <table>
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Applies To</th>
+                        <th>Description</th>
+                        <th>Data type</th>
+                        <th>Valid values &amp; notes</th>
+                        <th>Rules</th>
+                        <th>Jurisdictions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AssetClass <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Asset class (e.g. Equity, Bond, CFD etc.)</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Future, Index, Option, PreferredEquity, Rights, StructuredProduct, Swap, Unit, Warrant.<br />To ignore this asset during checking, set to 'Ignore'</td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>CallOrPut </td>
+                        <td>
+Warrant, Option <img src="/img/required.png" title='Required for file validation to pass' alt="required" />
+                        </td>
+                        <td>If an option / warrant is call or put</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Valid values: Call, Put.</td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>CommoditySymbol </td>
+                        <td>
+                                All
+                        </td>
+                        <td>Exchange-specific commodity symbol (e.g. CL for NYMEX Crude Oil)</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td></td>
+                        <td>2</td>
+                        <td><span title="US">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>ContractSize </td>
+                        <td>
+CFD, Future, Option, Warrant                        </td>
+                        <td>Contract size of a derivative. If relevant, this should be in instrument currency</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td>e.g. 1000 would mean every option represents 1000 of the underlying.</td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>ConversionRatio </td>
+                        <td>
+ADR, Convertible, PreferredEquity, Rights                        </td>
+                        <td><strong>Convertible</strong>: the number of equities one convertible converts into;<br /><strong>DR</strong>: the number of underlying shares represented in one DR;<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.<br /> <strong>Preferred Equity</strong>: the number of common shares one convertible preference share converts into.</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td></td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>DeliveryMonth </td>
+                        <td>
+                                All
+                        </td>
+                        <td>Delivery month of exchange-traded derivatives in ISO8601 YYYY-MM format</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td></td>
+                        <td>2</td>
+                        <td><span title="US">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>Delta </td>
+                        <td>
+Convertible, Option, Warrant                        </td>
+                        <td>Delta of the asset (price sensitivity with relation to the underlying)</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td></td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>InstrumentCurrency </td>
+                        <td>
+                                All
+                                    <br />
+                                    Index, StructuredProduct
+                                    <img src="/img/required.png" title='Required for file validation to pass' alt="required" />
+                        </td>
+                        <td>Currency the instrument is denominated in</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Valid values: <a href="http://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a> currency codes.</td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>InstrumentId <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Identifier to link assets to instruments and instruments to Underlying instruments</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td><strong>Must be unique for every instrument in one upload</strong></td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>InstrumentName <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Instrument name</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td></td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>Market </td>
+                        <td>
+ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Rights, Swap, Unit, Warrant                        </td>
+                        <td>Market identification code (MIC) for the market this instrument is traded on</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td><a href="http://www.iso15022.org/mic/homepagemic.htm" target="_blank">ISO 10383 code</a> (MIC). Used as a lookup to calculate listing country and also for certain rules to see if market is in a list of specific markets. Insert the MIC (the specific market segment) and not only the Operating MIC since the latter is the parent market venue only. For securities with no market, use value: XXXX</td>
+                        <td>2</td>
+                        <td><span title="US">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>Price </td>
+                        <td>
+                                All
+                        </td>
+                        <td>Price of the instrument in instrument currency. For bonds and convertibles, the price must be stated as a percentage of the face value of an individual bond (since this is the way bonds are quoted on the market).</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td></td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 id="InstrumentComponentProperties">InstrumentComponent Properties</h2>
+ <p>An InstrumentComponent is a component of an index / basket / structured product</p>             <table>
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Applies To</th>
+                        <th>Description</th>
+                        <th>Data type</th>
+                        <th>Valid values &amp; notes</th>
+                        <th>Rules</th>
+                        <th>Jurisdictions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>InstrumentId <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td></td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td></td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                    <tr>
+                        <td>Weighting </td>
+                        <td>
+ADR, Bond, Convertible, Equity, Index <img src='/img/required.png' title='Required for file validation to pass' alt='required' />, PreferredEquity, StructuredProduct, Unit <img src='/img/required.png' title='Required for file validation to pass' alt='required' />                        </td>
+                        <td>Weighting of the component in the structured product. If not specified, we will default this to a value of 1.</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td>Allowed value range: 0 .. 1</td>
+                        <td>All</td>
+                        <td><span title="">All</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        <h2 id="globalProperties">Properties valid for ALL AssetClasses</h2>
+        <p>AssetClass, AssetId, AssetName, CommoditySymbol, DeliveryMonth, InstrumentCurrency, InstrumentId, InstrumentName, Price, Quantity</p>
+        <h2 id="byClass">Properties valid for each AssetClass</h2>
+        <p>Asset classes which require at least one underlying asset to pass validation are marked with <img src="/img/atleastone.png" /><br />
+        Asset classes which can have multiple underlying assets are marked with <img src="/img/multiple.png" /></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Asset Class</th>
+                    <th>Valid Underlyings</th>
+                    <th>Properties</th>
+                </tr>
+            </thead>
+                <tr>
+                    <td>ADR
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>Equity, PreferredEquity</td>
+                    <td>ConversionRatio, Market, Weighting</td>
+                </tr>
+                <tr>
+                    <td>Bond
+                                        </td>
+                    <td></td>
+                    <td>Market, Weighting</td>
+                </tr>
+                <tr>
+                    <td>CDS
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>Bond, Index, StructuredProduct</td>
+                    <td>Market</td>
+                </tr>
+                <tr>
+                    <td>CFD
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>Bond, Convertible, Equity, Index, PreferredEquity, StructuredProduct</td>
+                    <td>ContractSize, Market</td>
+                </tr>
+                <tr>
+                    <td>Convertible
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>Equity</td>
+                    <td>ConversionRatio, Delta, Market, Weighting</td>
+                </tr>
+                <tr>
+                    <td>Equity
+                                        </td>
+                    <td></td>
+                    <td>Market, Weighting</td>
+                </tr>
+                <tr>
+                    <td>Future
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>Bond, Convertible, Equity, Index, PreferredEquity, StructuredProduct</td>
+                    <td>ContractSize, Market</td>
+                </tr>
+                <tr>
+                    <td>Index
+                    <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <td>ADR, Bond, CDS, Convertible, Equity, PreferredEquity</td>
+                    <td>Weighting</td>
+                </tr>
+                <tr>
+                    <td>Option
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                    <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <td>Bond, Convertible, Equity, Future, Index, PreferredEquity, StructuredProduct, Unit</td>
+                    <td>CallOrPut, ContractSize, Delta, Market</td>
+                </tr>
+                <tr>
+                    <td>PreferredEquity
+                                        </td>
+                    <td>Equity</td>
+                    <td>ConversionRatio, Market, Weighting</td>
+                </tr>
+                <tr>
+                    <td>Rights
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>Equity</td>
+                    <td>ConversionRatio, Market</td>
+                </tr>
+                <tr>
+                    <td>StructuredProduct
+                    <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <td>ADR, Bond, CDS, Convertible, Equity, Future, Index, Option, PreferredEquity, StructuredProduct, Unit</td>
+                    <td>Weighting</td>
+                </tr>
+                <tr>
+                    <td>Swap
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                    <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <td>ADR, Bond, Convertible, Equity, Index, PreferredEquity, StructuredProduct</td>
+                    <td>Market</td>
+                </tr>
+                <tr>
+                    <td>Unit
+                    <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />                    </td>
+                    <td>ADR, Bond, CDS, Convertible, Equity, Future, Option, PreferredEquity, StructuredProduct</td>
+                    <td>Market, Weighting</td>
+                </tr>
+                <tr>
+                    <td>Warrant
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                                        </td>
+                    <td>Equity</td>
+                    <td>CallOrPut, ContractSize, Delta, Market</td>
+                </tr>
+            </table>
+        <script src="javascripts/scale.fix.js"></script>
+    </body>
+</html>
