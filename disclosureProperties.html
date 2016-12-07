@@ -44,7 +44,8 @@
                         </td>
                         <td>Unique ID of the asset</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
+                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.
+<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
                         <td>All</td>
                         <td><span title="">All</span></td>
                     </tr>
@@ -76,7 +77,9 @@ ADR, Convertible, Equity, PreferredEquity, Rights, Warrant                      
                         </td>
                         <td>Direct or Indirect holding</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Only used for display purposes / in forms<br />Valid values: Direct, Indirect.<br />Used in TR1 forms</td>
+                        <td>Only used for display purposes / in forms
+<br />Valid values: Direct, Indirect.
+<br />Used in TR1 forms</td>
                         <td>-</td>
                         <td><span title="">-</span></td>
                     </tr>
@@ -86,7 +89,8 @@ ADR, Convertible, Equity, PreferredEquity, Rights, Warrant                      
 Equity                        </td>
                         <td>If a short equity position is used for delta hedging purposes of long convertible bonds</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
-                        <td>Defaults to false if not provided.<br />Used in: Short selling in Japan</td>
+                        <td>Defaults to false if not provided.
+<br />Used in: Short selling in Japan</td>
                         <td>1</td>
                         <td><span title="JP">1</span></td>
                     </tr>
@@ -97,7 +101,8 @@ Equity                        </td>
                         </td>
                         <td>The manager managing the position</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Only used for display purposes / in forms<br />Used in document generation where the manager of individual assets must be disclosed, e.g. 13F</td>
+                        <td>Only used for display purposes / in forms
+<br />Used in document generation where the manager of individual assets must be disclosed, e.g. 13F</td>
                         <td>-</td>
                         <td><span title="">-</span></td>
                     </tr>
@@ -157,7 +162,8 @@ Equity                        </td>
                         </td>
                         <td>Asset class (e.g. Equity, Bond, CFD etc.)</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Future, Index, Option, PreferredEquity, Rights, StructuredProduct, Swap, Unit, Warrant.<br />To ignore this asset during checking, set to 'Ignore'</td>
+                        <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Future, Index, Option, PreferredEquity, Rights, StructuredProduct, Swap, Unit, Warrant.
+<br />To ignore this asset during checking, set to 'Ignore'</td>
                         <td>459</td>
                         <td><span title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, ZA, ZW">87</span></td>
                     </tr>
@@ -168,7 +174,8 @@ Equity                        </td>
                         </td>
                         <td>Customer defined asset class</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Only used for display purposes / in forms<br />Optional field to be populated with a customer's own internal asset class specification as reference</td>
+                        <td>Only used for display purposes / in forms
+<br />Optional field to be populated with a customer's own internal asset class specification as reference</td>
                         <td>-</td>
                         <td><span title="">-</span></td>
                     </tr>
@@ -217,7 +224,10 @@ CFD, Future, Option, Warrant                        </td>
                         <td>ConversionRatio </td>
                         <td>
 ADR, Convertible, PreferredEquity, Rights                        </td>
-                        <td><strong>Convertible</strong>: the number of equities one convertible converts into;<br /><strong>DR</strong>: the number of underlying shares represented in one DR;<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.<br /> <strong>Preferred Equity</strong>: the number of common shares one convertible preference share converts into.</td>
+                        <td><strong>Convertible</strong>: the number of equities one convertible converts into;
+<br /><strong>DR</strong>: the number of underlying shares represented in one DR;
+<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.
+<br /> <strong>Preferred Equity</strong>: the number of common shares one convertible preference share converts into.</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td></td>
                         <td>395</td>
@@ -269,7 +279,8 @@ Convertible, Option, Warrant                        </td>
 ADR                        </td>
                         <td>Type of depositary receipt</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Valid values: NVDR, P-Note, Sponsored, Unsponsored.<br />Required for: Major Thailand</td>
+                        <td>Valid values: NVDR, P-Note, Sponsored, Unsponsored.
+<br />Required for: Major Thailand</td>
                         <td>1</td>
                         <td><span title="TH">1</span></td>
                     </tr>
@@ -289,7 +300,8 @@ Bond                        </td>
 CFD, Future, Option                        </td>
                         <td>Exercise / strike price</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
-                        <td>Only used for display purposes / in forms<br />Used in TR1 forms</td>
+                        <td>Only used for display purposes / in forms
+<br />Used in TR1 forms</td>
                         <td>-</td>
                         <td><span title="">-</span></td>
                     </tr>
@@ -299,7 +311,8 @@ CFD, Future, Option                        </td>
 Option, Warrant                        </td>
                         <td>Exercise style of options and warrants</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Valid values: American, Bermudan, European.<br />Defaults to American if not provided</td>
+                        <td>Valid values: American, Bermudan, European.
+<br />Defaults to American if not provided</td>
                         <td>9</td>
                         <td><span title="CA, US">2</span></td>
                     </tr>
@@ -309,7 +322,7 @@ Option, Warrant                        </td>
 Bond, Convertible                        </td>
                         <td>Denomination of a debt instrument at issuance</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
-                        <td>Defaults to Nominal if not provided.</td>
+                        <td></td>
                         <td>35</td>
                         <td><span title="AT, BE, BG, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK, US">29</span></td>
                     </tr>
@@ -466,7 +479,10 @@ Bond                        </td>
 ADR, Bond, Convertible, Equity, PreferredEquity, Unit, Warrant                        </td>
                         <td>Unique identifier for the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Defaults to Issuer if not provided.<br />This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. You could use the issuer's LEI here.<br />For government bonds, insert the exact sovereign issuer name from <a href="https://www.esma.europa.eu/net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers, if you want Rapptr to lookup the TotalDebtOutstanding automatically.<br />For Unit funds structured as an ETF, this should be the ETF itself.</td>
+                        <td>Defaults to Issuer if not provided.
+<br />This allows you to link assets of the same issuer together. If you don't have an Id, the Name can be used, but may not 100% accurate. You could use the issuer's LEI here.
+<br />For government bonds, insert the exact sovereign issuer name from <a href="https://www.esma.europa.eu/net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers, if you want Rapptr to lookup the TotalDebtOutstanding automatically.
+<br />For Unit funds structured as an ETF, this should be the ETF itself.</td>
                         <td>457</td>
                         <td><span title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, ZA, ZW">87</span></td>
                     </tr>
@@ -476,7 +492,8 @@ ADR, Bond, Convertible, Equity, PreferredEquity, Unit, Warrant                  
 ADR, Bond, Convertible, Equity, PreferredEquity, Unit, Warrant                        </td>
                         <td>Name of the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Defaults to IssuerId if not provided.<br />Not needed if you're using the name as the IssuerId. For Unit fund structured as ETFs, the IssuerName should be that of the ETFs it self.</td>
+                        <td>Defaults to IssuerId if not provided.
+<br />Not needed if you're using the name as the IssuerId. For Unit fund structured as ETFs, the IssuerName should be that of the ETFs it self.</td>
                         <td>457</td>
                         <td><span title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, ZA, ZW">87</span></td>
                     </tr>
@@ -545,7 +562,10 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Right
                         <td>MaturityDate </td>
                         <td>
 Convertible, Future, Option, PreferredEquity, Rights, Swap, Warrant                        </td>
-                        <td><strong>Convertible, Right, Warrant</strong>: The 'maturity date' should be populated with the first date on which the instrument can be converted into the underlying equity. E.g. if a convertible bond can be converted into the reference security prior to the maturity of the bond then it is the date of when the conversion can take which should be provided. <br /> <strong>Physically settled derivative</strong> When the securities are to be delivered.<br /> <strong>Bond, Deposit</strong>: Maturity Date.<br /> <strong>PreferredEquity (convertible)</strong>: Convertible preferred equity doesn't have a 'maturity date' in the same sense that convertible debt does. Populate this field with: a) the first date on which the holder can convert into the underlying equity securities, if they hold control of conversion (this is usually found in the share issuance prospectus), or b) the date when the convertible preferred may first be callable (convertible) by the issuer, if the company controls the conditions of conversion. If it can be converted at any time, insert a past date or today's date.</td>
+                        <td><strong>Convertible, Right, Warrant</strong>: The 'maturity date' should be populated with the first date on which the instrument can be converted into the underlying equity. E.g. if a convertible bond can be converted into the reference security prior to the maturity of the bond then it is the date of when the conversion can take which should be provided. 
+<br /> <strong>Physically settled derivative</strong> When the securities are to be delivered.
+<br /> <strong>Bond, Deposit</strong>: Maturity Date.
+<br /> <strong>PreferredEquity (convertible)</strong>: Convertible preferred equity doesn't have a 'maturity date' in the same sense that convertible debt does. Populate this field with: a) the first date on which the holder can convert into the underlying equity securities, if they hold control of conversion (this is usually found in the share issuance prospectus), or b) the date when the convertible preferred may first be callable (convertible) by the issuer, if the company controls the conditions of conversion. If it can be converted at any time, insert a past date or today's date.</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Date</a></td>
                         <td>Necessary for USA &amp; Canada to determine if expiry is within next 60 days and for document generation in the UK, Hong Kong and Philippines.</td>
                         <td>12</td>
