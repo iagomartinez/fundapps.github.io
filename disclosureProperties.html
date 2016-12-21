@@ -214,9 +214,9 @@ Convertible                        </td>
                         <td>Amount of outstanding debt for that class of convertible</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>Only required for UK takeover calculations for convertibles</td>
-                        <td>2</td>
+                        <td>3</td>
                         <td>
-                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="GB">1</span>
+                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="GB, NZ">2</span>
                         </td>
                     </tr>
                     <tr>
@@ -226,7 +226,7 @@ Equity, PreferredEquity, Unit                        </td>
                         <td>Total amount of shares in circulation for this share class</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>For Unit funds structured as ETFs this should reflect the number of units issued.</td>
-                        <td>45</td>
+                        <td>43</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AU, BR, BW, CA, GB, GH, GR, HK, IE, JO, KR, MU, MY, NG, NZ, PH, SA, SG, US, ZA">20</span>
                         </td>
@@ -274,9 +274,9 @@ Bond, Equity, PreferredEquity                        </td>
                         <td>Country the stock was issued</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>Valid values: <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_blank">ISO 3166-1 Alpha 2</a> country codes.</td>
-                        <td>62</td>
+                        <td>30</td>
                         <td>
-                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AR, AT, BE, BG, BM, CO, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR, HK, HR, HU, IE, IL, IN, IS, IT, KY, KZ, LT, LU, LV, MT, MU, MY, NL, PH, PL, PT, QA, RO, RU, SE, SI, SK, TH, UY, VE, ZW">46</span>
+                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AR, BM, CO, HK, IL, IN, IS, KY, KZ, MU, MY, PH, QA, RU, TH, UY, VE, ZW">18</span>
                         </td>
                     </tr>
                     <tr>
@@ -298,7 +298,7 @@ Convertible, Option, Warrant                        </td>
                         <td>Delta of the asset (price sensitivity with relation to the underlying)</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td></td>
-                        <td>244</td>
+                        <td>245</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AT, AU, BD, BE, BG, BM, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GH, GR, HR, HU, ID, IE, IT, KR, KY, LT, LU, LV, MT, MY, NL, NZ, PL, PT, RO, SE, SG, SI, SK, TH, TW, VG, WW">45</span>
                         </td>
@@ -346,7 +346,7 @@ Option, Warrant                        </td>
                         <td>Exercise style of options and warrants</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>Valid values: American, Bermudan, European.<br />Defaults to American if not provided</td>
-                        <td>10</td>
+                        <td>8</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="CA, US">2</span>
                         </td>
@@ -358,9 +358,9 @@ Bond, Convertible                        </td>
                         <td>Denomination of a debt instrument at issuance</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>Defaults to Nominal if not provided.</td>
-                        <td>35</td>
+                        <td>36</td>
                         <td>
-                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AT, BE, BG, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK, US">29</span>
+                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AT, BE, BG, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR, HR, HU, IE, IT, LT, LU, LV, MT, NL, NZ, PL, PT, RO, SE, SI, SK, US">30</span>
                         </td>
                     </tr>
                     <tr>
@@ -370,7 +370,7 @@ ADR, Convertible, Equity, PreferredEquity, Rights, Warrant                      
                         <td>Indicates if a security (or in some cases, the ADR for which it is an underlier) is registered under U.S. Section 12 by other means besides being listed on a U.S. National Securities Exchange. The A&amp;O memo for the United States describes alternate means of registration in Section 3.5(a), 'Section 12 Registration' and related footnotes. In addition, it is possible for a foreign security (even if it's not traded on a U.S. market) to be considered disclosable if the particular class is held on deposit underlying an ADR which is section 12 registered (See section 3.5(g) of the A&amp;O memo for the regulatory background). This property should be set to true for securities meeting that criteria.</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td>Populate this as true if a security is considered U.S. Section 12 registered as noted in the description. For more information on a security in this category which is also on deposit underyling an ADR in the United States, see <a href="https://www.sec.gov/divisions/corpfin/guidance/reg13d-interp.htm" target="_blank">Question 101.03 of the SEC's Q&amp;A on 13D and 13G reporting</a></td>
-                        <td>6</td>
+                        <td>4</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="US">1</span>
                         </td>
@@ -394,9 +394,9 @@ Convertible <img src='/img/required.png' title='Required for file validation to 
                         <td>If the holder has control over the conditions of conversion (for convertibles) or exercise (for warrants).</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td>Some countries require convertibles &amp; warrants to be counted if the conditions for conversion are within the control of the parties (e.g. UK, Pakistan).</td>
-                        <td>26</td>
+                        <td>24</td>
                         <td>
-                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="BE, FR, IS, LT, LU, NG, NO, PH, PK, RO, TN">11</span>
+                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="BE, FR, IS, LU, NG, NO, PH, PK, RO, TN">10</span>
                         </td>
                     </tr>
                     <tr>
@@ -449,7 +449,7 @@ CFD, Future, Option, Swap, Warrant <img src="/img/required.png" title='Required 
                         <td>If the derivative is cash settled (as opposed to requiring physical delivery)</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td>Most countries capture physically settled derivatives, many (but less) are interested in cash settled derivatives.</td>
-                        <td>218</td>
+                        <td>216</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AR, AT, AU, BD, BE, BG, BH, BR, CA, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR, HR, HU, IE, IL, IN, IS, IT, JO, JP, KR, KW, LT, LU, LV, MA, MT, MX, MY, NL, NO, PH, PK, PL, PT, RO, SA, SE, SG, SI, SK, TH, TN, TR, UA, US, ZA">56</span>
                         </td>
@@ -461,7 +461,7 @@ PreferredEquity                        </td>
                         <td>If the preferred equity has the option to be converted into ordinary shares.</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td></td>
-                        <td>184</td>
+                        <td>182</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AT, BD, BE, BG, BH, CA, CH, CY, CZ, DE, EE, EG, ES, FR, GB, GH, GR, HK, HR, HU, IE, IS, IT, JO, JP, KE, KR, KZ, LK, LT, LU, LV, MA, MT, MU, MX, MY, NG, OM, PH, PK, PL, PT, RO, RU, SA, SG, SI, SK, TN, TR, US, VN, ZA">54</span>
                         </td>
@@ -473,7 +473,7 @@ Convertible                        </td>
                         <td>This property defines whether a convertible bond references shares already in issue or shares to be issued by the issuer upon conversion of the bond. Should this information not be possible to provide, please use the value 'Undetermined'. This value is allowed because the IsCoveredConvertible property, when set to True without certain knowledge, may be conservative in one context (Major rules), but less conservative in another (EU short selling).</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>Valid values: False, True, Undetermined.</td>
-                        <td>166</td>
+                        <td>167</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AR, AT, AU, BE, BG, BR, CA, CN, CY, CZ, DE, DK, EC, EE, ES, FI, FR, GB, GR, HR, HU, IE, IL, IN, IS, IT, JP, KR, KW, LT, LU, LV, MT, MX, MY, NG, NL, NZ, PH, PL, PT, RO, SA, SE, SG, SI, SK, TN, UA, US, ZA">51</span>
                         </td>
@@ -497,7 +497,7 @@ Unit                        </td>
                         <td>If a unit fund is exchange traded</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td></td>
-                        <td>170</td>
+                        <td>174</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AT, AU, BE, BG, BR, CH, CL, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR, HK, HR, HU, ID, IE, IT, JP, KE, LT, LU, LV, MA, MT, NG, NL, NZ, PH, PL, PT, RO, SE, SI, SK, TR, UA, US, VN">45</span>
                         </td>
@@ -533,9 +533,9 @@ Bond                        </td>
                         <td>If the bond is issued by a country or a state (True = By a state, False = by a country), for sovereign debt rules</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td>Only required if you can't match the sovereign issuer name used in Issuer to <a href="https://www.esma.europa.eu/net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers</td>
-                        <td>30</td>
+                        <td>All</td>
                         <td>
-                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AT, BE, BG, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK">28</span>
+                                <span>All</span>
                         </td>
                     </tr>
                     <tr>
@@ -545,7 +545,7 @@ ADR, Bond, Convertible, Equity, PreferredEquity, Unit, Warrant                  
                         <td>Unique identifier for the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>Defaults to Issuer if not provided.<br />This allows to link assets of the same issuer together. If an Id cannot be used, a name of a comapny can be used, but rule results may not be 100% accurate. An issuer's <a href="https://www.leiroc.org/lei.htm" target="_blank">LEI</a> could be used here.<br />For Unit funds structured as an ETF, this should identify the ETF itself.</td>
-                        <td>488</td>
+                        <td>486</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MC, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, ZA, ZW">88</span>
                         </td>
@@ -557,7 +557,7 @@ ADR, Bond, Convertible, Equity, PreferredEquity, Unit, Warrant                  
                         <td>Name of the issuer of the instrument</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>Defaults to IssuerId if not provided.<br />For Unit funds structured as <strong>ETF</strong>, the IssuerName should be that of the ETFs itself.<br />For <strong>government bonds</strong>, insert the exact sovereign issuer name from <a href="https://www.esma.europa.eu/net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers, if you want Rapptr to automatically populate the official value for TotalDebtOutstanding.<br />For issuers that are disclosable under the nominal share capital rules in The Netherlands, insert the exact issuer name outlined by the Dutch AFM <a href="https://www.afm.nl/en/professionals/registers/alle-huidige-registers.aspx?type=F25D2CA1-B93C-4331-B025-85DF328CD505" target="_blank">here</a> if you want Rapptr to automatically populate the official value for TotalIssuedNominalCapital.</td>
-                        <td>488</td>
+                        <td>486</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MC, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, ZA, ZW">88</span>
                         </td>
@@ -630,9 +630,9 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Right
                         <td>List of market identification codes (MICs) where the instrument is listed</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">List</a></td>
                         <td><a href="http://www.iso15022.org/mic/homepagemic.htm" target="_blank">ISO 10383 code</a> (MIC). Insert the MICs (the specific market segments) and not only the Operating MICs since the latter are the parent market venues only. For securities with no market, use value: XXXX</td>
-                        <td>189</td>
+                        <td>186</td>
                         <td>
-                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AU, BD, BE, BH, BM, BR, BW, CA, CH, CL, CO, CY, DE, DK, EC, EG, GB, GG, GH, GR, HK, IE, IL, IN, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LV, MA, MC, MU, MX, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PT, QA, RU, SA, SG, SI, TH, TN, TR, US, UY, VE, VN, ZA, ZW">65</span>
+                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AU, BD, BE, BH, BM, BR, BW, CA, CH, CL, CO, CY, DE, DK, EC, EG, GB, GG, GH, GR, HK, IE, IL, IN, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LV, MA, MU, MX, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PT, QA, RU, SA, SG, SI, TH, TN, TR, US, UY, VE, VN, ZA, ZW">64</span>
                         </td>
                     </tr>
                     <tr>
@@ -642,7 +642,7 @@ Convertible, Future, Option, PreferredEquity, Rights, Swap, Warrant             
                         <td><strong>Convertible, Right, Warrant</strong>: The 'maturity date' should be populated with the first date on which the instrument can be converted into the underlying equity. E.g. if a convertible bond can be converted into the reference security prior to the maturity of the bond then it is the date of when the conversion can take which should be provided. <br /> <strong>Physically settled derivative</strong> When the securities are to be delivered.<br /> <strong>Bond, Deposit</strong>: Maturity Date.<br /> <strong>PreferredEquity (convertible)</strong>: Convertible preferred equity doesn't have a 'maturity date' in the same sense that convertible debt does. Populate this field with: a) the first date on which the holder can convert into the underlying equity securities, if they hold control of conversion (this is usually found in the share issuance prospectus), or b) the date when the convertible preferred may first be callable (convertible) by the issuer, if the company controls the conditions of conversion. If it can be converted at any time, insert a past date or today's date.</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Date</a></td>
                         <td>Necessary for USA &amp; Canada to determine if expiry is within next 60 days and for document generation in the UK, Hong Kong and Philippines.</td>
-                        <td>13</td>
+                        <td>11</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="CA, PH, UA, US">4</span>
                         </td>
@@ -654,7 +654,7 @@ Option                        </td>
                         <td>Next date where an option is exercisable. For American options: Maturity date </td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Date</a></td>
                         <td>Defaults to MaturityDate if not provided.</td>
-                        <td>7</td>
+                        <td>5</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="CA, US">2</span>
                         </td>
@@ -751,7 +751,7 @@ Equity, PreferredEquity, Unit                        </td>
                         <td>Total amount of shares in circulation for this issuer (all share classes)</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>For Unit funds structured as ETFs this should reflect the number of units issued.</td>
-                        <td>171</td>
+                        <td>173</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MC, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, WW, ZA, ZW">89</span>
                         </td>
