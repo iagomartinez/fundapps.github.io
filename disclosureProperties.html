@@ -1,28 +1,29 @@
-<!DOCTYPE html>
-<!-- saved from url=(0045)http://localhost:19605/Property/ExportSummary -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        <title>FundApps: Properties required for </title>
-        <link rel="shortcut icon" href="http://localhost:19605/Property/favicon.ico">
-        <link rel="icon" type="image/x-icon" href="http://localhost:19605/Property/favicon.ico">
-        <link rel="stylesheet" href="./disclosureProperties_files/styles.css">
-        <link rel="stylesheet" href="./disclosureProperties_files/pygment_trac.css">
+﻿﻿
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FundApps: Properties required for Disclosure</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="stylesheets/pygment_trac.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
 <body>
-    <p><a href="http://localhost:19605/"><img src="./disclosureProperties_files/fundapps_logo.png" alt="Logo"></a></p>
-    <h1>Properties required for </h1>
+    <p><a href="/"><img src="/img/fundapps_logo.png" alt="Logo" /></a></p>
+    <h1>Properties required for Disclosure</h1>
     <p>
-        {disclosureWarning}
-        Rapptr will <a href="https://fundapps.zendesk.com/hc/en-us/articles/204840639">fail validation</a> if any of the properties marked with <img src="./disclosureProperties_files/required.png"> are missing.
+        To ensure 100% disclosure coverage in all 86 jurisdictions for all asset classes, <b>all</b> of the following properties are required.<br /> It is possible you <b>might</b> 'get away' with less e.g. if you are NOT trading in Czech or Filipino companies you don't need to provide MarketCap. But obviously if you start trading there in the future you will need this data. Therefore we recommend trying to populate as much as possible<br /> The only way to be sure you are providing enough data is to go into Rapptr results and ensure you have no Missing Data - <a href='https://fundapps.zendesk.com/hc/en-us/articles/204820619-Missing-Data-The-gory-details'>see here</a>.<br />
+        Rapptr will <a href="https://fundapps.zendesk.com/hc/en-us/articles/204840639">fail validation</a> if any of the properties marked with <img src="/img/required.png" /> are missing.
     </p>
     <p>
         For information on integrating via API, please see <a href="https://github.com/fundapps/api-examples" rel="nofollow">our GitHub repository</a>. For all other information on Rapptr please see our <a href="https://fundapps.zendesk.com/hc/en-us" rel="nofollow">Zendesk HelpCentre</a>
     </p>
-    <br>
+    <br />
         <h2 id="AssetProperties">Asset Properties</h2>
  <p>An asset is the specific position a portfolio has in an instrument. Instrument properties are independent of portfolio, whereas asset properties are specifc to the portfolio</p>         <table>
             <thead>
@@ -39,22 +40,21 @@
             </thead>
             <tbody>
                     <tr>
-                        <td>AssetId <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required"></td>
+                        <td>AssetId <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
                         <td>Unique ID of the asset</td>
                         <td></td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.
-<br><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
+                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
                         <td>All</td>
                         <td>
                                 <span>All</span>
                         </td>
                     </tr>
                     <tr>
-                        <td>AssetName <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required"></td>
+                        <td>AssetName <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -81,17 +81,44 @@ ADR, Convertible, Equity, PreferredEquity, Rights, Warrant                      
                         </td>
                     </tr>
                     <tr>
+                        <td>HoldingType </td>
+                        <td>
+                                All
+                        </td>
+                        <td>Direct or Indirect holding</td>
+                        <td></td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Only used for display purposes / in forms<br />Valid values: Direct, Indirect.<br />Used in TR1 forms</td>
+                        <td>-</td>
+                        <td>
+                                <span>-</span>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>IsDeltaHedge </td>
                         <td>
 Equity                        </td>
                         <td>If a short equity position is used for delta hedging purposes of long convertible bonds</td>
                         <td></td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
-                        <td>Defaults to false if not provided.
-<br>Used in: Short selling in Japan</td>
+                        <td>Defaults to false if not provided.<br />Used in: Short selling in Japan</td>
                         <td>All</td>
                         <td>
                                 <span>All</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ManagedBy </td>
+                        <td>
+                                All
+                        </td>
+                        <td>The manager managing the position</td>
+                        <td></td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Only used for display purposes / in forms<br />Used in document generation where the manager of individual assets must be disclosed, e.g. 13F</td>
+                        <td>-</td>
+                        <td>
+                                <span>-</span>
                         </td>
                     </tr>
                     <tr>
@@ -123,7 +150,7 @@ Equity                        </td>
                         </td>
                     </tr>
                     <tr>
-                        <td>Quantity <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required"></td>
+                        <td>Quantity <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -154,24 +181,37 @@ Equity                        </td>
             </thead>
             <tbody>
                     <tr>
-                        <td>AssetClass <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required"></td>
+                        <td>AssetClass <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
                         <td>Asset class (e.g. Equity, Bond, CFD etc.)</td>
                         <td>BB: BVAL_ASSET_CLASS</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Future, Index, Option, PreferredEquity, Rights, StructuredProduct, Swap, Unit, Warrant.
-<br>To ignore this asset during checking, set to 'Ignore'</td>
+                        <td>Valid values: ADR, Bond, CDS, CFD, Convertible, Equity, Future, Index, Option, PreferredEquity, Rights, StructuredProduct, Swap, Unit, Warrant.<br />To ignore this asset during checking, set to 'Ignore'</td>
                         <td>490</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MC, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, WW, ZA, ZW">89</span>
                         </td>
                     </tr>
                     <tr>
+                        <td>AssetClassCustomer </td>
+                        <td>
+                                All
+                        </td>
+                        <td>Customer defined asset class</td>
+                        <td></td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Only used for display purposes / in forms<br />Optional field to be populated with a customer's own internal asset class specification as reference</td>
+                        <td>-</td>
+                        <td>
+                                <span>-</span>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>CallOrPut </td>
                         <td>
-Warrant, Option <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">
+Warrant, Option <img src="/img/required.png" title='Required for file validation to pass' alt="required" />
                         </td>
                         <td>If an option / warrant is call or put</td>
                         <td>BB: OPT_PUT_CALL</td>
@@ -225,10 +265,7 @@ CFD, Future, Option, Warrant                        </td>
                         <td>ConversionRatio </td>
                         <td>
 ADR, Convertible, PreferredEquity, Rights                        </td>
-                        <td><strong>Convertible</strong>: the number of equities one convertible converts into;
-<br><strong>DR</strong>: the number of underlying shares represented in one DR;
-<br><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.
-<br> <strong>Preferred Equity</strong>: the number of common shares one convertible preference share converts into.</td>
+                        <td><strong>Convertible</strong>: the number of equities one convertible converts into;<br /><strong>DR</strong>: the number of underlying shares represented in one DR;<br /><strong>Right</strong>: the number of underlying securities that one right gives entitlement to.<br /> <strong>Preferred Equity</strong>: the number of common shares one convertible preference share converts into.</td>
                         <td>BB: For Convertibles: CV_CNVS_RATIO, For DRs: ADR_SH_PER_ADR</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td></td>
@@ -296,8 +333,7 @@ ADR                        </td>
                         <td>Type of depositary receipt</td>
                         <td>BB: ADR_SPONSORSHIP_TYP</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Valid values: NVDR, P-Note, Sponsored, Unsponsored.
-<br>Required for: Major Thailand</td>
+                        <td>Valid values: NVDR, P-Note, Sponsored, Unsponsored.<br />Required for: Major Thailand</td>
                         <td>1</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="TH">1</span>
@@ -317,14 +353,26 @@ Bond                        </td>
                         </td>
                     </tr>
                     <tr>
+                        <td>ExercisePrice </td>
+                        <td>
+CFD, Future, Option                        </td>
+                        <td>Exercise / strike price</td>
+                        <td>BB: CP_OPT_PX or STRIKE</td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td>Only used for display purposes / in forms<br />Used in TR1 forms</td>
+                        <td>-</td>
+                        <td>
+                                <span>-</span>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>ExerciseStyle </td>
                         <td>
 Option, Warrant                        </td>
                         <td>Exercise style of options and warrants</td>
                         <td>BB: EXERCISETYPE or OPT_EXER_TYP</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Valid values: American, Bermudan, European.
-<br>Defaults to American if not provided</td>
+                        <td>Valid values: American, Bermudan, European.<br />Defaults to American if not provided</td>
                         <td>8</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="CA, US">2</span>
@@ -372,7 +420,7 @@ ADR, Bond, Convertible, Equity, PreferredEquity, Rights, Unit, Warrant          
                     <tr>
                         <td>InControlOfConversion </td>
                         <td>
-Convertible <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">, PreferredEquity, Warrant <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">                        </td>
+Convertible <img src='/img/required.png' title='Required for file validation to pass' alt='required' />, PreferredEquity, Warrant <img src='/img/required.png' title='Required for file validation to pass' alt='required' />                        </td>
                         <td>If the holder has control over the conditions of conversion (for convertibles) or exercise (for warrants).</td>
                         <td>BB: CV_CONV_BY_ISSUER_OR_HOLDER</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
@@ -386,10 +434,10 @@ Convertible <img src="./disclosureProperties_files/required.png" title="Required
                         <td>InstrumentCurrency </td>
                         <td>
                                 All
-                                    &lt;
-                                    <br>
+                                    <
+                                    <br />
                                     Index, StructuredProduct
-                                    <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">
+                                    <img src="/img/required.png" title='Required for file validation to pass' alt="required" />
                         </td>
                         <td>Currency the instrument is denominated in</td>
                         <td>BB: CRNCY or A_SECS.SEC_CURRENCY</td>
@@ -401,7 +449,7 @@ Convertible <img src="./disclosureProperties_files/required.png" title="Required
                         </td>
                     </tr>
                     <tr>
-                        <td>InstrumentId <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required"></td>
+                        <td>InstrumentId <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -415,7 +463,7 @@ Convertible <img src="./disclosureProperties_files/required.png" title="Required
                         </td>
                     </tr>
                     <tr>
-                        <td>InstrumentName <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required"></td>
+                        <td>InstrumentName <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -431,7 +479,7 @@ Convertible <img src="./disclosureProperties_files/required.png" title="Required
                     <tr>
                         <td>IsCashSettled </td>
                         <td>
-CFD, Future, Option, Swap, Warrant <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">
+CFD, Future, Option, Swap, Warrant <img src="/img/required.png" title='Required for file validation to pass' alt="required" />
                         </td>
                         <td>If the derivative is cash settled (as opposed to requiring physical delivery)</td>
                         <td>BB: SETTLEMENT_TYPE or CASH_SETTLED</td>
@@ -540,9 +588,7 @@ ADR, Bond, Convertible, Equity, PreferredEquity, Unit, Warrant                  
                         <td>Unique identifier for the issuer of the instrument</td>
                         <td>BB: ENTITY_ID</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Defaults to Issuer if not provided.
-<br>This allows to link assets of the same issuer together. If an Id cannot be used, a name of a comapny can be used, but rule results may not be 100% accurate. An issuer's <a href="https://www.leiroc.org/lei.htm" target="_blank">LEI</a> could be used here.
-<br>For Unit funds structured as an ETF, this should identify the ETF itself.</td>
+                        <td>Defaults to Issuer if not provided.<br />This allows to link assets of the same issuer together. If an Id cannot be used, a name of a comapny can be used, but rule results may not be 100% accurate. An issuer's <a href="https://www.leiroc.org/lei.htm" target="_blank">LEI</a> could be used here.<br />For Unit funds structured as an ETF, this should identify the ETF itself.</td>
                         <td>486</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MC, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, ZA, ZW">88</span>
@@ -555,10 +601,7 @@ ADR, Bond, Convertible, Equity, PreferredEquity, Unit, Warrant                  
                         <td>Name of the issuer of the instrument</td>
                         <td></td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Defaults to IssuerId if not provided.
-<br>For Unit funds structured as <strong>ETF</strong>, the IssuerName should be that of the ETFs itself.
-<br>For <strong>government bonds</strong>, insert the exact sovereign issuer name from <a href="https://www.esma.europa.eu/net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers, if you want Rapptr to automatically populate the official value for TotalDebtOutstanding.
-<br>For issuers that are disclosable under the nominal share capital rules in The Netherlands, insert the exact issuer name outlined by the Dutch AFM <a href="https://www.afm.nl/en/professionals/registers/alle-huidige-registers.aspx?type=F25D2CA1-B93C-4331-B025-85DF328CD505" target="_blank">here</a> if you want Rapptr to automatically populate the official value for TotalIssuedNominalCapital.</td>
+                        <td>Defaults to IssuerId if not provided.<br />For Unit funds structured as <strong>ETF</strong>, the IssuerName should be that of the ETFs itself.<br />For <strong>government bonds</strong>, insert the exact sovereign issuer name from <a href="https://www.esma.europa.eu/net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers, if you want Rapptr to automatically populate the official value for TotalDebtOutstanding.<br />For issuers that are disclosable under the nominal share capital rules in The Netherlands, insert the exact issuer name outlined by the Dutch AFM <a href="https://www.afm.nl/en/professionals/registers/alle-huidige-registers.aspx?type=F25D2CA1-B93C-4331-B025-85DF328CD505" target="_blank">here</a> if you want Rapptr to automatically populate the official value for TotalIssuedNominalCapital.</td>
                         <td>486</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MC, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, ZA, ZW">88</span>
@@ -575,6 +618,20 @@ Equity, PreferredEquity                        </td>
                         <td>28</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AT, BE, BG, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK">28</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>LocalTicker </td>
+                        <td>
+                                All
+                        </td>
+                        <td>Local stock ticker</td>
+                        <td></td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Only used for display purposes / in forms</td>
+                        <td>-</td>
+                        <td>
+                                <span>-</span>
                         </td>
                     </tr>
                     <tr>
@@ -633,10 +690,7 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Right
                         <td>MaturityDate </td>
                         <td>
 Convertible, Future, Option, PreferredEquity, Rights, Swap, Warrant                        </td>
-                        <td><strong>Convertible, Right, Warrant</strong>: The 'maturity date' should be populated with the first date on which the instrument can be converted into the underlying equity. E.g. if a convertible bond can be converted into the reference security prior to the maturity of the bond then it is the date of when the conversion can take which should be provided. 
-<br> <strong>Physically settled derivative</strong> When the securities are to be delivered.
-<br> <strong>Bond, Deposit</strong>: Maturity Date.
-<br> <strong>PreferredEquity (convertible)</strong>: Convertible preferred equity doesn't have a 'maturity date' in the same sense that convertible debt does. Populate this field with: a) the first date on which the holder can convert into the underlying equity securities, if they hold control of conversion (this is usually found in the share issuance prospectus), or b) the date when the convertible preferred may first be callable (convertible) by the issuer, if the company controls the conditions of conversion. If it can be converted at any time, insert a past date or today's date.</td>
+                        <td><strong>Convertible, Right, Warrant</strong>: The 'maturity date' should be populated with the first date on which the instrument can be converted into the underlying equity. E.g. if a convertible bond can be converted into the reference security prior to the maturity of the bond then it is the date of when the conversion can take which should be provided. <br /> <strong>Physically settled derivative</strong> When the securities are to be delivered.<br /> <strong>Bond, Deposit</strong>: Maturity Date.<br /> <strong>PreferredEquity (convertible)</strong>: Convertible preferred equity doesn't have a 'maturity date' in the same sense that convertible debt does. Populate this field with: a) the first date on which the holder can convert into the underlying equity securities, if they hold control of conversion (this is usually found in the share issuance prospectus), or b) the date when the convertible preferred may first be callable (convertible) by the issuer, if the company controls the conditions of conversion. If it can be converted at any time, insert a past date or today's date.</td>
                         <td>BB: CP_MTY_DTETO or MATURITY_DATE</td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Date</a></td>
                         <td>Necessary for USA &amp; Canada to determine if expiry is within next 60 days and for document generation in the UK, Hong Kong and Philippines.</td>
@@ -696,6 +750,19 @@ Equity, PreferredEquity                        </td>
                         <td>426</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MC, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, WW, ZA, ZW">89</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TitleOfClass </td>
+                        <td>
+ADR, Bond, Convertible, Equity, PreferredEquity, Rights, Unit, Warrant                        </td>
+                        <td>Title of the class of the security (e.g. 1p ORD). Used in disclosure forms</td>
+                        <td></td>
+                        <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Only used for display purposes / in forms</td>
+                        <td>-</td>
+                        <td>
+                                <span>-</span>
                         </td>
                     </tr>
                     <tr>
@@ -807,7 +874,7 @@ Equity, PreferredEquity, Unit                        </td>
             </thead>
             <tbody>
                     <tr>
-                        <td>InstrumentId <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required"></td>
+                        <td>InstrumentId <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -823,7 +890,7 @@ Equity, PreferredEquity, Unit                        </td>
                     <tr>
                         <td>Weighting </td>
                         <td>
-ADR, Bond, Convertible, Equity, Index <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">, PreferredEquity, StructuredProduct, Unit <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">                        </td>
+ADR, Bond, Convertible, Equity, Index <img src='/img/required.png' title='Required for file validation to pass' alt='required' />, PreferredEquity, StructuredProduct, Unit <img src='/img/required.png' title='Required for file validation to pass' alt='required' />                        </td>
                         <td>Weighting of the component in the structured product. If not specified, we will default this to a value of 1.</td>
                         <td></td>
                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
@@ -836,11 +903,11 @@ ADR, Bond, Convertible, Equity, Index <img src="./disclosureProperties_files/req
             </tbody>
         </table>
     <h2 id="globalProperties">Properties valid for ALL AssetClasses</h2>
-    <p>AssetClass, AssetId, AssetName, BaseDate, CompanyType, DefaultParentId, DisqualifiedFrom13GIssuerIDs, DisqualifiedFromAMRSIssuerIDs, FundDomicile, IncludeRightToAcquireSharesForSchedule13, InstrumentCurrency, InstrumentId, InstrumentName, IsAIF, MarketValue, MarketValueInInstrumentCurrency, NavDate, PortfolioCompany, PortfolioCurrency, PortfolioName, PortfolioType, Price, Quantity, RuleFolders</p>
+    <p>Address, AssetClass, AssetClassCustomer, AssetId, AssetName, AUSellerId, BafinID, BaseDate, BicCode, City, CompanyName, CompanyNumber, CompanyType, ContactPersonFirst, ContactPersonLast, Country, Custodian, DefaultParentId, DisqualifiedFrom13GIssuerIDs, DisqualifiedFromAMRSIssuerIDs, Email, EntityCountryOfIncorporation, Fax, FundDomicile, HoldingType, HongKongSPRID, IEIdentifierCode, IncludeRightToAcquireSharesForSchedule13, IndianPAN, InstrumentCurrency, InstrumentId, InstrumentName, IsAIF, LocalTicker, ManagedBy, MarketValue, MarketValueInInstrumentCurrency, NavDate, PortfolioCompany, PortfolioCurrency, PortfolioName, PortfolioType, PostCode, Price, Province, Quantity, ReportingPersonAddress, ReportingPersonCity, ReportingPersonCompany, ReportingPersonCountry, ReportingPersonEmail, ReportingPersonFax, ReportingPersonFirst, ReportingPersonLast, ReportingPersonPhone, ReportingPersonPosition, ReportingPersonPostCode, ReportingPersonProvince, Role, RuleFolders, SSRUKHolderID, Telephone, USReportingPersonType, ZARegistrationNo</p>
     <h2 id="byClass">Properties valid for each AssetClass</h2>
     <p>
-        Asset classes which require at least one underlying asset to pass validation are marked with <img src="./disclosureProperties_files/atleastone.png"><br>
-        Asset classes which can have multiple underlying assets are marked with <img src="./disclosureProperties_files/multiple.png">
+        Asset classes which require at least one underlying asset to pass validation are marked with <img src="/img/atleastone.png" /><br />
+        Asset classes which can have multiple underlying assets are marked with <img src="/img/multiple.png" />
     </p>
     <table>
         <thead>
@@ -850,120 +917,120 @@ ADR, Bond, Convertible, Equity, Index <img src="./disclosureProperties_files/req
                 <th>Properties</th>
             </tr>
         </thead>
-            <tbody><tr>
+            <tr>
                 <td>
                     ADR
-<img src="./disclosureProperties_files/atleastone.png" title="At least one underlying required for file validation to pass" alt="required">                            </td>
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Equity, PreferredEquity</td>
-            <td>ConversionRatio, CUSIP, DRType, ExecutionVenue, HasAlternateUSSection12Registration, HomeMemberState, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, Weighting</td>
+            <td>ConversionRatio, CUSIP, DRType, ExecutionVenue, HasAlternateUSSection12Registration, HomeMemberState, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, TitleOfClass, Weighting</td>
         </tr>
             <tr>
                 <td>
                     Bond
                             </td>
             <td></td>
-            <td>CountryOfIssue, CUSIP, DurationAdjustment, FaceValue, HomeMemberState, IsGovernmentBacked, ISIN, IsSubNational, IssuerId, IssuerName, Market, MarketsListedIn, TotalDebtOutstanding, Weighting</td>
+            <td>CountryOfIssue, CUSIP, DurationAdjustment, FaceValue, HomeMemberState, IsGovernmentBacked, ISIN, IsSubNational, IssuerId, IssuerName, Market, MarketsListedIn, TitleOfClass, TotalDebtOutstanding, Weighting</td>
         </tr>
             <tr>
                 <td>
                     CDS
-<img src="./disclosureProperties_files/atleastone.png" title="At least one underlying required for file validation to pass" alt="required">                            </td>
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Bond, Index, StructuredProduct</td>
             <td>CUSIP, ISIN, Market, MarketsListedIn, Notional</td>
         </tr>
             <tr>
                 <td>
                     CFD
-<img src="./disclosureProperties_files/atleastone.png" title="At least one underlying required for file validation to pass" alt="required">                            </td>
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Bond, Convertible, Equity, Index, PreferredEquity, StructuredProduct</td>
-            <td>ContractSize, CUSIP, IsCashSettled, ISIN, Market, MarketsListedIn</td>
+            <td>ContractSize, CUSIP, ExercisePrice, IsCashSettled, ISIN, Market, MarketsListedIn</td>
         </tr>
             <tr>
                 <td>
                     Convertible
-<img src="./disclosureProperties_files/atleastone.png" title="At least one underlying required for file validation to pass" alt="required">                            </td>
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Equity</td>
-            <td>ClassDebtOutstanding, ConversionRatio, CUSIP, Delta, ExecutionVenue, FaceValue, HasAlternateUSSection12Registration, HomeMemberState, InControlOfConversion, IsCoveredConvertible, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, MaturityDate, TotalDebtOutstanding, Weighting</td>
+            <td>ClassDebtOutstanding, ConversionRatio, CUSIP, Delta, ExecutionVenue, FaceValue, HasAlternateUSSection12Registration, HomeMemberState, InControlOfConversion, IsCoveredConvertible, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, MaturityDate, TitleOfClass, TotalDebtOutstanding, Weighting</td>
         </tr>
             <tr>
                 <td>
                     Equity
                             </td>
             <td></td>
-            <td>ClassSharesOutstanding, CountryOfIncorporation, CountryOfIssue, CUSIP, ExecutionVenue, HasAlternateUSSection12Registration, HomeMemberState, IsDeltaHedge, ISIN, IssuerId, IssuerName, IsWhenIssued, LotSize, Market, MarketCap, MarketsListedIn, ParValue, TotalIssuedNominalCapital, TotalSharesInTreasury, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
+            <td>ClassSharesOutstanding, CountryOfIncorporation, CountryOfIssue, CUSIP, ExecutionVenue, HasAlternateUSSection12Registration, HomeMemberState, IsDeltaHedge, ISIN, IssuerId, IssuerName, IsWhenIssued, LotSize, Market, MarketCap, MarketsListedIn, ParValue, TitleOfClass, TotalIssuedNominalCapital, TotalSharesInTreasury, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
         </tr>
             <tr>
                 <td>
                     Future
-<img src="./disclosureProperties_files/atleastone.png" title="At least one underlying required for file validation to pass" alt="required">                            </td>
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Bond, Convertible, Equity, Index, PreferredEquity, StructuredProduct</td>
-            <td>ContractSize, CUSIP, IsCashSettled, ISIN, Market, MarketsListedIn, MaturityDate, Notional</td>
+            <td>ContractSize, CUSIP, ExercisePrice, IsCashSettled, ISIN, Market, MarketsListedIn, MaturityDate, Notional</td>
         </tr>
             <tr>
                 <td>
                     Index
-                <img src="./disclosureProperties_files/multiple.png" title="Multiple underlyings allowed" alt="multiple">            </td>
+                <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
             <td>ADR, Bond, CDS, Convertible, Equity, PreferredEquity</td>
             <td>Weighting</td>
         </tr>
             <tr>
                 <td>
                     Option
-<img src="./disclosureProperties_files/atleastone.png" title="At least one underlying required for file validation to pass" alt="required">                <img src="./disclosureProperties_files/multiple.png" title="Multiple underlyings allowed" alt="multiple">            </td>
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
             <td>Bond, Convertible, Equity, Future, Index, PreferredEquity, StructuredProduct, Unit</td>
-            <td>CallOrPut, ContractSize, CUSIP, Delta, ExerciseStyle, IsCashSettled, ISIN, Market, MarketsListedIn, MaturityDate, NextExerciseDate, Notional</td>
+            <td>CallOrPut, ContractSize, CUSIP, Delta, ExercisePrice, ExerciseStyle, IsCashSettled, ISIN, Market, MarketsListedIn, MaturityDate, NextExerciseDate, Notional</td>
         </tr>
             <tr>
                 <td>
                     PreferredEquity
                             </td>
             <td>Equity</td>
-            <td>ClassSharesOutstanding, ConversionRatio, CountryOfIncorporation, CountryOfIssue, CUSIP, ExecutionVenue, HasAlternateUSSection12Registration, HomeMemberState, InControlOfConversion, IsConvertiblePreferred, ISIN, IssuerId, IssuerName, IsWhenIssued, LotSize, Market, MarketCap, MarketsListedIn, MaturityDate, ParValue, TotalIssuedNominalCapital, TotalSharesInTreasury, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
+            <td>ClassSharesOutstanding, ConversionRatio, CountryOfIncorporation, CountryOfIssue, CUSIP, ExecutionVenue, HasAlternateUSSection12Registration, HomeMemberState, InControlOfConversion, IsConvertiblePreferred, ISIN, IssuerId, IssuerName, IsWhenIssued, LotSize, Market, MarketCap, MarketsListedIn, MaturityDate, ParValue, TitleOfClass, TotalIssuedNominalCapital, TotalSharesInTreasury, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
         </tr>
             <tr>
                 <td>
                     Rights
-<img src="./disclosureProperties_files/atleastone.png" title="At least one underlying required for file validation to pass" alt="required">                            </td>
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Equity</td>
-            <td>ConversionRatio, CUSIP, ExecutionVenue, HasAlternateUSSection12Registration, HomeMemberState, Market, MarketsListedIn, MaturityDate</td>
+            <td>ConversionRatio, CUSIP, ExecutionVenue, HasAlternateUSSection12Registration, HomeMemberState, Market, MarketsListedIn, MaturityDate, TitleOfClass</td>
         </tr>
             <tr>
                 <td>
                     StructuredProduct
-                <img src="./disclosureProperties_files/multiple.png" title="Multiple underlyings allowed" alt="multiple">            </td>
+                <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
             <td>ADR, Bond, CDS, Convertible, Equity, Future, Index, Option, PreferredEquity, StructuredProduct, Unit</td>
             <td>Weighting</td>
         </tr>
             <tr>
                 <td>
                     Swap
-<img src="./disclosureProperties_files/atleastone.png" title="At least one underlying required for file validation to pass" alt="required">                <img src="./disclosureProperties_files/multiple.png" title="Multiple underlyings allowed" alt="multiple">            </td>
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
             <td>ADR, Bond, Convertible, Equity, Index, PreferredEquity, StructuredProduct</td>
             <td>CUSIP, IsCashSettled, ISIN, Market, MarketsListedIn, MaturityDate, Notional</td>
         </tr>
             <tr>
                 <td>
                     Unit
-                <img src="./disclosureProperties_files/multiple.png" title="Multiple underlyings allowed" alt="multiple">            </td>
+                <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
             <td>ADR, Bond, CDS, Convertible, Equity, Future, Option, PreferredEquity, StructuredProduct</td>
-            <td>ClassSharesOutstanding, CountryOfIncorporation, CUSIP, HomeMemberState, IsETF, ISIN, IssuerId, IssuerName, LotSize, Market, MarketsListedIn, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
+            <td>ClassSharesOutstanding, CountryOfIncorporation, CUSIP, HomeMemberState, IsETF, ISIN, IssuerId, IssuerName, LotSize, Market, MarketsListedIn, TitleOfClass, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
         </tr>
             <tr>
                 <td>
                     Warrant
-<img src="./disclosureProperties_files/atleastone.png" title="At least one underlying required for file validation to pass" alt="required">                            </td>
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Equity</td>
-            <td>CallOrPut, ContractSize, CUSIP, Delta, ExecutionVenue, ExerciseStyle, HasAlternateUSSection12Registration, HomeMemberState, InControlOfConversion, IsCashSettled, IsCoveredWarrant, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, MaturityDate</td>
+            <td>CallOrPut, ContractSize, CUSIP, Delta, ExecutionVenue, ExerciseStyle, HasAlternateUSSection12Registration, HomeMemberState, InControlOfConversion, IsCashSettled, IsCoveredWarrant, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, MaturityDate, TitleOfClass</td>
         </tr>
-    </tbody></table>
-    <h2 id="portfolioProperties">Portfolio &amp; Entity Properties</h2>
+    </table>
+    <h2 id="portfolioProperties">Portfolio & Entity Properties</h2>
     <p>A portfolio is the smallest unit that can hold assets (aka an account, fund etc.), an entity is a grouping of portfolios</p>
  <p>The following are required for the rules / Rapptr to function correctly</p>         <table>
             <thead><tr><th>Property Name</th><th>Description</th><th>Data type</th><th>Valid values &amp; notes</th><th>Rules</th><th>Jurisdictions</th></tr></thead>
             <tbody>
                 <tr>
                     <td>
-                        PortfolioId <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">                    </td>
+                        PortfolioId <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
                     <td>Unique identifier for the portfolio / entity</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td></td>
@@ -974,7 +1041,7 @@ ADR, Bond, Convertible, Equity, Index <img src="./disclosureProperties_files/req
                 </tr>
                 <tr>
                     <td>
-                        PortfolioName <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">                    </td>
+                        PortfolioName <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
                     <td>Name of the portfolio / entity</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td></td>
@@ -985,7 +1052,7 @@ ADR, Bond, Convertible, Equity, Index <img src="./disclosureProperties_files/req
                 </tr>
                 <tr>
                     <td>
-                        PortfolioCurrency <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">                    </td>
+                        PortfolioCurrency <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
                     <td>Base currency of the portfolio</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td>Valid values: <a href="http://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a> currency codes.</td>
@@ -996,8 +1063,8 @@ ADR, Bond, Convertible, Equity, Index <img src="./disclosureProperties_files/req
                 </tr>
                 <tr>
                     <td>
-                        PortfolioType <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">                    </td>
-                    <td><strong>Portfolio</strong>: a container that holds assets (Accounts, Funds, Portfolios etc.);<br><strong>Entity</strong>: an aggregation of portfolios (Management Company, Controlling Entity, etc.)</td>
+                        PortfolioType <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
+                    <td><strong>Portfolio</strong>: a container that holds assets (Accounts, Funds, Portfolios etc.);<br /><strong>Entity</strong>: an aggregation of portfolios (Management Company, Controlling Entity, etc.)</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td>Valid values: Entity, Portfolio</td>
                     <td>All</td>
@@ -1007,7 +1074,7 @@ ADR, Bond, Convertible, Equity, Index <img src="./disclosureProperties_files/req
                 </tr>
                 <tr>
                     <td>
-                        PortfolioCompany <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">                    </td>
+                        PortfolioCompany <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
                     <td>If a Chinese wall, or similar, exists, you will be able to limit the visibility to specific areas of the business.</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td>More information is available <a href="https://fundapps.zendesk.com/hc/en-us/articles/201749897-Creating-and-Editing-Companies" target="_blank">here</a></td>
@@ -1018,7 +1085,7 @@ ADR, Bond, Convertible, Equity, Index <img src="./disclosureProperties_files/req
                 </tr>
                 <tr>
                     <td>
-                        DefaultParentId <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">                    </td>
+                        DefaultParentId <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
                     <td>Identifier (PortfolioId) of the Entity that a portfolio or (sub)Entity aggregates to</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td>Must match a PortfolioId of an Entity in the file. This is used to define the aggregation structure. In this case, an aggregation structure named 'Default' is used. For Entities which are at the top of the tree, the DefaultParentId will be its own PortfolioId. For clients with multiple aggregation structures, additional columns named 'XParentId' can be added, where X is the name of the tree (e.g. Voting, Legal, Management). More information <a href="https://fundapps.zendesk.com/hc/en-us/articles/210134023-Portfolio-File" target="_blank">here</a></td>
@@ -1029,7 +1096,7 @@ ADR, Bond, Convertible, Equity, Index <img src="./disclosureProperties_files/req
                 </tr>
                 <tr>
                     <td>
-                        RuleFolders <img src="./disclosureProperties_files/required.png" title="Required for file validation to pass" alt="required">                    </td>
+                        RuleFolders <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
                     <td>Defines which rules run on the system.</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">List</a></td>
                     <td>Valid values: Disclosure, Industry Min. Limits, Validation</td>
@@ -1054,8 +1121,7 @@ ADR, Bond, Convertible, Equity, Index <img src="./disclosureProperties_files/req
                         CompanyType                     </td>
                     <td>Values that indicate classifications for a portfolio/entity that have effect on the application of certain rules</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">List</a></td>
-                    <td>Valid values: CA-AMRS, ITFM, NOATOFFICE, None, NotZA, UKIM, USPassiveInvestor, US-QII.
-<br>See description of possible values <a href="https://fundapps.zendesk.com/hc/en-us/articles/204842149-CompanyType-values" target="_blank">here</a></td>
+                    <td>Valid values: CA-AMRS, ITFM, NOATOFFICE, None, NotZA, UKIM, USPassiveInvestor, US-QII.<br />See description of possible values <a href="https://fundapps.zendesk.com/hc/en-us/articles/204842149-CompanyType-values" target="_blank">here</a></td>
                     <td>16</td>
                     <td>
                             <span style="border-bottom: 1px dotted grey; cursor: pointer" title="CA, GB, IT, US, ZA">5</span>
@@ -1118,15 +1184,416 @@ ADR, Bond, Convertible, Equity, Index <img src="./disclosureProperties_files/req
                 </tr>
             </tbody>
         </table>
-    <script src="./disclosureProperties_files/scale.fix.js.download"></script>
+ <p>The following are required for disclosure forms</p>         <table>
+            <thead><tr><th>Property Name</th><th>Description</th><th>Data type</th><th>Valid values &amp; notes</th><th>Rules</th><th>Jurisdictions</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Address                     </td>
+                    <td>Address used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        AUSellerId                     </td>
+                    <td>The seller ID to be used in the Australian short selling disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        BafinID                     </td>
+                    <td>BaFin ID used in disclosure documents, <a href="https://portal.mvp.bafin.de/MvpPortalWeb/app/initialRegistration.html?locale=en_UK" target="_blank">registration here</a></td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        BicCode                     </td>
+                    <td>Bank Identifier Code used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        City                     </td>
+                    <td>Companies city used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CompanyName                     </td>
+                    <td>Name of the company used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CompanyNumber                     </td>
+                    <td>Company Number of the disclosing entity. Required for the generation of Malaysian forms 29A, 29B and 29C and Philippines forms 23A and 23B.</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ContactPersonFirst                     </td>
+                    <td>First name of the person used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ContactPersonLast                     </td>
+                    <td>Last name of the person used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Country                     </td>
+                    <td>Companies country used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms<br />Valid values: <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_blank">ISO 3166-1 Alpha 2</a> country codes.</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Custodian                     </td>
+                    <td>The custodian of the portfolio.</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email                     </td>
+                    <td>Email address of the contact person used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        EntityCountryOfIncorporation                     </td>
+                    <td>The country of incorporation of the reporting entity, please select country of incorporated from the list.</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms<br />Valid values: <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_blank">ISO 3166-1 Alpha 2</a> country codes.<br />Country must be a valid ISO code.</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Fax                     </td>
+                    <td>Company Fax number used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        HongKongSPRID                     </td>
+                    <td>Hong Kong identifier used in disclosure documents, <a href="https://portal.sfc.hk/dsp/gateway/registration" target="_blank">registration here</a></td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IEIdentifierCode                     </td>
+                    <td>Ireland identifier code used in disclosure documents, <a href="http://www.centralbank.ie/regulation/securities-markets/shortselling/Pages/Forms.aspx" target="_blank">registration here</a></td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IndianPAN                     </td>
+                    <td>Permanent Account Number used in Indian holding breakdown form.</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        PostCode                     </td>
+                    <td>Company post code used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Province                     </td>
+                    <td>Companies province used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ReportingPersonAddress                     </td>
+                    <td>Street and number of the person filing the disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ReportingPersonCity                     </td>
+                    <td>City of the person filing the disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ReportingPersonCompany                     </td>
+                    <td>Company of the person filing the disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ReportingPersonCountry                     </td>
+                    <td>Country of the person filing the disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms<br />Valid values: <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_blank">ISO 3166-1 Alpha 2</a> country codes.</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ReportingPersonEmail                     </td>
+                    <td>Email of the person filing the disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ReportingPersonFax                     </td>
+                    <td>Fax number of the person filing the disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ReportingPersonFirst                     </td>
+                    <td>First name of the person filing the disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ReportingPersonLast                     </td>
+                    <td>Last name of the person filing the disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ReportingPersonPhone                     </td>
+                    <td>Phone number of the person filing the disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ReportingPersonPosition                     </td>
+                    <td>Position/Title of the person filing the disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ReportingPersonPostCode                     </td>
+                    <td>Postal code of the person filing the disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ReportingPersonProvince                     </td>
+                    <td>State/province of the person filing the disclosure form</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Role                     </td>
+                    <td>Contact person's role used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        SSRUKHolderID                     </td>
+                    <td>UK Short Selling Holder ID used in disclosure documents, send <a href="http://www.fca.org.uk/static/documents/forms/ssr-registration-form.xlsx" target="_blank">registration form</a> to <a href="m&#x61;&#105;&#108;&#116;&#111;&#58;&#114;&#x65;&#x67;&#x69;&#x73;&#116;&#x72;&#97;&#116;&#105;&#x6f;&#x6e;&#83;S&#82;&#64;f&#99;a&#x2e;o&#114;&#x67;&#x2e;u&#x6b;">&#x72;&#101;&#103;&#x69;&#x73;&#116;&#x72;&#97;&#116;&#105;&#x6f;&#110;&#83;&#x53;&#x52;&#64;&#102;&#x63;&#97;&#46;&#x6f;&#114;&#x67;&#x2e;&#117;k</a></td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Telephone                     </td>
+                    <td>Company or contact person telephone number used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        USReportingPersonType                     </td>
+                    <td>Type of reporting person</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms<br />Valid values: BD, BK, CO, CP, EP, FI, HC, IA, IC, IN, IV, OO, PN, SA.</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ZARegistrationNo                     </td>
+                    <td>South African ID/Registration number used in disclosure documents</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <script src="javascripts/scale.fix.js"></script>
 
 <!-- Visual Studio Browser Link -->
 <script type="application/json" id="__browserLink_initializationData">
-    {"appName":"Chrome","requestId":"248534c3184f44ac948b7e6d4201ba83"}
+    {"appName":"Mozilla","requestId":"7e70cf74005a4384983d747a10f1369f"}
 </script>
-<script type="text/javascript" src="./disclosureProperties_files/browserLink" async="async"></script>
+<script type="text/javascript" src="http://localhost:8323/0778787557b14b148adc3f884a587220/browserLink" async="async"></script>
 <!-- End Browser Link -->
 
+</body>
 
-
-<div style="box-sizing: content-box; display: inline-block; height: 0px; overflow: hidden; position: absolute; top: 0px; visibility: hidden; white-space: nowrap;"></div><div id="workable-clipper"></div></body></html>
+</html>
