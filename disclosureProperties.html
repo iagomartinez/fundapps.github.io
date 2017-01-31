@@ -44,7 +44,7 @@
                         </td>
                         <td>Unique ID of the asset</td>
  <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>e.g. ISIN + Market for listed instruments, <a href="http://www.fca.org.uk/firms/systems-reporting/transaction-reporting/alternative-instrument-identifier" target="_blank">Alternative Instrument Identifier</a> for OTCs.<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
+                        <td>e.g. ISIN + Market for listed instruments, <a href="https://www.fca.org.uk/markets/transaction-reporting/alternative-instrument-identifiers" target="_blank">Alternative Instrument Identifier</a> for OTCs.<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
                         <td>All</td>
                         <td>
                                 <span>All</span>
@@ -82,22 +82,10 @@ ADR, Convertible, Equity, PreferredEquity, Rights, Warrant                      
                         </td>
                         <td>Direct or Indirect holding</td>
  <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>Only used for display purposes / in forms<br />Valid values: Direct, Indirect.<br />Used in TR1 forms</td>
+                        <td>Only used for display purposes / in forms<br />Valid values: Direct, Indirect.</td>
                         <td>-</td>
                         <td>
                                 <span>-</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>IsDeltaHedge </td>
-                        <td>
-Equity                        </td>
-                        <td>If a short equity position is used for delta hedging purposes of long convertible bonds</td>
- <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
-                        <td>Defaults to false if not provided.<br />Used in: Short selling in Japan</td>
-                        <td>All</td>
-                        <td>
-                                <span>All</span>
                         </td>
                     </tr>
                     <tr>
@@ -295,9 +283,9 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Right
                         <td>Delta </td>
                         <td>
 Convertible, Option, Warrant                        </td>
-                        <td>Delta of the asset (price sensitivity with relation to the underlying)</td>
+                        <td>The Delta measures the degree to which the derivative is exposed to shifts in the price of the underlying asset (price sensitivity with relation to the underlying)</td>
  <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
-                        <td></td>
+                        <td>Valid Values: 0 to 1</td>
                         <td>247</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AT, AU, BD, BE, BG, BM, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GH, GR, HR, HU, ID, IE, IT, KR, KY, LT, LU, LV, MT, MY, NL, NO, NZ, PL, PT, RO, SE, SG, SI, SK, TH, TW, VG, WW">46</span>
@@ -331,7 +319,7 @@ Bond                        </td>
                         <td>ExercisePrice </td>
                         <td>
 CFD, Future, Option                        </td>
-                        <td>Exercise / strike price</td>
+                        <td>Price at which a derivative can be exercised. Also known as strike price.</td>
  <td><strong>BB</strong>: CP_OPT_PX or STRIKE</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>Only used for display purposes / in forms<br />Used in TR1 forms</td>
                         <td>-</td>
@@ -343,7 +331,7 @@ CFD, Future, Option                        </td>
                         <td>ExerciseStyle </td>
                         <td>
 Option, Warrant                        </td>
-                        <td>Exercise style of options and warrants</td>
+                        <td>Exercise style of options and warrants, which is defined by when, and under what circumstances an option may be exercised.</td>
  <td><strong>BB</strong>: EXERCISETYPE or OPT_EXER_TYP</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>Valid values: American, Bermudan, European.<br />Defaults to American if not provided</td>
                         <td>8</td>
@@ -379,7 +367,7 @@ ADR, Convertible, Equity, PreferredEquity, Rights, Warrant                      
                         <td>HomeMemberState </td>
                         <td>
 ADR, Bond, Convertible, Equity, PreferredEquity, Rights, Unit, Warrant                        </td>
-                        <td>Chosen home member state of the issuer</td>
+                        <td>The EU country of the competent authority to which an issuer of the security is assigned or registered with respect to the EU Transparency Directive.</td>
  <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                         <td>If not provided, Rapptr tries to look it up in the <a href="http://registers.esma.europa.eu/publication/searchRegister?core=esma_registers_mifid_sha" target="_blank">ESMA list</a></td>
                         <td>176</td>
@@ -675,7 +663,7 @@ CDS, Future, Option, Swap                        </td>
                         <td>ParValue </td>
                         <td>
 Equity, PreferredEquity                        </td>
-                        <td>Price of an equity security when originally issued and bearing no relation to the market price.</td>
+                        <td>Price of an equity security when originally issued and bearing no relation to the market price. The value will be stated in the company's articles of incorporation/association.</td>
  <td><strong>BB</strong>: PAR_AMT</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>Only required for a handful of jurisdictions.</td>
                         <td>11</td>
@@ -836,7 +824,7 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.png' title='Requir
             </tbody>
         </table>
     <h2 id="globalProperties">Properties valid for ALL AssetClasses</h2>
-    <p>Address, AssetClass, AssetClassCustomer, AssetId, AssetName, AUSellerId, BafinID, BaseDate, BicCode, City, CompanyName, CompanyNumber, CompanyType, ContactPersonFirst, ContactPersonLast, Country, Custodian, DefaultParentId, DisqualifiedFrom13GIssuerIDs, DisqualifiedFromAMRSIssuerIDs, Email, EntityCountryOfIncorporation, Fax, FundDomicile, HoldingType, HongKongSPRID, IEIdentifierCode, IncludeRightToAcquireSharesForSchedule13, IndianPAN, InstrumentCurrency, InstrumentId, InstrumentName, IsAIF, LocalTicker, ManagedBy, MarketValue, MarketValueInInstrumentCurrency, NavDate, PortfolioCompany, PortfolioCurrency, PortfolioName, PortfolioType, PostCode, Price, Province, Quantity, ReportingPersonAddress, ReportingPersonCity, ReportingPersonCompany, ReportingPersonCountry, ReportingPersonEmail, ReportingPersonFax, ReportingPersonFirst, ReportingPersonLast, ReportingPersonPhone, ReportingPersonPosition, ReportingPersonPostCode, ReportingPersonProvince, Role, RuleFolders, SSRUKHolderID, Telephone, USReportingPersonType, ZARegistrationNo</p>
+    <p>Address, AssetClass, AssetClassCustomer, AssetId, AssetName, AUSellerId, BafinID, BaseDate, BicCode, City, CompanyName, CompanyNumber, CompanyType, ContactPersonFirst, ContactPersonLast, Country, Custodian, DefaultParentId, DisqualifiedFrom13GIssuerIDs, DisqualifiedFromAMRSIssuerIDs, Email, EntityCountryOfIncorporation, Fax, FundDomicile, HoldingType, HongKongSPRID, IEIdentifierCode, IncludeRightToAcquireSharesForSchedule13, IndianPAN, InstrumentCurrency, InstrumentId, InstrumentName, IRCNumberKR, IsAIF, LocalTicker, ManagedBy, MarketValue, MarketValueInInstrumentCurrency, NavDate, PortfolioCompany, PortfolioCurrency, PortfolioName, PortfolioType, PostCode, Price, Province, Quantity, ReportingPersonAddress, ReportingPersonCity, ReportingPersonCompany, ReportingPersonCountry, ReportingPersonEmail, ReportingPersonFax, ReportingPersonFirst, ReportingPersonLast, ReportingPersonPhone, ReportingPersonPosition, ReportingPersonPostCode, ReportingPersonProvince, RuleFolders, SSRUKHolderID, Telephone, USReportingPersonType, ZARegistrationNo</p>
     <h2 id="byClass">Properties valid for each AssetClass</h2>
     <p>
         Asset classes which require at least one underlying asset to pass validation are marked with <img src="/img/atleastone.png" /><br />
@@ -890,7 +878,7 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.png' title='Requir
                     Equity
                             </td>
             <td></td>
-            <td>ClassSharesOutstanding, CountryOfIncorporation, CountryOfIssue, CUSIP, ExecutionVenue, HasAlternateUSSection12Registration, HomeMemberState, IsDeltaHedge, ISIN, IssuerId, IssuerName, IsWhenIssued, LotSize, Market, MarketCap, MarketsListedIn, ParValue, TitleOfClass, TotalIssuedNominalCapital, TotalSharesInTreasury, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
+            <td>ClassSharesOutstanding, CountryOfIncorporation, CountryOfIssue, CUSIP, ExecutionVenue, HasAlternateUSSection12Registration, HomeMemberState, ISIN, IssuerId, IssuerName, IsWhenIssued, LotSize, Market, MarketCap, MarketsListedIn, ParValue, TitleOfClass, TotalIssuedNominalCapital, TotalSharesInTreasury, TotalSharesOutstanding, TotalVotingRights, TotalVotingShares, VotesPerShare, Weighting</td>
         </tr>
             <tr>
                 <td>
@@ -1054,7 +1042,7 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.png' title='Requir
                         CompanyType                     </td>
                     <td>Values that indicate classifications for a portfolio/entity that have effect on the application of certain rules</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">List</a></td>
-                    <td>Valid values: CA-AMRS, ITFM, NOATOFFICE, None, NotZA, UKIM, USPassiveInvestor, US-QII.<br />See description of possible values <a href="https://fundapps.zendesk.com/hc/en-us/articles/204842149-CompanyType-values" target="_blank">here</a></td>
+                    <td>Valid values: CA-AMRS, ITFM, None, NotZA, UKIM, USPassiveInvestor, US-QII.<br />See description of possible values <a href="https://fundapps.zendesk.com/hc/en-us/articles/204842149-CompanyType-values" target="_blank">here</a></td>
                     <td>16</td>
                     <td>
                             <span style="border-bottom: 1px dotted grey; cursor: pointer" title="CA, GB, IT, US, ZA">5</span>
@@ -1309,6 +1297,17 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.png' title='Requir
                 </tr>
                 <tr>
                     <td>
+                        IRCNumberKR                     </td>
+                    <td>The Investment Registration Certificate number for any foreign investor in Korea registered with the Financial Supervisory Services. Required for the generation of the short Korea form.</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+                    <td>-</td>
+                    <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         PostCode                     </td>
                     <td>Company post code used in disclosure documents</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
@@ -1454,17 +1453,6 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.png' title='Requir
                     <td>
                         ReportingPersonProvince                     </td>
                     <td>State/province of the person filing the disclosure form</td>
-                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                    <td>Only used for display purposes / in forms</td>
-                    <td>-</td>
-                    <td>
-                            <span>-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Role                     </td>
-                    <td>Contact person's role used in disclosure documents</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td>Only used for display purposes / in forms</td>
                     <td>-</td>
