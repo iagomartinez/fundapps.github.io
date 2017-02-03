@@ -286,7 +286,7 @@ Convertible, Option, Warrant                        </td>
                         <td>The Delta measures the degree to which the derivative is exposed to shifts in the price of the underlying asset (price sensitivity with relation to the underlying)</td>
  <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>Valid Values: 0 to 1</td>
-                        <td>247</td>
+                        <td>245</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AT, AU, BD, BE, BG, BM, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GH, GR, HR, HU, ID, IE, IT, KR, KY, LT, LU, LV, MT, MY, NL, NO, NZ, PL, PT, RO, SE, SG, SI, SK, TH, TW, VG, WW">46</span>
                         </td>
@@ -382,9 +382,9 @@ Convertible <img src='/img/required.png' title='Required for file validation to 
                         <td>If the holder has control over the conditions of conversion (for convertibles) or exercise (for warrants).</td>
  <td><strong>BB</strong>: CV_CONV_BY_ISSUER_OR_HOLDER</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td>Some countries require convertibles &amp; warrants to be counted if the conditions for conversion are within the control of the parties (e.g. UK, Pakistan).</td>
-                        <td>24</td>
+                        <td>28</td>
                         <td>
-                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="BE, FR, IS, LU, NG, NO, PH, PK, RO, TN">10</span>
+                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="BE, FR, IS, LU, NG, NO, PH, PK, RO, TN, US">11</span>
                         </td>
                     </tr>
                     <tr>
@@ -512,18 +512,6 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Swap,
                         <td>99</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AT, AU, BE, BG, BR, BW, CA, CH, CL, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GH, GR, HK, HR, HU, ID, IE, IT, JO, KR, LT, LU, LV, MT, MU, MY, NG, NL, NO, NZ, PH, PK, PL, PT, RO, SA, SE, SG, SI, SK, TH, TN, US, WW, ZA">53</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>IsSubNational </td>
-                        <td>
-Bond                        </td>
-                        <td>If the bond is issued by a country or a state (True = By a state, False = by a country), for sovereign debt rules</td>
- <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
-                        <td>Only required if you can't match the sovereign issuer name used in Issuer to <a href="https://www.esma.europa.eu/net-short-position-notification-thresholds-sovereign-issuers" target="_blank">ESMA's list</a> of sovereign issuers</td>
-                        <td>All</td>
-                        <td>
-                                <span>All</span>
                         </td>
                     </tr>
                     <tr>
@@ -727,7 +715,7 @@ Equity, PreferredEquity                        </td>
                         <td>Total amount of shares held in treasury by the issuer.</td>
  <td><strong>BB</strong>: BS_NUM_OF_TSY_SH</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td></td>
-                        <td>56</td>
+                        <td>55</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AT, BE, BG, BR, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR, HR, HU, ID, IE, IT, JO, JP, KR, LT, LU, LV, MA, MT, NL, NO, PL, PT, RO, SA, SE, SI, SK, TW">37</span>
                         </td>
@@ -739,7 +727,7 @@ Equity, PreferredEquity, Unit                        </td>
                         <td>Total amount of shares in circulation for this issuer (all share classes)</td>
  <td><strong>BB</strong>: EQY_SH_OUT_TOT_MULT_SH</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>For Unit funds structured as ETFs this should reflect the number of units issued.</td>
-                        <td>173</td>
+                        <td>172</td>
                         <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LK, LT, LU, LV, MA, MC, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, WW, ZA, ZW">89</span>
                         </td>
@@ -763,9 +751,9 @@ Equity, PreferredEquity, Unit                        </td>
                         <td>Total amount of outstanding shares with voting rights attached in circulation</td>
  <td><strong>BB</strong>: EQY_SH_OUT_TOT_MULT_SH - TOTAL_NON_VOTING_SHARES_VALUE</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>Only required for a handful of jurisdictions.</td>
-                        <td>12</td>
+                        <td>14</td>
                         <td>
-                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="HU, IE, IN, KE, KW, LK, MY, UA, VN">9</span>
+                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="HU, IE, IN, KE, KR, KW, LK, MY, UA, VN">10</span>
                         </td>
                     </tr>
                     <tr>
@@ -850,7 +838,7 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.png' title='Requir
                     Bond
                             </td>
             <td></td>
-            <td>CountryOfIssue, CUSIP, DurationAdjustment, FaceValue, HomeMemberState, IsGovernmentBacked, ISIN, IsSubNational, IssuerId, IssuerName, Market, MarketsListedIn, TitleOfClass, TotalDebtOutstanding, Weighting</td>
+            <td>CountryOfIssue, CUSIP, DurationAdjustment, FaceValue, HomeMemberState, IsGovernmentBacked, ISIN, IssuerId, IssuerName, Market, MarketsListedIn, TitleOfClass, TotalDebtOutstanding, Weighting</td>
         </tr>
             <tr>
                 <td>
