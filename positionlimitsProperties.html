@@ -124,7 +124,7 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Right
  <td>3</td>                                             </tr>
             </tbody>
         </table>
-    <h2 id="globalProperties">Properties valid for ALL AssetClasses</h2>
+        <h2 id="globalProperties">Properties valid for ALL AssetClasses</h2>
     <p>AssetId, AssetName, CommoditySymbol, DeliveryMonth, InstrumentId, InstrumentName, Quantity</p>
     <h2 id="byClass">Properties valid for each AssetClass</h2>
     <p>
@@ -136,114 +136,98 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Right
             <tr>
                 <th>Asset Class</th>
                 <th>Valid Underlyings</th>
-                <th>Properties</th>
-            </tr>
+<th>Properties</th>             </tr>
         </thead>
             <tr>
                 <td>
                     ADR
 <img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Equity, PreferredEquity</td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
             <tr>
                 <td>
                     Bond
                             </td>
             <td></td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
             <tr>
                 <td>
                     CDS
 <img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Bond, Index, StructuredProduct</td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
             <tr>
                 <td>
                     CFD
 <img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Bond, Convertible, Equity, Index, PreferredEquity, StructuredProduct</td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
             <tr>
                 <td>
                     Convertible
 <img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Equity</td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
             <tr>
                 <td>
                     Equity
                             </td>
             <td></td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
             <tr>
                 <td>
                     Future
 <img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Bond, Convertible, Equity, Index, PreferredEquity, StructuredProduct</td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
             <tr>
                 <td>
                     Index
                 <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
             <td>ADR, Bond, CDS, Convertible, Equity, PreferredEquity</td>
-            <td></td>
-        </tr>
+ <td></td>         </tr>
             <tr>
                 <td>
                     Option
 <img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
             <td>Bond, Convertible, Equity, Future, Index, PreferredEquity, StructuredProduct, Unit</td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
             <tr>
                 <td>
                     PreferredEquity
                             </td>
             <td>Equity</td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
             <tr>
                 <td>
                     Rights
 <img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Equity</td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
             <tr>
                 <td>
                     StructuredProduct
                 <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
             <td>ADR, Bond, CDS, Convertible, Equity, Future, Index, Option, PreferredEquity, StructuredProduct, Unit</td>
-            <td></td>
-        </tr>
+ <td></td>         </tr>
             <tr>
                 <td>
                     Swap
 <img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
             <td>ADR, Bond, Convertible, Equity, Index, PreferredEquity, StructuredProduct</td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
             <tr>
                 <td>
                     Unit
                 <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
             <td>ADR, Bond, CDS, Convertible, Equity, Future, Option, PreferredEquity, StructuredProduct</td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
             <tr>
                 <td>
                     Warrant
 <img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
             <td>Equity</td>
-            <td>Market</td>
-        </tr>
+ <td>Market</td>         </tr>
     </table>
     <h2 id="portfolioProperties">Portfolio & Entity Properties</h2>
     <p>A portfolio is the smallest unit that can hold assets (aka an account, fund etc.), an entity is a grouping of portfolios</p>
