@@ -29,6 +29,7 @@
             <thead>
                 <tr>
                     <th>Property Name</th>
+                    <th></th>
                     <th>Applies To</th>
                     <th>Description</th>
  <th>Mapping*</th>                     <th>Data type</th>
@@ -37,17 +38,18 @@
             </thead>
             <tbody>
                     <tr>
-                        <td>AssetId <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>AssetId</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
                         <td>Unique ID of the asset</td>
  <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
-                        <td>e.g. ISIN + Market for listed instruments, <a href="https://www.fca.org.uk/markets/transaction-reporting/alternative-instrument-identifiers" target="_blank">Alternative Instrument Identifier</a> for OTCs.
-<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
+                        <td>e.g. ISIN + Market for listed instruments, <a href="https://www.fca.org.uk/markets/transaction-reporting/alternative-instrument-identifiers" target="_blank">Alternative Instrument Identifier</a> for OTCs.<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
                                             </tr>
                     <tr>
-                        <td>AssetName <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>AssetName</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -56,7 +58,8 @@
                         <td>Used throughout Rapptr as the primary display name for the asset, so ensure this name is meaningful</td>
                                             </tr>
                     <tr>
-                        <td>Quantity <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>Quantity</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -71,6 +74,7 @@
             <thead>
                 <tr>
                     <th>Property Name</th>
+                    <th></th>
                     <th>Applies To</th>
                     <th>Description</th>
  <th>Mapping*</th>                     <th>Data type</th>
@@ -79,7 +83,8 @@
             </thead>
             <tbody>
                     <tr>
-                        <td>CommoditySymbol <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>CommoditySymbol</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -88,7 +93,8 @@
                         <td></td>
                                             </tr>
                     <tr>
-                        <td>DeliveryMonth <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>DeliveryMonth</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -97,7 +103,17 @@
                         <td><a href="http://www.iso.org/iso/home/standards/iso8601.htm" target="_blank">ISO 8601</a> YYYY-MM format</td>
                                             </tr>
                     <tr>
-                        <td>InstrumentId <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>Delta</td>
+                        <td></td>
+                        <td>
+Convertible, Option, Warrant                        </td>
+                        <td>The Delta measures the degree to which the derivative is exposed to shifts in the price of the underlying asset (price sensitivity with relation to the underlying)</td>
+ <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td>Valid Values: 0 to 1</td>
+                                            </tr>
+                    <tr>
+                        <td>InstrumentId</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -106,7 +122,8 @@
                         <td><strong>Must be unique for every instrument in one upload</strong></td>
                                             </tr>
                     <tr>
-                        <td>InstrumentName <img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>InstrumentName</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                         <td>
                                 All
                         </td>
@@ -115,7 +132,8 @@
                         <td>Used throughout Rapptr as the primary display name for the instrument, so ensure this name is meaningful</td>
                                             </tr>
                     <tr>
-                        <td>Market </td>
+                        <td>Market</td>
+                        <td></td>
                         <td>
 ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Rights, Swap, Unit, Warrant                        </td>
                         <td>Market identification code (MIC) for the market this instrument is traded on</td>
@@ -230,46 +248,46 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Right
     <h2 id="portfolioProperties">Portfolio & Entity Properties</h2>
     <p>A portfolio is the smallest unit that can hold assets (aka an account, fund etc.), an entity is a grouping of portfolios</p>
  <p>The following are required for the rules / Rapptr to function correctly</p>         <table>
-            <thead><tr><th>Property Name</th><th>Description</th><th>Data type</th><th>Valid values &amp; notes</th></tr></thead>
+            <thead><tr><th>Property Name</th><th>Description</th><th></th><th>Data type</th><th>Valid values &amp; notes</th></tr></thead>
             <tbody>
                 <tr>
-                    <td>
-                        PortfolioId <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
+                    <td>PortfolioId</td>
+                    <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                     <td>Unique identifier for the portfolio / entity</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td></td>
                                     </tr>
                 <tr>
-                    <td>
-                        PortfolioName <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
+                    <td>PortfolioName</td>
+                    <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                     <td>Name of the portfolio / entity</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td></td>
                                     </tr>
                 <tr>
-                    <td>
-                        PortfolioType <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
+                    <td>PortfolioType</td>
+                    <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                     <td><strong>Portfolio</strong>: a container that holds assets (Accounts, Funds, Portfolios etc.);<br /><strong>Entity</strong>: an aggregation of portfolios (Management Company, Controlling Entity, etc.)</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td>Valid values: Entity, Portfolio</td>
                                     </tr>
                 <tr>
-                    <td>
-                        PortfolioCompany <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
+                    <td>PortfolioCompany</td>
+                    <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                     <td>If a Chinese wall, or similar, exists, you will be able to limit the visibility to specific areas of the business.</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td>More information is available <a href="https://fundapps.zendesk.com/hc/en-us/articles/201749897-Creating-and-Editing-Companies" target="_blank">here</a></td>
                                     </tr>
                 <tr>
-                    <td>
-                        DefaultParentId <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
+                    <td>DefaultParentId</td>
+                    <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                     <td>Identifier (PortfolioId) of the Entity that a portfolio or (sub)Entity aggregates to</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td>Must match a PortfolioId of an Entity in the file. This is used to define the aggregation structure. In this case, an aggregation structure named 'Default' is used. For Entities which are at the top of the tree, the DefaultParentId will be its own PortfolioId. For clients with multiple aggregation structures, additional columns named 'XParentId' can be added, where X is the name of the tree (e.g. Voting, Legal, Management). More information <a href="https://fundapps.zendesk.com/hc/en-us/articles/210134023-Portfolio-File" target="_blank">here</a></td>
                                     </tr>
                 <tr>
-                    <td>
-                        RuleFolders <img src="/img/required.png" title='Required for file validation to pass' alt="required" />                    </td>
+                    <td>RuleFolders</td>
+                    <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
                     <td>Defines which rules run on the system.</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">List</a></td>
                     <td>Valid values: Position Limits</td>
@@ -278,5 +296,13 @@ ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Right
         </table>
     <p>* Although every effort has been made to provide complete and accurate information, FundApps makes no guarantees, express or implied, or representations as to the accuracy of this content. FundApps assumes no liability or responsibility for any error or omissions in these mappings</p>
     <script src="javascripts/scale.fix.js"></script>
+    
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Mozilla","requestId":"1ee88d0ea87a4f4eb97aadf331894f51"}
+</script>
+<script type="text/javascript" src="http://localhost:50179/8f3589717b12421c8cc3882a8b6e0b6c/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
 </body>
 </html>
