@@ -1,103 +1,299 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In - FundApps</title>
-    <link href="/Content/app.new.css?17ae03b4467a8f5fb3a13df3ea9a9b2beeab5b69" rel="stylesheet" />
-</head>
-<body class="unauthorized bs logon-view">
-    <div id="header" class="header">
-        <h1><a href="/">FundApps</a></h1>
-    </div>
-    <div class="wrapper">
-        <div class="content">
-            <h2>Log In</h2>
-            <div class="alert alert-error" style="display:none"></div>
-<div class="alert alert-info" style="display:none"></div>
-
-
-            
-<form method="POST" id="login-form" autocomplete="off">
-    <!--[if gte IE 9]><!-->
-    <input name="__RequestVerificationToken" type="hidden" value="m3eQ0zAsQcfzknERZFkFJe1iCppASEz7c-3qSWTL3F07kqpppI8O63zmwzn7wf1H5v-AYISfIJaXUaPKTBNHe1ieSyI1" />
-    <div class="validation-summary-valid&#32;alert&#32;alert-error" data-valmsg-summary="true"><ul><li style="display:none"></li>
-</ul></div>
-        <div class="control-group">
-            <div class="input-prepend">
-                <span class="add-on"><i class="icon-user"></i></span>
-                <input autocapitalize="off" autocomplete="On" autocorrect="off" class="input-block-level" data-val="true" data-val-required="&#39;Email&#32;Address&#39;&#32;should&#32;not&#32;be&#32;empty." id="EmailAddress" name="EmailAddress" placeholder="Email&#32;address" spellcheck="false" type="text" value="" />
-            </div>
-        </div>
-        <div class="control-group">
-            <div class="input-prepend">
-                <span class="add-on"><i class="icon-lock"></i></span>
-                <input autocomplete="On" class="input-block-level" id="Password" name="Password" placeholder="Password" type="password" />
-            </div>
-        </div>
-        <div class="control-group">
-            <button class="btn btn-block btn-primary" type="submit">Log in</button>
-        </div>
-    <p class="leave-cta"><a href="/Auth/RequestPasswordResetToken">Forgot your password?</a></p>
-    <!--<![endif]-->
-    <p class="form__input input-validation-error" id="ie-9-10-warn" style="display:none;">
-        You are using an outdated browser.
-        <strong>As of April 11th 2017 you will be unable to access FundApps using this browser</strong>.
-        Please <a href="https://fundapps.zendesk.com/hc/en-us/articles/200148157-Browser-Support">refer to our documentation</a> for supported browsers and either upgrade or ask your system admin to do so.
+    <head>
+        <meta charset="utf-8">
+        <title>FundApps: Properties required for Positionlimits</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+    <p><a href="/"><img src="/img/fundapps_logo.png" alt="Logo" /></a></p>
+    <h1>Properties required for Positionlimits</h1>
+    <p>
+        
+        Rapptr will <a href="https://fundapps.zendesk.com/hc/en-us/articles/204840639">fail validation</a> if any of the properties marked with <img src="/img/required.png" /> are missing.
     </p>
-    <!--[if lt IE 9]>
-        <p class="form__input input-validation-error">You are using an <strong>outdated</strong> browser! From April 30th 2015, FundApps no longer supports Internet Explorer 8 (or earlier). Please <a href="https://fundapps.zendesk.com/hc/en-us/articles/200148157-Browser-Support">upgrade your browser</a> or ask your system admin to do so.</p>
-    <![endif]-->
-
-</form>
-
-<!--[if gte IE 9]><!-->
-<script type="text/javascript" nonce="MYpdF6Due0Jl8Suovpe38A==">
-    document.getElementById("EmailAddress").focus();
-
-    if ('documentMode' in document) {
-        var ieVersion = document.documentMode;
-
-        if (ieVersion <= 10) {
-            document.getElementById('ie-9-10-warn').style.display = 'block';
-        }
-    }
-</script>
-<!--<![endif]-->
-
-        </div>
-    </div>
-    <div class="footer">
-            <span class="poweredby">Powered by <a target="_blank" href="https://www.fundapps.co">FundApps</a></span>
-        <a class="support" href="https://fundapps.zendesk.com/hc/en-us/articles/200951119-Contacting-Support" target="_blank">Contact Support</a>
-    </div>
-    <script nonce="MYpdF6Due0Jl8Suovpe38A==" src="/scripts/dist/vendor.all.js?b990d3912e14355fefc7e87eba512c08d0186f5c" type="text/javascript"></script>
-    <script type="text/javascript" nonce="MYpdF6Due0Jl8Suovpe38A==">
-    
-        if (!("placeholder" in document.createElement("input"))) {
-            $('[placeholder]').focus(function () {
-                var input = $(this);
-                if (input.val() == input.attr('placeholder')) {
-                    input.val('');
-                    input.removeClass('placeholder');
-                }
-            }).blur(function () {
-                var input = $(this);
-                if (input.val() == '' || input.val() == input.attr('placeholder')) {
-                    input.addClass('placeholder');
-                    input.val(input.attr('placeholder'));
-                }
-            }).blur().parents('form').submit(function () {
-                $(this).find('[placeholder]').each(function() {
-                    var input = $(this);
-                    if (input.val() == input.attr('placeholder')) {
-                        input.val('');
-                    }
-                });
-            });
-        }
-    </script>
-</body>
+    <p>
+        For information on integrating via API, please see <a href="https://github.com/fundapps/api-examples" rel="nofollow">our GitHub repository</a>. For all other information on Rapptr please see our <a href="https://fundapps.zendesk.com/hc/en-us" rel="nofollow">Zendesk HelpCentre</a>
+    </p>
+    <br />
+        <h2 id="AssetProperties">Asset Properties</h2>
+ <p>An asset is the specific position a portfolio has in an instrument. Instrument properties are independent of portfolio, whereas asset properties are specifc to the portfolio</p>         <table>
+            <thead>
+                <tr>
+                    <th>Property Name</th>
+                    <th></th>
+                    <th>Applies To</th>
+                    <th>Description</th>
+ <th>Mapping*</th>                     <th>Data type</th>
+                    <th>Valid values &amp; notes</th>
+                                    </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>AssetId</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Unique ID of the asset</td>
+ <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>e.g. ISIN + Market for listed instruments, <a href="https://www.fca.org.uk/markets/transaction-reporting/alternative-instrument-identifiers" target="_blank">Alternative Instrument Identifier</a> for OTCs.<br /><strong>Must be unique for every asset in the portfolio and consistent across NAV dates</strong></td>
+                                            </tr>
+                    <tr>
+                        <td>AssetName</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Name of the asset</td>
+ <td><strong>BB</strong>: SEC_NAME</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Used throughout Rapptr as the primary display name for the asset, so ensure this name is meaningful</td>
+                                            </tr>
+                    <tr>
+                        <td>Quantity</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td><strong>Equities</strong> - Number of shares held <br /> <strong>Bonds</strong> - Total nominal value divided by face value (the multiple of the face value making up the nominal of the position) <br /> <strong>ETF</strong> - Number of units held <br /> <strong>Derivatives</strong> - Number of contracts held</td>
+ <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td>For credit default swaps (CDS), use a negative quantity for protection buys (which is an effective short position) and positive quantity for protection sells (which is an effective long position)</td>
+                                            </tr>
+            </tbody>
+        </table>
+        <h2 id="InstrumentProperties">Instrument Properties</h2>
+ <p>An instrument is the portfolio independent information</p>         <table>
+            <thead>
+                <tr>
+                    <th>Property Name</th>
+                    <th></th>
+                    <th>Applies To</th>
+                    <th>Description</th>
+ <th>Mapping*</th>                     <th>Data type</th>
+                    <th>Valid values &amp; notes</th>
+                                    </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>CommoditySymbol</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Exchange-specific commodity symbol (e.g. CL for NYMEX Crude Oil)</td>
+ <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td></td>
+                                            </tr>
+                    <tr>
+                        <td>DeliveryMonth</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Delivery month of exchange-traded derivatives</td>
+ <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td><a href="http://www.iso.org/iso/home/standards/iso8601.htm" target="_blank">ISO 8601</a> YYYY-MM format</td>
+                                            </tr>
+                    <tr>
+                        <td>Delta</td>
+                        <td></td>
+                        <td>
+Convertible, Option, Warrant                        </td>
+                        <td>The Delta measures the degree to which the derivative is exposed to shifts in the price of the underlying asset (price sensitivity with relation to the underlying)</td>
+ <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
+                        <td>Valid Values: 0 to 1</td>
+                                            </tr>
+                    <tr>
+                        <td>InstrumentId</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Identifier to link assets to instruments and instruments to Underlying instruments</td>
+ <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td><strong>Must be unique for every instrument in one upload</strong></td>
+                                            </tr>
+                    <tr>
+                        <td>InstrumentName</td>
+                        <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Instrument name</td>
+ <td><strong>BB</strong>: SEC_NAME</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Used throughout Rapptr as the primary display name for the instrument, so ensure this name is meaningful</td>
+                                            </tr>
+                    <tr>
+                        <td>Market</td>
+                        <td></td>
+                        <td>
+ADR, Bond, CDS, CFD, Convertible, Equity, Future, Option, PreferredEquity, Rights, Swap, Unit, Warrant                        </td>
+                        <td>Market identification code (MIC) for the market this instrument is traded on</td>
+ <td><strong>BB</strong>: ID_MIC_PRIM_EXCH</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td><a href="http://www.iso15022.org/mic/homepagemic.htm" target="_blank">ISO 10383 code</a> (MIC). Insert the MIC (the specific market segment) and not only the Operating MIC since the latter is the parent market venue only. For securities with no market, use value: XXXX</td>
+                                            </tr>
+            </tbody>
+        </table>
+        <h2 id="byClass">Properties valid for each AssetClass</h2>
+    <p>
+        Asset classes which require at least one underlying asset to pass validation are marked with <img src="/img/atleastone.png" /><br />
+        Asset classes which can have multiple underlying assets are marked with <img src="/img/multiple.png" />
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Asset Class</th>
+                <th>Valid Underlyings</th>
+            </tr>
+        </thead>
+            <tr>
+                <td>
+                    ADR
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
+            <td>Equity, PreferredEquity</td>
+        </tr>
+            <tr>
+                <td>
+                    Bond
+                            </td>
+            <td></td>
+        </tr>
+            <tr>
+                <td>
+                    CDS
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
+            <td>Bond, Index, StructuredProduct</td>
+        </tr>
+            <tr>
+                <td>
+                    CFD
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
+            <td>Bond, Convertible, Equity, Index, PreferredEquity, StructuredProduct</td>
+        </tr>
+            <tr>
+                <td>
+                    Convertible
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
+            <td>Equity</td>
+        </tr>
+            <tr>
+                <td>
+                    Equity
+                            </td>
+            <td></td>
+        </tr>
+            <tr>
+                <td>
+                    Future
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
+            <td>Bond, Convertible, Equity, Index, PreferredEquity, StructuredProduct</td>
+        </tr>
+            <tr>
+                <td>
+                    Index
+                <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
+            <td>ADR, Bond, CDS, Convertible, Equity, PreferredEquity</td>
+        </tr>
+            <tr>
+                <td>
+                    Option
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
+            <td>Bond, Convertible, Equity, Future, Index, PreferredEquity, StructuredProduct, Unit</td>
+        </tr>
+            <tr>
+                <td>
+                    PreferredEquity
+                            </td>
+            <td>Equity</td>
+        </tr>
+            <tr>
+                <td>
+                    Rights
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
+            <td>Equity</td>
+        </tr>
+            <tr>
+                <td>
+                    StructuredProduct
+                <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
+            <td>ADR, Bond, CDS, Convertible, Equity, Future, Index, Option, PreferredEquity, StructuredProduct, Unit</td>
+        </tr>
+            <tr>
+                <td>
+                    Swap
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
+            <td>ADR, Bond, Convertible, Equity, Index, PreferredEquity, StructuredProduct</td>
+        </tr>
+            <tr>
+                <td>
+                    Unit
+                <img src="/img/multiple.png" title='Multiple underlyings allowed' alt="multiple" />            </td>
+            <td>ADR, Bond, CDS, Convertible, Equity, Future, Option, PreferredEquity, StructuredProduct</td>
+        </tr>
+            <tr>
+                <td>
+                    Warrant
+<img src="/img/atleastone.png" title='At least one underlying required for file validation to pass' alt="required" />                            </td>
+            <td>Equity</td>
+        </tr>
+    </table>
+    <h2 id="portfolioProperties">Portfolio & Entity Properties</h2>
+    <p>A portfolio is the smallest unit that can hold assets (aka an account, fund etc.), an entity is a grouping of portfolios</p>
+ <p>The following are required for the rules / Rapptr to function correctly</p>         <table>
+            <thead><tr><th>Property Name</th><th></th><th>Description</th><th>Data type</th><th>Valid values &amp; notes</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>PortfolioId</td>
+                    <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                    <td>Unique identifier for the portfolio / entity</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td></td>
+                                    </tr>
+                <tr>
+                    <td>PortfolioName</td>
+                    <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                    <td>Name of the portfolio / entity</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td></td>
+                                    </tr>
+                <tr>
+                    <td>PortfolioType</td>
+                    <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                    <td><strong>Portfolio</strong>: a container that holds assets (Accounts, Funds, Portfolios etc.);<br /><strong>Entity</strong>: an aggregation of portfolios (Management Company, Controlling Entity, etc.)</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Valid values: Entity, Portfolio</td>
+                                    </tr>
+                <tr>
+                    <td>PortfolioCompany</td>
+                    <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                    <td>If a Chinese wall, or similar, exists, you will be able to limit the visibility to specific areas of the business.</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>More information is available <a href="https://fundapps.zendesk.com/hc/en-us/articles/201749897-Creating-and-Editing-Companies" target="_blank">here</a></td>
+                                    </tr>
+                <tr>
+                    <td>DefaultParentId</td>
+                    <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                    <td>Identifier (PortfolioId) of the Entity that a portfolio or (sub)Entity aggregates to</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Must match a PortfolioId of an Entity in the file. This is used to define the aggregation structure. In this case, an aggregation structure named 'Default' is used. For Entities which are at the top of the tree, the DefaultParentId will be its own PortfolioId. For clients with multiple aggregation structures, additional columns named 'XParentId' can be added, where X is the name of the tree (e.g. Voting, Legal, Management). More information <a href="https://fundapps.zendesk.com/hc/en-us/articles/210134023-Portfolio-File" target="_blank">here</a></td>
+                                    </tr>
+                <tr>
+                    <td>RuleFolders</td>
+                    <td><img src="/img/required.png" title='Required for file validation to pass' alt="required" /></td>
+                    <td>Defines which rules run on the system.</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">List</a></td>
+                    <td>Valid values: Position Limits</td>
+                                    </tr>
+            </tbody>
+        </table>
+    <p>* Although every effort has been made to provide complete and accurate information, FundApps makes no guarantees, express or implied, or representations as to the accuracy of this content. FundApps assumes no liability or responsibility for any error or omissions in these mappings</p>
+    <script src="javascripts/scale.fix.js"></script>
+    </body>
 </html>
-
