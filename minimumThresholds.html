@@ -18,9 +18,9 @@
 		<script type="text/javascript" src="javascripts/tablesort.number.js"></script>
 	</head>
 	<body>
-  		<p><a href='/'><img src='/img/fundapps_logo.png' alt='Logo' /></a></p>
-  		<h1>Minimum Thresholds / Deadlines</h1>
-  		<table id = 'mins'>
+		<p><a href='/'><img src='/img/fundapps_logo.png' alt='Logo' /></a></p>
+		<h1>Minimum Thresholds / Deadlines</h1>
+		<table>
     <thead>
     <tr>
       <th>CountryCode</th><th>Country</th><th data-sort-method='number'>Lowest Long Threshold %</th><th data-sort-method='number'>Lowest Short Threshold %</th><th data-sort-method='number'>Shortest Deadline (Days)</th>
@@ -118,9 +118,6 @@
      <tr><td>VG <img src='/img/blank.gif' class='flag flag-vg' alt='Virgin Islands, British' /></td><td>Virgin Islands, British</td><td>10</td><td>N/A</td><td>N/A</td></tr>
      <tr><td>ZW <img src='/img/blank.gif' class='flag flag-zw' alt='Zimbabwe' /></td><td>Zimbabwe</td><td>5</td><td>N/A</td><td>N/A</td></tr>
 </tbody>
-</table>
-		<script>
-  			new Tablesort(document.getElementById('mins'));
-		</script>
- 	</body>	
+</table><script>new Tablesort(document.getElementById('mins'));</script>
+	</body>
 </html>
