@@ -200,7 +200,7 @@ Warrant, Option <img src="/img/required.png" title='Required for file validation
 Convertible                        </td>
                         <td>Amount of outstanding debt for that class of convertible</td>
  <td><strong>BB</strong>: AMT_OUTSTANDING</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
-                        <td>Only required for UK takeover calculations for convertibles</td>
+                        <td>Required for UK takeover and New Zealand major shareholding calculations for convertibles.</td>
  <td>3</td>                                                 <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="GB, NZ">2</span>
                         </td>
@@ -381,8 +381,8 @@ Convertible <img src='/img/required.png' title='Required for file validation to 
                         <td>If the holder has control over the conditions of conversion (for convertibles) or exercise (for warrants).</td>
  <td><strong>BB</strong>: CV_CONV_BY_ISSUER_OR_HOLDER</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td>Some countries require convertibles &amp; warrants to be counted if the conditions for conversion are within the control of the parties (e.g. UK, Pakistan).</td>
- <td>29</td>                                                 <td>
-                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="BE, BS, FR, IS, LU, NG, NO, PH, PK, RO, TN, US">12</span>
+ <td>26</td>                                                 <td>
+                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="BS, FR, IS, LU, NG, NO, PH, PK, RO, TN, US">11</span>
                         </td>
                     </tr>
                     <tr>
@@ -436,7 +436,7 @@ CFD, Future, Option, Swap, Warrant <img src="/img/required.png" title='Required 
                         <td>If the derivative is cash settled (as opposed to requiring physical delivery)</td>
  <td><strong>BB</strong>: SETTLEMENT_TYPE or CASH_SETTLED</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td>Most countries capture physically settled derivatives, many (but less) are interested in cash settled derivatives.</td>
- <td>228</td>                                                 <td>
+ <td>230</td>                                                 <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AR, AT, AU, BD, BE, BG, BH, BR, BS, CA, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GI, GR, HR, HU, IE, IL, IN, IS, IT, JO, JP, KR, KW, LB, LT, LU, LV, MA, MT, MX, MY, NL, NO, PH, PK, PL, PT, RO, SA, SE, SG, SI, SK, TH, TN, TR, UA, US, ZA">59</span>
                         </td>
                     </tr>
@@ -448,7 +448,7 @@ PreferredEquity                        </td>
                         <td>If the preferred equity has the option to be converted into ordinary shares.</td>
  <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td></td>
- <td>207</td>                                                 <td>
+ <td>209</td>                                                 <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AT, BD, BE, BG, BH, BS, CA, CH, CY, CZ, DE, DK, EE, EG, ES, FI, FR, GB, GH, GI, GR, HK, HR, HU, IE, IS, IT, JO, JP, KE, KR, KZ, LB, LK, LT, LU, LV, MA, MT, MU, MX, MY, NG, NL, NO, OM, PH, PK, PL, PT, RO, RU, SA, SE, SG, SI, SK, TN, TR, US, VN, ZA">62</span>
                         </td>
                     </tr>
@@ -484,7 +484,7 @@ Unit                        </td>
                         <td>If a unit fund is exchange traded</td>
  <td><strong>BB</strong>: FUND_TYP</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td></td>
- <td>186</td>                                                 <td>
+ <td>188</td>                                                 <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AT, AU, BE, BG, BR, CH, CL, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GI, GR, HK, HR, HU, ID, IE, IT, JP, KE, LB, LT, LU, LV, MA, MT, NG, NL, NO, NZ, PH, PL, PT, RO, SE, SI, SK, TR, UA, US, VN, ZA">49</span>
                         </td>
                     </tr>
@@ -738,7 +738,7 @@ Equity, PreferredEquity, Unit                        </td>
                         <td>Total amount of shares in circulation for this issuer (all share classes)</td>
  <td><strong>BB</strong>: EQY_SH_OUT_TOT_MULT_SH</td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Decimal</a></td>
                         <td>For Unit funds structured as ETFs this should reflect the number of units issued.</td>
- <td>177</td>                                                 <td>
+ <td>176</td>                                                 <td>
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BS, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GI, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LB, LK, LT, LU, LV, MA, MC, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, WW, ZA, ZW">92</span>
                         </td>
                     </tr>
@@ -1179,6 +1179,16 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.png' title='Requir
                     <td>Custodian</td>
                     <td></td>
                     <td>The custodian of the portfolio.</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms</td>
+ <td>-</td>                      <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CustodianAddress</td>
+                    <td></td>
+                    <td>Full address of the custodian..</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td>Only used for display purposes / in forms</td>
  <td>-</td>                      <td>
