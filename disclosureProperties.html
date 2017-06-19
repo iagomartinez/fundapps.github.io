@@ -139,6 +139,19 @@ ADR, Convertible, Equity, PreferredEquity, Rights, Warrant                      
                                 <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AE, AR, AT, AU, BD, BE, BG, BH, BM, BR, BS, BW, CA, CH, CL, CN, CO, CY, CZ, DE, DK, EC, EE, EG, ES, FI, FR, GB, GG, GH, GI, GR, HK, HR, HU, ID, IE, IL, IN, IS, IT, JE, JO, JP, KE, KR, KW, KY, KZ, LB, LK, LT, LU, LV, MA, MC, MT, MU, MX, MY, NG, NL, NO, NZ, OM, PA, PE, PH, PK, PL, PT, QA, RO, RU, SA, SE, SG, SI, SK, TH, TN, TR, TW, UA, US, UY, VE, VG, VN, WW, ZA, ZW">92</span>
                         </td>
                     </tr>
+                    <tr>
+                        <td>SFTType</td>
+                        <td></td>
+                        <td>
+                                All
+                        </td>
+                        <td>Type of securities financing transaction (SFT)</td>
+ <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                        <td>Only used for display purposes / in forms<br />Valid values: Borrowed, CollateralGiven, CollateralTaken, Lent, Normal.<br />This property accounts for various kinds of transactions such as lending, borrowing, repos, reverse repos, while also allowing for general collateral taken and collateral given. </td>
+ <td>1</td>                                                 <td>
+                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AR">1</span>
+                        </td>
+                    </tr>
             </tbody>
         </table>
         <h2 id="InstrumentProperties">Instrument Properties</h2>
@@ -448,8 +461,8 @@ PreferredEquity                        </td>
                         <td>If the preferred equity has the option to be converted into ordinary shares.</td>
  <td></td>                         <td><a href="https://github.com/fundapps/api-examples#data-types">Boolean</a></td>
                         <td></td>
- <td>209</td>                                                 <td>
-                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AT, BD, BE, BG, BH, BS, CA, CH, CY, CZ, DE, DK, EE, EG, ES, FI, FR, GB, GH, GI, GR, HK, HR, HU, IE, IS, IT, JO, JP, KE, KR, KZ, LB, LK, LT, LU, LV, MA, MT, MU, MX, MY, NG, NL, NO, OM, PH, PK, PL, PT, RO, RU, SA, SE, SG, SI, SK, TN, TR, US, VN, ZA">62</span>
+ <td>213</td>                                                 <td>
+                                <span style="border-bottom: 1px dotted grey; cursor: pointer" title="AT, BD, BE, BG, BH, BS, CA, CH, CY, CZ, DE, DK, EE, EG, ES, FI, FR, GB, GH, GI, GR, HK, HR, HU, IE, IL, IN, IS, IT, JO, JP, KE, KR, KZ, LB, LK, LT, LU, LV, MA, MT, MU, MX, MY, NG, NL, NO, OM, PH, PK, PL, PT, RO, RU, SA, SE, SG, SI, SK, TN, TR, US, VN, ZA">64</span>
                         </td>
                     </tr>
                     <tr>
@@ -821,7 +834,7 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.png' title='Requir
             </tbody>
         </table>
         <h2 id="globalProperties">Properties valid for ALL AssetClasses</h2>
-    <p>AssetClass, AssetClassCustomer, AssetId, AssetName, HoldingType, InstrumentCurrency, InstrumentId, InstrumentName, LocalTicker, ManagedBy, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity</p>
+    <p>AssetClass, AssetClassCustomer, AssetId, AssetName, HoldingType, InstrumentCurrency, InstrumentId, InstrumentName, LocalTicker, ManagedBy, MarketValue, MarketValueInInstrumentCurrency, Price, Quantity, SFTType</p>
     <h2 id="byClass">Properties valid for each AssetClass</h2>
     <p>
         Asset classes which require at least one underlying asset to pass validation are marked with <img src="/img/atleastone.png" /><br />
@@ -1261,6 +1274,16 @@ ADR, Bond, Convertible, Equity, Index <img src='/img/required.png' title='Requir
                     <td>Confidential Name of the portfolio / entity. Where applicable, if the portfolio or entity name should not be populated on a disclosure form, please populate this field with the alias that should be displayed. In certain forms, results may be grouped by the alias given.</td>
                     <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
                     <td>Only used for display purposes / in forms</td>
+ <td>-</td>                      <td>
+                            <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ParticularsOfHoldingsMY</td>
+                    <td></td>
+                    <td>Particulars of each interest and circumstances/reason by which the shareholder has an interest. Required for the generation of forms in Malaysia.</td>
+                    <td><a href="https://github.com/fundapps/api-examples#data-types">String</a></td>
+                    <td>Only used for display purposes / in forms<br />Used in forms s137, s138, s139, s141 for the following fields: <br /> s137: 'Full particulars of each interest and of circumstances by reason of which the substantial shareholder has interest.'; <br /> s138: 'Circumstances by reason of which change has occurred.'; <br /> s139: 'Full particulars of circumstances by reason of which a person ceases to be a substantial shareholder.'; <br /> s141: 'Full particulars of each interest and of circumstances by reason of which the substantial shareholder has interest.'</td>
  <td>-</td>                      <td>
                             <span>-</span>
                     </td>
