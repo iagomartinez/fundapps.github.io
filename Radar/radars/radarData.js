@@ -118,14 +118,14 @@ var radar_data = [
     "color": "#DC6F1D",
     "items": [
       //Hold
-      { "name": "SQLServer",              "pc": { "r": 390, "t": 215 }, "movement": "c" },
-      { "name": "Angular",                "pc": { "r": 390, "t": 185 }, "movement": "c" },
-      { "name": "WebApi",                 "pc": { "r": 390, "t": 235 }, "movement": "c" },
-      { "name": "Newtonsoft.Json",        "pc": { "r": 390, "t": 245 }, "movement": "c" },
+      { "name": "SQLServer",              "pc": { "r": 320, "t": 215 }, "movement": "c" },
+      { "name": "Angular",                "pc": { "r": 320, "t": 185 }, "movement": "c" },
+      { "name": "WebApi",                 "pc": { "r": 320, "t": 235 }, "movement": "c" },
+      { "name": "Newtonsoft.Json",        "pc": { "r": 320, "t": 245 }, "movement": "c" },
 
       //Assess
-      { "name": "Suave",                  "pc": { "r": 250, "t": 260 }, "movement": "c" },
-      { "name": "Amazon S3 for Crawls",   "pc": { "r": 275, "t": 260 }, "movement": "t" },
+      { "name": "Suave",                  "pc": { "r": 240, "t": 260 }, "movement": "c" },
+      { "name": "Amazon S3 for Crawls",   "pc": { "r": 240, "t": 260 }, "movement": "t" },
 
       //Trial
       { "name": "Postgres + SQLProvider", "pc":{ "r": 130, "t": 260 }, "movement": "t" },
@@ -143,12 +143,12 @@ var radar_data = [
     "top": (h/2 + 18),
     "items": [
       //Hold
-      { "name": "Directus",              "pc": { "r": 360, "t": 270 }, "movement": "c" },
-      { "name": "Amazon Lambda (JS)",    "pc": { "r": 390, "t": 290 }, "movement": "c" },
-      { "name": "Amazon Dynamo",         "pc": { "r": 375, "t": 310 }, "movement": "c" },
-      { "name": "Amazon RDS (MySQL)",    "pc": { "r": 375, "t": 330 }, "movement": "c" },
-      { "name": "Nancy",                 "pc": { "r": 345, "t": 350 }, "movement": "c" },
-      { "name": "Owin",                  "pc": { "r": 355, "t": 370 }, "movement": "c" },
+      { "name": "Directus",              "pc": { "r": 320, "t": 270 }, "movement": "c" },
+      { "name": "Amazon Lambda (JS)",    "pc": { "r": 320, "t": 290 }, "movement": "c" },
+      { "name": "Amazon Dynamo",         "pc": { "r": 325, "t": 310 }, "movement": "c" },
+      { "name": "Amazon RDS (MySQL)",    "pc": { "r": 320, "t": 330 }, "movement": "c" },
+      { "name": "Nancy",                 "pc": { "r": 320, "t": 350 }, "movement": "c" },
+      { "name": "Owin",                  "pc": { "r": 320, "t": 370 }, "movement": "c" },
 
       //Assess
       //Trial
