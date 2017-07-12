@@ -68,12 +68,12 @@ var radar_data = [
             
             //Adopt
             { name: 'Windows 2016', pc:{r:80,t:100}, movement: 'c'},   
-            { name: 'SQL Server 2016', pc:{r:80,t:150}, movement: 'c'},   
-            { name: '.NET 4.6.2', pc:{r:80,t:130}, movement: 'c'},   
-            { name: 'Consul (KV)', pc:{r:60,t:100}, movement: 'c'},
-            { name: 'Sentry', pc:{r:50,t:150}, movement: 'c'},
-            { name: 'Grafana', pc:{r:30,t:130}, movement: 'c'},
-            { name: 'Alert Logic Cloud Insight', pc:{r:20,t:100}, movement: 'c'}
+            { name: 'SQL Server 2016', pc:{r:80,t:120}, movement: 'c'},   
+            { name: '.NET 4.6.2', pc:{r:80,t:140}, movement: 'c'},   
+            { name: 'Consul (KV)', pc:{r:80,t:160}, movement: 'c'},
+            { name: 'Sentry', pc:{r:50,t:100}, movement: 'c'},
+            { name: 'Grafana', pc:{r:50,t:120}, movement: 'c'},
+            { name: 'Alert Logic Cloud Insight', pc:{r:50,t:140}, movement: 'c'}
 
         ]
     },
