@@ -137,7 +137,7 @@ var radar_data = [
     ]
   },
   {
-    "quadrant": "Rapptr Components - Notifications, Tasks, Rule Commentary",
+    "quadrant": "Rapptr Components - Notifications / Tasks / Rule Commentary",
     "color": "#B70062",
     "left": (w-200+30),
     "top": (h/2 + 18),
