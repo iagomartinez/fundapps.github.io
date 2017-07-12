@@ -58,6 +58,7 @@ var radar_data = [
       { "name": "Windows 2012",               "pc": { "r": 380, "t": 160 }, "movement": "c" },
       { "name": "Azure",                      "pc": { "r": 380, "t": 130 }, "movement": "c" },
       { "name": "Nac OS 10.11",               "pc": { "r": 380, "t": 100 }, "movement": "c" },
+      
       //Hold
 
       //Assess
@@ -121,6 +122,12 @@ var radar_data = [
     "top": (h/2 + 18),
     "color": "#DC6F1D",
     "items": [
+      //Remove
+      { "name": "ServiceStack / ORMLite", "pc": { "r": 380, "t": 185 }, "movement": "c" },
+      { "name": "FSharpX.Extras",         "pc": { "r": 380, "t": 210 }, "movement": "c" },
+      { "name": "Common DevTools",        "pc": { "r": 380, "t": 235 }, "movement": "c" },
+      { "name": "auth.fundapps.co",       "pc": { "r": 380, "t": 265 }, "movement": "c" },
+
       //Hold
       { "name": "Angular",                "pc": { "r": 320, "t": 185 }, "movement": "c" },
       { "name": "SQLServer",              "pc": { "r": 320, "t": 210 }, "movement": "c" },
