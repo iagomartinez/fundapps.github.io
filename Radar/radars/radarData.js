@@ -7,7 +7,7 @@ var radar_arcs = [
                   ,{'r':200,'name':'Trial'}
                   ,{'r':300,'name':'Assess'}
                   ,{'r':350,'name':'Hold'}
-                  ,{'r':450,'name':'Remove'}
+                  ,{'r':420,'name':'Remove'}
                  ];
 
 //This is your raw data
