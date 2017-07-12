@@ -62,11 +62,11 @@ var radar_data = [
       { "name": "Intruder.io",                "pc":{ "r":240,"t":100 }, "movement": "c" },
 
       //Trial
-      { "name": "Okta",                       "pc":{ "r":170,"t":150 }, "movement": "c" },
-      { "name": "Amazon Aurora",              "pc":{ "r":130,"t":170 }, "movement": "c" },
-      { "name": "Vault",                      "pc":{ "r":170,"t":110 }, "movement": "c" },
-      { "name": "Docker (development)",       "pc":{ "r":150,"t":95 },  "movement": "c", "url":"https://www.docker.com/"},
-      { "name": "Amazon Inspector",           "pc":{ "r":180,"t":105 }, "movement": "c" },   
+      { "name": "Okta",                       "pc":{ "r":140,"t":95 }, "movement": "c" },
+      { "name": "Amazon Aurora",              "pc":{ "r":140,"t":110 }, "movement": "c" },
+      { "name": "Vault",                      "pc":{ "r":140,"t":125 }, "movement": "c" },
+      { "name": "Docker (development)",       "pc":{ "r":140,"t":140 },  "movement": "c", "url":"https://www.docker.com/"},
+      { "name": "Amazon Inspector",           "pc":{ "r":140,"t":155 }, "movement": "c" },   
 
       //Adopt
       { "name": "Windows 2016",               "pc":{ "r":80,"t":100 }, "movement": "c" },
@@ -74,8 +74,8 @@ var radar_data = [
       { "name": ".NET 4.6.2",                 "pc":{ "r":80,"t":140 }, "movement": "c" },
       { "name": "Consul (KV)",                "pc":{ "r":80,"t":160 }, "movement": "c" },
       { "name": "Sentry",                     "pc":{ "r":50,"t":100 }, "movement": "c" },
-      { "name": "Grafana",                    "pc":{ "r":50,"t":120 }, "movement": "c" },
-      { "name": "Alert Logic Cloud Insight",  "pc":{ "r":50,"t":140 }, "movement": "c" }
+      { "name": "Grafana",                    "pc":{ "r":50,"t":130 }, "movement": "c" },
+      { "name": "Alert Logic Cloud Insight",  "pc":{ "r":50,"t":170 }, "movement": "c" }
     ]
   },
   { 
@@ -130,7 +130,7 @@ var radar_data = [
       //Trial
       { "name": "Postgres + SQLProvider", "pc":{ "r": 140, "t": 190 }, "movement": "t" },
       { "name": "OneLogin",               "pc":{ "r": 140, "t": 230 }, "movement": "c" },
-      { "name": "Angular-JWT",            "pc":{ "r": 140, "t": 160 }, "movement": "c" },
+      { "name": "Angular-JWT",            "pc":{ "r": 140, "t": 260 }, "movement": "c" },
 
       //Adopt
       { "name": "Amazon RDS (Postgres)",  "pc": { "r": 30, "t": 225 }, "movement": "c" }
