@@ -85,13 +85,13 @@ var radar_data = [
     "color": "#587486",
     "items": [
       //Hold
-      { "name": "Octopus",  "pc": { "r": 330, "t": 82 }, "movement": "c" },
-      { "name": "MSpec",    "pc": { "r": 330, "t": 56 }, "movement": "c" },
-      { "name": "JQGrid",   "pc": { "r": 330, "t": 5 },  "movement": "c" },
-      { "name": "RabbitMQ", "pc": { "r": 330, "t": 18 }, "movement": "c" },
-      { "name": "F#",       "pc": { "r": 330, "t": 18 }, "movement": "c" },
-      { "name": "Gulp",     "pc": { "r": 330, "t": 18 }, "movement": "c" },
-      { "name": "NPM",      "pc": { "r": 330, "t": 18 }, "movement": "c" },
+      { "name": "Octopus",  "pc": { "r": 320, "t": 80 }, "movement": "c" },
+      { "name": "MSpec",    "pc": { "r": 320, "t": 70 }, "movement": "c" },
+      { "name": "JQGrid",   "pc": { "r": 320, "t": 60 },  "movement": "c" },
+      { "name": "RabbitMQ", "pc": { "r": 320, "t": 50 }, "movement": "c" },
+      { "name": "F#",       "pc": { "r": 320, "t": 40 }, "movement": "c" },
+      { "name": "Gulp",     "pc": { "r": 320, "t": 30 }, "movement": "c" },
+      { "name": "NPM",      "pc": { "r": 320, "t": 20 }, "movement": "c" },
 
       //Assess
       { "name": "ZeroMQ",   "pc": { "r": 240, "t": 80 }, "movement": "c" },
