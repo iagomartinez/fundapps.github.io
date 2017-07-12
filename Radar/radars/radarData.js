@@ -57,9 +57,9 @@ var radar_data = [
       //Hold
 
       //Assess
-      { "name": "Active Directory",           "pc":{ "r":230,"t":133 }, "movement": "c" },
-      { "name": "Nomad",                      "pc":{ "r":250,"t":165 }, "movement": "c" },
-      { "name": "Intruder.io",                "pc":{ "r":225,"t":120 }, "movement": "c" },
+      { "name": "Active Directory",           "pc":{ "r":240,"t":160 }, "movement": "c" },
+      { "name": "Nomad",                      "pc":{ "r":240,"t":130 }, "movement": "c" },
+      { "name": "Intruder.io",                "pc":{ "r":240,"t":100 }, "movement": "c" },
 
       //Trial
       { "name": "Okta",                       "pc":{ "r":170,"t":150 }, "movement": "c" },
