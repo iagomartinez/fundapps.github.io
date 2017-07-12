@@ -105,14 +105,14 @@ var radar_data = [
       { "name": "Postgres", "pc": { "r": 240, "t": 40 }, "movement": "c" },
 
       //Trial
-      { "name": "React",     "pc": { "r": 140, "t": 20 }, "movement": "t" },
+      { "name": "React",     "pc": { "r": 140, "t": 60 }, "movement": "t" },
       { "name": "Amazon S3", "pc": { "r": 140, "t": 40 }, "movement": "c" },
-      { "name": "XUnit",     "pc": { "r": 140, "t": 60 }, "movement": "c" },
+      { "name": "XUnit",     "pc": { "r": 140, "t": 20 }, "movement": "c" },
 
       //Adopt
-      { "name": "ESNext",   "pc": { "r": 80, "t": 25 }, "movement": "c" },
+      { "name": "ESNext",   "pc": { "r": 80, "t": 65 }, "movement": "c" },
       { "name": "Yarn",     "pc": { "r": 80, "t": 45 }, "movement": "c" },
-      { "name": "Flow",     "pc": { "r": 80, "t": 65 }, "movement": "c" }
+      { "name": "Flow",     "pc": { "r": 80, "t": 25 }, "movement": "c" }
     ]
   },
   { 
