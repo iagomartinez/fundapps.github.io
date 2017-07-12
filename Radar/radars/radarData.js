@@ -62,11 +62,11 @@ var radar_data = [
       { "name": "Intruder.io",                "pc":{ "r":240,"t":100 }, "movement": "c" },
 
       //Trial
-      { "name": "Okta",                       "pc":{ "r":140,"t":95 }, "movement": "c" },
-      { "name": "Amazon Aurora",              "pc":{ "r":140,"t":110 }, "movement": "c" },
-      { "name": "Vault",                      "pc":{ "r":140,"t":125 }, "movement": "c" },
-      { "name": "Docker (development)",       "pc":{ "r":140,"t":140 },  "movement": "c", "url":"https://www.docker.com/"},
-      { "name": "Amazon Inspector",           "pc":{ "r":140,"t":155 }, "movement": "c" },   
+      { "name": "Okta",                       "pc":{ "r":140,"t":100 }, "movement": "c" },
+      { "name": "Amazon Aurora",              "pc":{ "r":140,"t":115 }, "movement": "c" },
+      { "name": "Vault",                      "pc":{ "r":140,"t":130 }, "movement": "c" },
+      { "name": "Docker (development)",       "pc":{ "r":140,"t":145 },  "movement": "c", "url":"https://www.docker.com/"},
+      { "name": "Amazon Inspector",           "pc":{ "r":140,"t":160 }, "movement": "c" },   
 
       //Adopt
       { "name": "Windows 2016",               "pc":{ "r":80,"t":100 }, "movement": "c" },
@@ -75,7 +75,7 @@ var radar_data = [
       { "name": "Consul (KV)",                "pc":{ "r":80,"t":160 }, "movement": "c" },
       { "name": "Sentry",                     "pc":{ "r":50,"t":100 }, "movement": "c" },
       { "name": "Grafana",                    "pc":{ "r":50,"t":130 }, "movement": "c" },
-      { "name": "Alert Logic Cloud Insight",  "pc":{ "r":50,"t":170 }, "movement": "c" }
+      { "name": "Alert Logic Cloud Insight",  "pc":{ "r":50,"t":160 }, "movement": "c" }
     ]
   },
   { 
@@ -106,9 +106,9 @@ var radar_data = [
       { "name": "XUnit",     "pc": { "r": 140, "t": 70 }, "movement": "c" },
 
       //Adopt
-      { "name": "ESNext",   "pc": { "r": 80, "t": 56 }, "movement": "c" },
-      { "name": "Yarn",     "pc": { "r": 12, "t": 25 }, "movement": "c" },
-      { "name": "Flow",     "pc": { "r": 30, "t": 72 }, "movement": "c" }
+      { "name": "ESNext",   "pc": { "r": 80, "t": 25 }, "movement": "c" },
+      { "name": "Yarn",     "pc": { "r": 80, "t": 45 }, "movement": "c" },
+      { "name": "Flow",     "pc": { "r": 80, "t": 65 }, "movement": "c" }
     ]
   },
   { 
