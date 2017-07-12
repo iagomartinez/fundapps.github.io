@@ -76,7 +76,7 @@ var radar_data = [
   },
   { 
     "quadrant": "Rapptr Core",
-    "left": "w-200+30",
+    "left": w-200+30,
     "top" : 18,
     "color": "#587486",
     "items": [ 
@@ -106,7 +106,7 @@ var radar_data = [
   { 
     "quadrant": "Data Services",
     "left": 45,
-    "top": "(h/2 + 18)",
+    "top": (h/2 + 18),
     "color": "#DC6F1D",
     "items": [
       { "name": "Postgres + SQLProvider", "pc":{ "r": 130, "t": 260 }, "movement": "t" },   
@@ -127,8 +127,8 @@ var radar_data = [
   {
     "quadrant": "Rapptr Components (Notifications, Tasks, Rule Commentary",
     "color": "#B70062",
-    "left": "(w-200+30)",
-    "top": "(h/2 + 18)",
+    "left": (w-200+30),
+    "top": (h/2 + 18),
     "items": [ 
       { "name": ".NET Standard",         "pc": { "r": 60, "t": 290 }, "movement": "c" },
       { "name": "Amazon RDS (Postgres)", "pc": { "r": 60, "t": 310 }, "movement": "c" },
