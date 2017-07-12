@@ -103,7 +103,7 @@ var radar_data = [
     ]
   },
   { 
-    "quadrant": "Data Services",
+    "quadrant": "Data Services / RegData",
     "left": 45,
     "top": (h/2 + 18),
     "color": "#DC6F1D",
@@ -124,7 +124,7 @@ var radar_data = [
     ]
   },
   {
-    "quadrant": "Rapptr Components (Notifications, Tasks, Rule Commentary",
+    "quadrant": "Rapptr Components (Notifications, Tasks, Rule Commentary)",
     "color": "#B70062",
     "left": (w-200+30),
     "top": (h/2 + 18),
