@@ -54,28 +54,32 @@ var radar_data = [
     "top": 18,
     "color": "#8FA227",
     "items": [
+      //Remove
+      { "name": "Windows 2012",               "pc": { "r": 380, "t": 160 }, "movement": "c" },
+      { "name": "Azure",                      "pc": { "r": 380, "t": 130 }, "movement": "c" },
+      { "name": "Nac OS 10.11",               "pc": { "r": 380, "t": 100 }, "movement": "c" },
       //Hold
 
       //Assess
-      { "name": "Active Directory",           "pc":{ "r":240,"t":160 }, "movement": "c" },
-      { "name": "Nomad",                      "pc":{ "r":240,"t":130 }, "movement": "c" },
-      { "name": "Intruder.io",                "pc":{ "r":240,"t":100 }, "movement": "c" },
+      { "name": "Active Directory",           "pc":{ "r": 240, "t": 160 }, "movement": "c" },
+      { "name": "Nomad",                      "pc":{ "r": 240, "t": 130 }, "movement": "c" },
+      { "name": "Intruder.io",                "pc":{ "r": 240, "t": 100 }, "movement": "c" },
 
       //Trial
-      { "name": "Okta",                       "pc":{ "r":140,"t":100 }, "movement": "c" },
-      { "name": "Amazon Aurora",              "pc":{ "r":140,"t":115 }, "movement": "c" },
-      { "name": "Vault",                      "pc":{ "r":140,"t":130 }, "movement": "c" },
-      { "name": "Docker (development)",       "pc":{ "r":140,"t":145 },  "movement": "c", "url":"https://www.docker.com/"},
-      { "name": "Amazon Inspector",           "pc":{ "r":140,"t":160 }, "movement": "c" },   
+      { "name": "Okta",                       "pc":{ "r": 140, "t": 160 }, "movement": "c" },
+      { "name": "Amazon Aurora",              "pc":{ "r": 140, "t": 145 }, "movement": "c" },
+      { "name": "Vault",                      "pc":{ "r": 140, "t": 130 }, "movement": "c" },
+      { "name": "Docker (development)",       "pc":{ "r": 140, "t": 115 }, "movement": "c", "url":"https://www.docker.com/"},
+      { "name": "Amazon Inspector",           "pc":{ "r": 140, "t": 100 }, "movement": "c" },   
 
       //Adopt
-      { "name": "Windows 2016",               "pc":{ "r":80,"t":100 }, "movement": "c" },
-      { "name": "SQL Server 2016",            "pc":{ "r":80,"t":120 }, "movement": "c" },
-      { "name": ".NET 4.6.2",                 "pc":{ "r":80,"t":140 }, "movement": "c" },
-      { "name": "Consul (KV)",                "pc":{ "r":80,"t":160 }, "movement": "c" },
-      { "name": "Sentry",                     "pc":{ "r":50,"t":100 }, "movement": "c" },
-      { "name": "Grafana",                    "pc":{ "r":50,"t":130 }, "movement": "c" },
-      { "name": "Alert Logic Cloud Insight",  "pc":{ "r":50,"t":160 }, "movement": "c" }
+      { "name": "Windows 2016",               "pc":{ "r": 80, "t": 160 }, "movement": "c" },
+      { "name": "SQL Server 2016",            "pc":{ "r": 80, "t": 140 }, "movement": "c" },
+      { "name": ".NET 4.6.2",                 "pc":{ "r": 80, "t": 120 }, "movement": "c" },
+      { "name": "Consul (KV)",                "pc":{ "r": 80, "t": 100 }, "movement": "c" },
+      { "name": "Sentry",                     "pc":{ "r": 50, "t": 160 }, "movement": "c" },
+      { "name": "Grafana",                    "pc":{ "r": 50, "t": 130 }, "movement": "c" },
+      { "name": "Alert Logic Cloud Insight",  "pc":{ "r": 50, "t": 100 }, "movement": "c" }
     ]
   },
   { 
@@ -137,7 +141,7 @@ var radar_data = [
     ]
   },
   {
-    "quadrant": "Rapptr Components: Notifications / Tasks / Rule Commentary",
+    "quadrant": "Notifications / Tasks / Rule Commentary",
     "color": "#B70062",
     "left": (w-200+30),
     "top": (h/2 + 18),
