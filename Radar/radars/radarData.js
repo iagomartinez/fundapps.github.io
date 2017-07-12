@@ -5,9 +5,9 @@ document.title = "FundApps Technology Radar (July 2017)";
 var radar_arcs = [
                    {'r':100,'name':'Adopt'}
                   ,{'r':200,'name':'Trial'}
-                  ,{'r':300,'name':'Assess'}
-                  ,{'r':350,'name':'Hold'}
-                  ,{'r':420,'name':'Remove'}
+                  ,{'r':280,'name':'Assess'}
+                  ,{'r':340,'name':'Hold'}
+                  ,{'r':400,'name':'Remove'}
                  ];
 
 //This is your raw data
