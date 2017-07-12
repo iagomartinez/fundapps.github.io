@@ -101,9 +101,9 @@ var radar_data = [
       { "name": "Postgres", "pc": { "r": 240, "t": 40 }, "movement": "c" },
 
       //Trial
-      { "name": "React",     "pc": { "r": 170, "t": 19 }, "movement": "t" },
-      { "name": "Amazon S3", "pc": { "r": 150, "t": 69 }, "movement": "c" },
-      { "name": "XUnit",     "pc": { "r": 110, "t": 70 }, "movement": "c" },
+      { "name": "React",     "pc": { "r": 140, "t": 19 }, "movement": "t" },
+      { "name": "Amazon S3", "pc": { "r": 140, "t": 69 }, "movement": "c" },
+      { "name": "XUnit",     "pc": { "r": 140, "t": 70 }, "movement": "c" },
 
       //Adopt
       { "name": "ESNext",   "pc": { "r": 80, "t": 56 }, "movement": "c" },
@@ -118,26 +118,26 @@ var radar_data = [
     "color": "#DC6F1D",
     "items": [
       //Hold
-      { "name": "SQLServer",              "pc": { "r": 320, "t": 215 }, "movement": "c" },
       { "name": "Angular",                "pc": { "r": 320, "t": 185 }, "movement": "c" },
+      { "name": "SQLServer",              "pc": { "r": 320, "t": 210 }, "movement": "c" },
       { "name": "WebApi",                 "pc": { "r": 320, "t": 235 }, "movement": "c" },
-      { "name": "Newtonsoft.Json",        "pc": { "r": 320, "t": 245 }, "movement": "c" },
+      { "name": "Newtonsoft.Json",        "pc": { "r": 320, "t": 265 }, "movement": "c" },
 
       //Assess
-      { "name": "Suave",                  "pc": { "r": 240, "t": 260 }, "movement": "c" },
-      { "name": "Amazon S3 for Crawls",   "pc": { "r": 240, "t": 260 }, "movement": "t" },
+      { "name": "Suave",                  "pc": { "r": 240, "t": 220 }, "movement": "c" },
+      { "name": "Amazon S3 for Crawls",   "pc": { "r": 240, "t": 240 }, "movement": "t" },
 
       //Trial
-      { "name": "Postgres + SQLProvider", "pc":{ "r": 130, "t": 260 }, "movement": "t" },
-      { "name": "OneLogin",               "pc":{ "r": 130, "t": 230 }, "movement": "c" },
-      { "name": "Angular-JWT",            "pc":{ "r": 190, "t": 190 }, "movement": "c" },
+      { "name": "Postgres + SQLProvider", "pc":{ "r": 140, "t": 190 }, "movement": "t" },
+      { "name": "OneLogin",               "pc":{ "r": 140, "t": 230 }, "movement": "c" },
+      { "name": "Angular-JWT",            "pc":{ "r": 140, "t": 160 }, "movement": "c" },
 
       //Adopt
       { "name": "Amazon RDS (Postgres)",  "pc": { "r": 30, "t": 225 }, "movement": "c" }
     ]
   },
   {
-    "quadrant": "Rapptr Components - Notifications / Tasks / Rule Commentary",
+    "quadrant": "Rapptr Components: Notifications / Tasks / Rule Commentary",
     "color": "#B70062",
     "left": (w-200+30),
     "top": (h/2 + 18),
@@ -152,7 +152,7 @@ var radar_data = [
 
       //Assess
       //Trial
-      { "name": "C# Xplat/.NET Core",    "pc": { "r": 150, "t": 298 }, "movement": "c" },
+      { "name": "C# Xplat/.NET Core",    "pc": { "r": 140, "t": 298 }, "movement": "c" },
 
       //Adopt
       { "name": ".NET Standard",         "pc": { "r": 60, "t": 290 }, "movement": "c" },
