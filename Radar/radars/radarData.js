@@ -5,9 +5,9 @@ document.title = "FundApps Technology Radar (July 2017)";
 var radar_arcs = [
                    {'r':100,'name':'Adopt'}
                   ,{'r':200,'name':'Trial'}
-                  ,{'r':280,'name':'Assess'}
-                  ,{'r':340,'name':'Hold'}
-                  ,{'r':400,'name':'Remove'}
+                  ,{'r':270,'name':'Assess'}
+                  ,{'r':320,'name':'Hold'}
+                  ,{'r':370,'name':'Remove'}
                  ];
 
 //This is your raw data
@@ -55,9 +55,9 @@ var radar_data = [
     "color": "#8FA227",
     "items": [
       //Remove
-      { "name": "Windows 2012",               "pc": { "r": 380, "t": 160 }, "movement": "c" },
-      { "name": "Azure",                      "pc": { "r": 380, "t": 130 }, "movement": "c" },
-      { "name": "Nac OS 10.11",               "pc": { "r": 380, "t": 100 }, "movement": "c" },
+      { "name": "Windows 2012",               "pc": { "r": 370, "t": 160 }, "movement": "c" },
+      { "name": "Azure",                      "pc": { "r": 370, "t": 130 }, "movement": "c" },
+      { "name": "Nac OS 10.11",               "pc": { "r": 370, "t": 100 }, "movement": "c" },
       
       //Hold
 
@@ -90,13 +90,13 @@ var radar_data = [
     "color": "#587486",
     "items": [
       //Hold
-      { "name": "Octopus",  "pc": { "r": 320, "t": 80 }, "movement": "c" },
-      { "name": "MSpec",    "pc": { "r": 320, "t": 68 }, "movement": "c" },
-      { "name": "JQGrid",   "pc": { "r": 320, "t": 56 },  "movement": "c" },
-      { "name": "RabbitMQ", "pc": { "r": 320, "t": 44 }, "movement": "c" },
-      { "name": "F#",       "pc": { "r": 320, "t": 32 }, "movement": "c" },
-      { "name": "Gulp",     "pc": { "r": 320, "t": 20 }, "movement": "c" },
-      { "name": "NPM",      "pc": { "r": 320, "t": 8 }, "movement": "c" },
+      { "name": "Octopus",  "pc": { "r": 310, "t": 80 }, "movement": "c" },
+      { "name": "MSpec",    "pc": { "r": 310, "t": 68 }, "movement": "c" },
+      { "name": "JQGrid",   "pc": { "r": 310, "t": 56 },  "movement": "c" },
+      { "name": "RabbitMQ", "pc": { "r": 310, "t": 44 }, "movement": "c" },
+      { "name": "F#",       "pc": { "r": 310, "t": 32 }, "movement": "c" },
+      { "name": "Gulp",     "pc": { "r": 310, "t": 20 }, "movement": "c" },
+      { "name": "NPM",      "pc": { "r": 310, "t": 8 }, "movement": "c" },
 
       //Assess
       { "name": "ZeroMQ",   "pc": { "r": 240, "t": 80 }, "movement": "c" },
@@ -123,16 +123,16 @@ var radar_data = [
     "color": "#DC6F1D",
     "items": [
       //Remove
-      { "name": "ServiceStack / ORMLite", "pc": { "r": 380, "t": 185 }, "movement": "c" },
-      { "name": "FSharpX.Extras",         "pc": { "r": 380, "t": 210 }, "movement": "c" },
-      { "name": "Common DevTools",        "pc": { "r": 380, "t": 235 }, "movement": "c" },
-      { "name": "auth.fundapps.co",       "pc": { "r": 380, "t": 265 }, "movement": "c" },
+      { "name": "ServiceStack / ORMLite", "pc": { "r": 370, "t": 185 }, "movement": "c" },
+      { "name": "FSharpX.Extras",         "pc": { "r": 370, "t": 210 }, "movement": "c" },
+      { "name": "Common DevTools",        "pc": { "r": 370, "t": 235 }, "movement": "c" },
+      { "name": "auth.fundapps.co",       "pc": { "r": 370, "t": 265 }, "movement": "c" },
 
       //Hold
-      { "name": "Angular",                "pc": { "r": 320, "t": 185 }, "movement": "c" },
-      { "name": "SQLServer",              "pc": { "r": 320, "t": 210 }, "movement": "c" },
-      { "name": "WebApi",                 "pc": { "r": 320, "t": 235 }, "movement": "c" },
-      { "name": "Newtonsoft.Json",        "pc": { "r": 320, "t": 265 }, "movement": "c" },
+      { "name": "Angular",                "pc": { "r": 310, "t": 185 }, "movement": "c" },
+      { "name": "SQLServer",              "pc": { "r": 310, "t": 210 }, "movement": "c" },
+      { "name": "WebApi",                 "pc": { "r": 310, "t": 235 }, "movement": "c" },
+      { "name": "Newtonsoft.Json",        "pc": { "r": 310, "t": 265 }, "movement": "c" },
 
       //Assess
       { "name": "Suave",                  "pc": { "r": 240, "t": 220 }, "movement": "c" },
@@ -154,12 +154,12 @@ var radar_data = [
     "top": (h/2 + 18),
     "items": [
       //Hold
-      { "name": "Directus",              "pc": { "r": 320, "t": 350 }, "movement": "c" },
-      { "name": "Amazon Lambda (JS)",    "pc": { "r": 320, "t": 345 }, "movement": "c" },
-      { "name": "Amazon Dynamo",         "pc": { "r": 320, "t": 330 }, "movement": "c" },
-      { "name": "Amazon RDS (MySQL)",    "pc": { "r": 320, "t": 315 }, "movement": "c" },
-      { "name": "Nancy",                 "pc": { "r": 320, "t": 300 }, "movement": "c" },
-      { "name": "Owin",                  "pc": { "r": 320, "t": 285 }, "movement": "c" },
+      { "name": "Directus",              "pc": { "r": 310, "t": 350 }, "movement": "c" },
+      { "name": "Amazon Lambda (JS)",    "pc": { "r": 310, "t": 345 }, "movement": "c" },
+      { "name": "Amazon Dynamo",         "pc": { "r": 310, "t": 330 }, "movement": "c" },
+      { "name": "Amazon RDS (MySQL)",    "pc": { "r": 310, "t": 315 }, "movement": "c" },
+      { "name": "Nancy",                 "pc": { "r": 310, "t": 300 }, "movement": "c" },
+      { "name": "Owin",                  "pc": { "r": 310, "t": 285 }, "movement": "c" },
 
       //Assess
       //Trial
