@@ -143,12 +143,12 @@ var radar_data = [
     "top": (h/2 + 18),
     "items": [
       //Hold
-      { "name": "Directus",              "pc": { "r": 320, "t": 270 }, "movement": "c" },
+      { "name": "Directus",              "pc": { "r": 320, "t": 280 }, "movement": "c" },
       { "name": "Amazon Lambda (JS)",    "pc": { "r": 320, "t": 290 }, "movement": "c" },
-      { "name": "Amazon Dynamo",         "pc": { "r": 325, "t": 310 }, "movement": "c" },
-      { "name": "Amazon RDS (MySQL)",    "pc": { "r": 320, "t": 330 }, "movement": "c" },
-      { "name": "Nancy",                 "pc": { "r": 320, "t": 350 }, "movement": "c" },
-      { "name": "Owin",                  "pc": { "r": 320, "t": 370 }, "movement": "c" },
+      { "name": "Amazon Dynamo",         "pc": { "r": 320, "t": 300 }, "movement": "c" },
+      { "name": "Amazon RDS (MySQL)",    "pc": { "r": 320, "t": 310 }, "movement": "c" },
+      { "name": "Nancy",                 "pc": { "r": 320, "t": 320 }, "movement": "c" },
+      { "name": "Owin",                  "pc": { "r": 320, "t": 330 }, "movement": "c" },
 
       //Assess
       //Trial
