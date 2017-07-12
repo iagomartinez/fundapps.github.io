@@ -91,7 +91,7 @@ var radar_data = [
       { "name": "RabbitMQ", "pc": { "r": 330, "t": 18 }, "movement": "c" },
       { "name": "F#",       "pc": { "r": 330, "t": 18 }, "movement": "c" },
       { "name": "Gulp",     "pc": { "r": 330, "t": 18 }, "movement": "c" },
-      { "name": "NPM",      "pc": { "r": 330, "t": 18 }, "movement": "c" }
+      { "name": "NPM",      "pc": { "r": 330, "t": 18 }, "movement": "c" },
 
       //Assess
       { "name": "ZeroMQ",   "pc": { "r": 280, "t": 74 }, "movement": "c" },
@@ -148,16 +148,15 @@ var radar_data = [
       { "name": "Amazon Dynamo",         "pc": { "r": 375, "t": 310 }, "movement": "c" },
       { "name": "Amazon RDS (MySQL)",    "pc": { "r": 375, "t": 330 }, "movement": "c" },
       { "name": "Nancy",                 "pc": { "r": 345, "t": 350 }, "movement": "c" },
-      { "name": "Owin",                  "pc": { "r": 355, "t": 370 }, "movement": "c" }
+      { "name": "Owin",                  "pc": { "r": 355, "t": 370 }, "movement": "c" },
 
       //Assess
       //Trial
-      { "name": "C# Xplat/.NET Core",    "pc": { "r": 150, "t": 298 }, "movement": "c" }
+      { "name": "C# Xplat/.NET Core",    "pc": { "r": 150, "t": 298 }, "movement": "c" },
 
       //Adopt
       { "name": ".NET Standard",         "pc": { "r": 60, "t": 290 }, "movement": "c" },
-      { "name": "Amazon RDS (Postgres)", "pc": { "r": 60, "t": 310 }, "movement": "c" },
-
+      { "name": "Amazon RDS (Postgres)", "pc": { "r": 60, "t": 310 }, "movement": "c" }
     ]
   }
 ];
