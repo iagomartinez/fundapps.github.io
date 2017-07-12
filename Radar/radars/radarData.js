@@ -104,10 +104,10 @@ var radar_data = [
   { name: 'Octopus',  pc: { r: 360, t: 82 }, movement: 'c' },
   { name: 'MSpec',    pc: { r: 380, t: 56 }, movement: 'c' },
   { name: 'JQGrid',   pc: { r: 330, t: 5 },  movement: 'c' }, 
-  { name: 'RabbitMQ', pc: { r: 330, t: 18 }, movement: 'c' }
-  { name: 'F#',       pc: { r: 330, t: 18 }, movement: 'c' }
-  { name: 'Gulp',     pc: { r: 330, t: 18 }, movement: 'c' }
-  { name: 'NPM',      pc: { r: 330, t: 18 }, movement: 'c' }
+  { name: 'RabbitMQ', pc: { r: 330, t: 18 }, movement: 'c' },
+  { name: 'F#',       pc: { r: 330, t: 18 }, movement: 'c' },
+  { name: 'Gulp',     pc: { r: 330, t: 18 }, movement: 'c' },
+  { name: 'NPM',      pc: { r: 330, t: 18 }, movement: 'c' },
   ]
     },
     { "quadrant": "Platforms",
