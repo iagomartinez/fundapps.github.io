@@ -90,12 +90,12 @@ var radar_data = [
     "items": [
       //Hold
       { "name": "Octopus",  "pc": { "r": 320, "t": 80 }, "movement": "c" },
-      { "name": "MSpec",    "pc": { "r": 320, "t": 70 }, "movement": "c" },
-      { "name": "JQGrid",   "pc": { "r": 320, "t": 60 },  "movement": "c" },
-      { "name": "RabbitMQ", "pc": { "r": 320, "t": 50 }, "movement": "c" },
-      { "name": "F#",       "pc": { "r": 320, "t": 40 }, "movement": "c" },
-      { "name": "Gulp",     "pc": { "r": 320, "t": 30 }, "movement": "c" },
-      { "name": "NPM",      "pc": { "r": 320, "t": 20 }, "movement": "c" },
+      { "name": "MSpec",    "pc": { "r": 320, "t": 68 }, "movement": "c" },
+      { "name": "JQGrid",   "pc": { "r": 320, "t": 56 },  "movement": "c" },
+      { "name": "RabbitMQ", "pc": { "r": 320, "t": 44 }, "movement": "c" },
+      { "name": "F#",       "pc": { "r": 320, "t": 32 }, "movement": "c" },
+      { "name": "Gulp",     "pc": { "r": 320, "t": 20 }, "movement": "c" },
+      { "name": "NPM",      "pc": { "r": 320, "t": 8 }, "movement": "c" },
 
       //Assess
       { "name": "ZeroMQ",   "pc": { "r": 240, "t": 80 }, "movement": "c" },
@@ -147,20 +147,20 @@ var radar_data = [
     "top": (h/2 + 18),
     "items": [
       //Hold
-      { "name": "Directus",              "pc": { "r": 320, "t": 280 }, "movement": "c" },
-      { "name": "Amazon Lambda (JS)",    "pc": { "r": 320, "t": 290 }, "movement": "c" },
+      { "name": "Directus",              "pc": { "r": 320, "t": 330 }, "movement": "c" },
+      { "name": "Amazon Lambda (JS)",    "pc": { "r": 320, "t": 315 }, "movement": "c" },
       { "name": "Amazon Dynamo",         "pc": { "r": 320, "t": 300 }, "movement": "c" },
-      { "name": "Amazon RDS (MySQL)",    "pc": { "r": 320, "t": 310 }, "movement": "c" },
-      { "name": "Nancy",                 "pc": { "r": 320, "t": 320 }, "movement": "c" },
-      { "name": "Owin",                  "pc": { "r": 320, "t": 330 }, "movement": "c" },
+      { "name": "Amazon RDS (MySQL)",    "pc": { "r": 320, "t": 285 }, "movement": "c" },
+      { "name": "Nancy",                 "pc": { "r": 320, "t": 270 }, "movement": "c" },
+      { "name": "Owin",                  "pc": { "r": 320, "t": 255 }, "movement": "c" },
 
       //Assess
       //Trial
-      { "name": "C# Xplat/.NET Core",    "pc": { "r": 140, "t": 298 }, "movement": "c" },
+      { "name": "C# Xplat/.NET Core",    "pc": { "r": 140, "t": 310 }, "movement": "c" },
 
       //Adopt
-      { "name": ".NET Standard",         "pc": { "r": 60, "t": 290 }, "movement": "c" },
-      { "name": "Amazon RDS (Postgres)", "pc": { "r": 60, "t": 310 }, "movement": "c" }
+      { "name": ".NET Standard",         "pc": { "r": 60, "t": 310 }, "movement": "c" },
+      { "name": "Amazon RDS (Postgres)", "pc": { "r": 60, "t": 280 }, "movement": "c" }
     ]
   }
 ];
