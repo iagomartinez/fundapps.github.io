@@ -85,8 +85,8 @@ var radar_data = [
     "color": "#587486",
     "items": [
       //Hold
-      { "name": "Octopus",  "pc": { "r": 360, "t": 82 }, "movement": "c" },
-      { "name": "MSpec",    "pc": { "r": 380, "t": 56 }, "movement": "c" },
+      { "name": "Octopus",  "pc": { "r": 330, "t": 82 }, "movement": "c" },
+      { "name": "MSpec",    "pc": { "r": 330, "t": 56 }, "movement": "c" },
       { "name": "JQGrid",   "pc": { "r": 330, "t": 5 },  "movement": "c" },
       { "name": "RabbitMQ", "pc": { "r": 330, "t": 18 }, "movement": "c" },
       { "name": "F#",       "pc": { "r": 330, "t": 18 }, "movement": "c" },
@@ -94,11 +94,11 @@ var radar_data = [
       { "name": "NPM",      "pc": { "r": 330, "t": 18 }, "movement": "c" },
 
       //Assess
-      { "name": "ZeroMQ",   "pc": { "r": 280, "t": 74 }, "movement": "c" },
-      { "name": "Webpack",  "pc": { "r": 280, "t": 78 }, "movement": "c" },
-      { "name": "Consul",   "pc": { "r": 260, "t": 75 }, "movement": "c" },
-      { "name": "DbUp",     "pc": { "r": 260, "t": 48 }, "movement": "c" },
-      { "name": "Postgres", "pc": { "r": 280, "t": 51 }, "movement": "c" },
+      { "name": "ZeroMQ",   "pc": { "r": 240, "t": 80 }, "movement": "c" },
+      { "name": "Webpack",  "pc": { "r": 240, "t": 70 }, "movement": "c" },
+      { "name": "Consul",   "pc": { "r": 240, "t": 60 }, "movement": "c" },
+      { "name": "DbUp",     "pc": { "r": 240, "t": 50 }, "movement": "c" },
+      { "name": "Postgres", "pc": { "r": 240, "t": 40 }, "movement": "c" },
 
       //Trial
       { "name": "React",     "pc": { "r": 170, "t": 19 }, "movement": "t" },
