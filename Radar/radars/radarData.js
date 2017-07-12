@@ -99,14 +99,14 @@ var radar_data = [
 
       //Assess
       { "name": "ZeroMQ",   "pc": { "r": 240, "t": 80 }, "movement": "c" },
-      { "name": "Webpack",  "pc": { "r": 240, "t": 70 }, "movement": "c" },
-      { "name": "Consul",   "pc": { "r": 240, "t": 60 }, "movement": "c" },
-      { "name": "DbUp",     "pc": { "r": 240, "t": 50 }, "movement": "c" },
-      { "name": "Postgres", "pc": { "r": 240, "t": 40 }, "movement": "c" },
+      { "name": "Webpack",  "pc": { "r": 240, "t": 60 }, "movement": "c" },
+      { "name": "Consul",   "pc": { "r": 240, "t": 40 }, "movement": "c" },
+      { "name": "DbUp",     "pc": { "r": 240, "t": 20 }, "movement": "c" },
+      { "name": "Postgres", "pc": { "r": 240, "t": 5 }, "movement": "c" },
 
       //Trial
-      { "name": "React",     "pc": { "r": 140, "t": 60 }, "movement": "t" },
-      { "name": "Amazon S3", "pc": { "r": 140, "t": 40 }, "movement": "c" },
+      { "name": "React",     "pc": { "r": 140, "t": 80 }, "movement": "t" },
+      { "name": "Amazon S3", "pc": { "r": 140, "t": 50 }, "movement": "c" },
       { "name": "XUnit",     "pc": { "r": 140, "t": 20 }, "movement": "c" },
 
       //Adopt
