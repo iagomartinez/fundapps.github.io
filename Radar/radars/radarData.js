@@ -1,7 +1,6 @@
 //This is the title for your window tab, and your Radar
 document.title = "FundApps Technology Radar (July 2017)";
 
-
 //This is the concentic circles that want on your radar
 var radar_arcs = [
                    {'r':100,'name':'Adopt'}
