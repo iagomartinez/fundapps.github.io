@@ -49,15 +49,32 @@ var h = 1000;
 var w = 1200;
 
 var radar_data = [
-    { "quadrant": "Platforms / Tooling / Services",
+    { "quadrant": "Platforms / Tooling / Services / IT",
         "left" : 45,
         "top" : 18,
         "color" : "#8FA227",
         "items" : [ 
+            //Assess
             { name: 'Active Directory', pc: { r: 230, t: 133 }, movement: 'c' },
+            { name: 'Nomad', pc:{r:250,t:165}, movement: 'c'},
+            { name: 'Intruder.io', pc:{r:225,t:120}, movement: 'c'},
             
-            { name: 'Okta', pc: { r: 170, t: 150}, movement: 'c'},   
+            //Trial
+            { name: 'Okta', pc:{r:170,t:150}, movement: 'c'},   
+            { name: 'Amazon Aurora', pc:{r:130,t:170}, movement: 'c'}, 
+            { name: 'Vault', pc:{r:170,t:110}, movement: 'c'},
+            { name: 'Docker (development)', pc:{r:150,t:95}, movement: 'c', "url":"http://www.google.com"},
+            { name: 'Amazon Inspector', pc:{r:180,t:105}, movement: 'c'},   
             
+            //Adopt
+            { name: 'Windows 2016', pc:{r:80,t:100}, movement: 'c'},   
+            { name: 'SQL Server 2016', pc:{r:80,t:150}, movement: 'c'},   
+            { name: '.NET 4.6.2', pc:{r:80,t:130}, movement: 'c'},   
+            { name: 'Consul (KV)', pc:{r:60,t:100}, movement: 'c'},
+            { name: 'Sentry', pc:{r:50,t:150}, movement: 'c'},
+            { name: 'Grafana', pc:{r:30,t:130}, movement: 'c'},
+            { name: 'Alert Logic Cloud Insight', pc:{r:20,t:100}, movement: 'c'}
+
         ]
     },
     { "quadrant": "Tools",
@@ -110,36 +127,36 @@ var radar_data = [
         "color" : "#DC6F1D",
         "items" : [
 
-            {"name":"OpenId Connect", "pc":{"r":130,"t":260},"movement":"t"},   
-            {"name":"Location based services", "pc":{"r":130,"t":230},"movement":"c"},
-            {"name":"Openstack", "pc":{"r":190,"t":190},"movement":"c"},
-            {"name":"RHEL 7", "pc":{"r":170,"t":215},"movement":"c"},      
+            { name: 'OpenId Connect', pc:{r:130,t:260}, movement:"t"},   
+            { name: 'Location based services', pc:{r:130,t:230}, movement: 'c'},
+            { name: 'Openstack', pc:{r:190,t:190}, movement: 'c'},
+            { name: 'RHEL 7', pc:{r:170,t:215}, movement: 'c'},      
 
-            {"name":"App containers", "pc":{"r":250,"t":260},"movement":"c"},
-            {"name":"Google Cloud Data Flow", "pc":{"r":275,"t":260},"movement":"t"},
+            { name: 'App containers', pc:{r:250,t:260}, movement: 'c'},
+            { name: 'Google Cloud Data Flow', pc:{r:275,t:260}, movement:"t"},
             { name: 'Postgres as NoSQL',              pc: { r: 220, t: 255 },              movement: 'c' },
-            {"name":"AWS 2014 Innovations", "pc":{"r":270,"t":195},"movement":"c"},
-            {"name":"Azure", "pc":{"r":290,"t":265},"movement":"c"},   
+            { name: 'AWS 2014 Innovations', pc:{r:270,t:195}, movement: 'c'},
+            { name: 'Azure', pc:{r:290,t:265}, movement: 'c'},   
             { name: 'Mesos',              pc: { r: 260, t: 265 },              movement: 't' },
             { name: 'Marathon',              pc: { r: 240, t: 268 },              movement: 't' },
             { name: 'Kubernetes',              pc: { r: 270, t: 236 },              movement: 't' },
-            {"name":"Google App Engine", "pc":{"r":290,"t":255},"movement":"c"},   
-            {"name":"Google as corporate platform", "pc":{"r":290,"t":200},"movement":"c"},   
+            { name: 'Google App Engine', pc:{r:290,t:255}, movement: 'c'},   
+            { name: 'Google as corporate platform', pc:{r:290,t:200}, movement: 'c'},   
 
 
-            {"name":"Google Play - (alpha/beta builds)", "pc":{"r":30,"t":225},"movement":"c"},
-            {"name":"JVM as platform", "pc":{"r":90,"t":265},"movement":"c"},   
-            {"name":"AWS", "pc":{"r":90,"t":250},"movement":"c"},   
+            { name: 'Google Play - (alpha/beta builds)', pc:{r:30,t:225}, movement: 'c'},
+            { name: 'JVM as platform', pc:{r:90,t:265}, movement: 'c'},   
+            { name: 'AWS', pc:{r:90,t:250}, movement: 'c'},   
             { name: 'BigIP v11',              pc: { r: 50, t: 257 },              movement: 'c' },
 
 
 
-            {"name":"Ruby On Rails", "pc":{"r":390,"t":215},"movement":"c"},
-            {"name":"Everest", "pc":{"r":390,"t":185},"movement":"c"},   
-            {"name":"Magnolia CMS", "pc":{"r":390,"t":235},"movement":"c"},   
-            {"name":"Java EE - the Bad Parts", "pc":{"r":390,"t":245},"movement":"c"},   
-            {"name":"MS SqlServer", "pc":{"r":390,"t":190},"movement":"c"},
-            {"name":"RHEL 5", "pc":{"r":370,"t":195},"movement":"c"}
+            { name: 'Ruby On Rails', pc:{r:390,t:215}, movement: 'c'},
+            { name: 'Everest', pc:{r:390,t:185}, movement: 'c'},   
+            { name: 'Magnolia CMS', pc:{r:390,t:235}, movement: 'c'},   
+            { name: 'Java EE - the Bad Parts', pc:{r:390,t:245}, movement: 'c'},   
+            { name: 'MS SqlServer', pc:{r:390,t:190}, movement: 'c'},
+            { name: 'RHEL 5', pc:{r:370,t:195}, movement: 'c'}
 
         ]
     },
@@ -154,23 +171,23 @@ var radar_data = [
             { name: 'Guice', pc: { r: 60, t: 278 },  movement: 'c' },
             { name: 'RxJava', pc: { r: 150, t: 298 },              movement: 'c',  domain: 'template' },          
 
-            {"name":"Java 8", "pc":{"r":130,"t":355},"movement":"c"},   
-            {"name":"Groovy ^", "pc":{"r":190,"t":280},"movement":"c"},
+            { name: 'Java 8', pc:{r:130,t:355}, movement: 'c'},   
+            { name: 'Groovy ^', pc:{r:190,t:280}, movement: 'c'},
 
-            {"name":"Swift", "pc":{"r":280,"t":300},"movement":"c"},
-            {"name":"Scala - the good parts ^", "pc":{"r":290,"t":320},"movement":"c"},   
-            {"name":"Serverside Javascript", "pc":{"r":220,"t":275},"movement":"c"},   
-            {"name":"Coffeescript", "pc":{"r":270,"t":282},"movement":"c"},
-            {"name":"Functional Reactive Programming", "pc":{"r":285,"t":330},"movement":"c"},   
-            {"name":"Clojure", "pc":{"r":280,"t":310},"movement":"c"},
+            { name: 'Swift', pc:{r:280,t:300}, movement: 'c'},
+            { name: 'Scala - the good parts ^', pc:{r:290,t:320}, movement: 'c'},   
+            { name: 'Serverside Javascript', pc:{r:220,t:275}, movement: 'c'},   
+            { name: 'Coffeescript', pc:{r:270,t:282}, movement: 'c'},
+            { name: 'Functional Reactive Programming', pc:{r:285,t:330}, movement: 'c'},   
+            { name: 'Clojure', pc:{r:280,t:310}, movement: 'c'},
             { name: 'RxJs',              pc: { r: 250, t: 338 },              movement: 'c',              domain: 'template' },
             { name: 'Web Components', pc: { r: 260, t: 330 },  movement: 'c' },
 
             { name: 'Mustache/Handlebars template',   pc: { r: 50, t: 298 },              movement: 'c',              domain: 'template' },
             { name: 'Spring ^', pc: { r: 360, t: 330 },  movement: 'c' },
-            {"name":"Web Objects", "pc":{"r":390,"t":290},"movement":"c"},
-            {"name":"ASP Classic", "pc":{"r":375,"t":330},"movement":"c"},
-            {"name":"Java 6 and earlier", "pc":{"r":390,"t":350},"movement":"c"}
+            { name: 'Web Objects', pc:{r:390,t:290}, movement: 'c'},
+            { name: 'ASP Classic', pc:{r:375,t:330}, movement: 'c'},
+            { name: 'Java 6 and earlier', pc:{r:390,t:350}, movement: 'c'}
         ]
     }
 ];
